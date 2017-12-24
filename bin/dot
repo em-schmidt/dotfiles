@@ -15,7 +15,10 @@ $ZSH/homebrew/install.sh 2>&1
 # Upgrade homebrew
 echo "› brew update"
 brew update
+echo "› brew upgrade"
 brew upgrade
+echo "› brew cask upgrade"
+brew cask upgrade
 
 # Install software
 echo "› $ZSH/scripts/install"

@@ -22,8 +22,11 @@ brew 'watch'
 brew 'packer'
 brew 'azure-cli'
 brew 'kubernetes-cli'
+brew 'kops'
 brew 'cfssl'
+brew 'kubernetes-helm'
 
+cask 'authy'
 cask 'slack'
 cask 'steam'
 cask 'viscosity'
@@ -38,4 +41,5 @@ cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'insomnia'
 cask 'minikube'
+
 
