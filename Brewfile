@@ -25,6 +25,13 @@ brew 'kubernetes-cli'
 brew 'kops'
 brew 'cfssl'
 brew 'kubernetes-helm'
+brew 'kubectx'
+
+#Telepresence https://www.telepresence.io/reference/install
+brew 'socat'
+cask 'osxfuse'
+tap 'datawire/blackbird'
+brew 'datawire/blackbird/telepresence'
 
 cask 'authy'
 cask 'slack'
@@ -41,5 +48,6 @@ cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'insomnia'
 cask 'minikube'
+cask 'visual-studio-code'
 
 
