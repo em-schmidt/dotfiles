@@ -18,5 +18,5 @@
 	url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim.symlink/pack/plugins/start/YouCompleteMe"]
 	path = vim.symlink/pack/plugins/start/YouCompleteMe
-	url = git@github.com:Valloric/YouCompleteMe.git
+	url = https://github.com/Valloric/YouCompleteMe.git
   ignore = dirty
