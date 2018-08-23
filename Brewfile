@@ -26,6 +26,10 @@ brew 'kops'
 brew 'cfssl'
 brew 'kubernetes-helm'
 brew 'kubectx'
+brew 'kube-ps1'
+brew 'vault'
+brew 'watchman'
+brew 'terraform'
 
 #Telepresence https://www.telepresence.io/reference/install
 brew 'socat'
@@ -33,12 +37,16 @@ cask 'osxfuse'
 tap 'datawire/blackbird'
 brew 'datawire/blackbird/telepresence'
 
+#Draft: https://github.com/Azure/draft
+tap 'azure/draft'
+brew 'draft'
+
 cask 'authy'
 cask 'slack'
 cask 'steam'
 cask 'viscosity'
 cask 'kaleidoscope'
-cask 'docker'
+#cask 'docker'
 cask 'iterm2'
 cask 'arq'
 cask 'mist'

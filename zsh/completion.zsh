@@ -6,3 +6,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*' insert-tab pending
 
 source /usr/local/share/zsh/site-functions/aws_zsh_completer.sh
+
+complete -o nospace -C /usr/local/bin/vault vault
