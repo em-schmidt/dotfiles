@@ -39,6 +39,13 @@ do
 done
 
 unset config_files
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+bindkey -v
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
@@ -46,11 +53,17 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+bindkey -M vicmd 'k' up-line-or-beginning-search # Up
+bindkey -M vicmd 'j' down-line-or-beginning-search # Down
+bindkey -M vicmd '?' history-incremental-search-backward
 
 PATH=$PATH:$HOME/workspace/bin
 
-# enable autoenv last so env processing can use nvm and rvm and other shell functions
-source /usr/local/opt/autoenv/activate.sh
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
 
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -F /Users/eric/workspace/bin/aliyun aliyun
+
+AUTOENV_FILE_ENTER=.env
+source ~/workspace/zsh-autoenv/autoenv.zsh
