@@ -17,8 +17,8 @@ echo "› brew update"
 brew update
 echo "› brew upgrade"
 brew upgrade
-echo "› brew cask upgrade"
-brew cask upgrade
+echo "› brew upgrade --cask"
+brew upgrade --cask
 
 # Install software
 echo "› $ZSH/scripts/install"
