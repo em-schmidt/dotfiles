@@ -12,7 +12,7 @@ brew 'hub'
 brew 'jq'
 brew 'readline'
 brew 'wget'
-brew 'vim', args: ["with-override-system-vi", "with-lua"]
+brew 'vim'
 brew 'autoenv'
 brew 'awscli'
 brew 'zsh-git-prompt'
@@ -21,43 +21,24 @@ brew 'proselint'
 brew 'nvm'
 brew 'tree'
 brew 'watch'
-brew 'packer'
 brew 'azure-cli'
-brew 'kubernetes-cli'
-brew 'kops'
 brew 'cfssl'
 brew 'kubernetes-helm'
-brew 'kubectx'
-brew 'kube-ps1'
-brew 'vault'
 brew 'watchman'
-brew 'terraform'
+#brew 'terraform' #using tfenv for multiple tf versions
+brew 'tfenv'
 brew 'fluxctl'
 
-#TFLint https://github.com/wata727/tflint
-tap 'wata727/tflint'
-brew 'tflint'
-
-#Telepresence https://www.telepresence.io/reference/install
-brew 'socat'
-cask 'osxfuse'
-tap 'datawire/blackbird'
-brew 'datawire/blackbird/telepresence'
-
-#Draft: https://github.com/Azure/draft
-tap 'azure/draft'
-brew 'draft'
-
-#Krypton https://krypt.co
-tap 'kryptco/tap'
-brew 'kryptco/tap/kr'
-
-tap 'aws/tap'
-brew 'aws-sam-cli'
+#m1 builds not available yet
+#brew 'kubernetes-cli'
+brew 'kubectx', args: ["build-from-source"]
+brew 'kube-ps1', args: ["build-from-source"]
+#brew 'vault'
+#brew 'packer'
 
 cask '1password'
-cask 'authy'
-cask 'slack'
+#cask 'authy'
+#cask 'slack' # installing from mac app store since its there
 cask 'steam'
 cask 'viscosity'
 cask 'kaleidoscope'
@@ -71,7 +52,7 @@ cask 'transmit-disk'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'insomnia'
-cask 'minikube'
 cask 'visual-studio-code'
 
-
+#dendron support
+cask 'prince' # supports PDF export

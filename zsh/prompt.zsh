@@ -1,9 +1,9 @@
 autoload colors && colors
 
-source "/usr/local/opt/zsh-git-prompt/zshrc.sh"
-source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+source "/opt/homebrew/opt/zsh-git-prompt/zshrc.sh"
+[[ -e /opt/homebrew/opt/kube-ps1/share/kube-ps1.sh ]] && source "/opt/homebrew/opt/kube-ps1/share/kube-ps1.sh"
 
-PROMPT='%B%m:%25<...<%~%<<%b$(git_super_status) %# '
+PROMPT='%B%m:%25<...<%~%<<%b %# '
 
 function aws_profile {
   if [ -v AWS_PROFILE ]; then
@@ -11,4 +11,4 @@ function aws_profile {
   fi
 }
 
-RPROMPT='$(kube_ps1) $(aws_profile)'
+RPROMPT='$(aws_profile)'
