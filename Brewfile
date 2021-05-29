@@ -2,57 +2,55 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 
-brew 'zsh'
-brew 'coreutils'
-brew 'cmake'
-brew 'graphviz'
-brew 'grc'
-brew 'go'
-brew 'hub'
-brew 'jq'
-brew 'readline'
-brew 'wget'
-brew 'vim'
-brew 'autoenv'
 brew 'awscli'
-brew 'zsh-git-prompt'
-brew 'jsonlint'
-brew 'proselint'
-brew 'nvm'
-brew 'tree'
-brew 'watch'
 brew 'azure-cli'
 brew 'cfssl'
-brew 'kubernetes-helm'
-brew 'watchman'
-#brew 'terraform' #using tfenv for multiple tf versions
-brew 'tfenv'
+brew 'cmake'
+brew 'coreutils'
 brew 'fluxctl'
+brew 'gh'
+brew 'go'
+brew 'graphviz'
+brew 'grc'
+brew 'jq'
+brew 'jsonlint'
+brew 'kubectx', args: ["build-from-source"]
+brew 'kube-ps1', args: ["build-from-source"]
+brew 'kubernetes-helm'
+brew 'mas'
+brew 'nvm'
+brew 'proselint'
+brew 'readline'
+brew 'tfenv'
+brew 'tree'
+brew 'watch'
+brew 'watchman'
+brew 'wget'
+brew 'zsh'
+brew 'zsh-git-prompt'
 
 #m1 builds not available yet
 #brew 'kubernetes-cli'
-brew 'kubectx', args: ["build-from-source"]
-brew 'kube-ps1', args: ["build-from-source"]
 #brew 'vault'
 #brew 'packer'
 
-cask '1password'
-#cask 'authy'
-#cask 'slack' # installing from mac app store since its there
-cask 'steam'
-cask 'viscosity'
-cask 'kaleidoscope'
-cask 'docker'
-cask 'kitematic'
-cask 'iterm2'
 cask 'arq'
-cask 'mist'
-cask 'transmit'
-cask 'transmit-disk'
+cask 'docker'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'insomnia'
+cask 'iterm2'
+cask 'kaleidoscope'
+cask 'kitematic'
+cask 'prince' # installed for dendron to support PDF export
+cask 'steam'
+cask 'transmit'
+cask 'viscosity'
 cask 'visual-studio-code'
 
-#dendron support
-cask 'prince' # supports PDF export
+mas "1Password 7", id: 1333542190
+mas "Navicat Premium Essentials", id: 1256997614
+mas "OmniGraffle", id: 1142578753
+mas "Slack", id: 803453959
+mas "Reeder", id: 1529448980
+mas "Xcode", id: 497799835
