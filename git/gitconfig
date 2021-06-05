@@ -20,18 +20,19 @@
 [apply]
         whitespace = nowarn
 [mergetool]
-        prompt = false
+	prompt = false
         keepBackup = false
 [mergetool "Kaleidoscope"]
-        cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true
 [merge]
-        tool = Kaleidoscope
+	tool = Kaleidoscope
 [difftool "Kaleidoscope"]
-        cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
-        prompt = false
+	prompt = false
 [diff]
-        tool = Kaleidoscope
+	tool = Kaleidoscope
 [help]
         autocorrect = 1
 [push]
@@ -47,5 +48,5 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	email = eric@moven.com
+	email = eric@spaceba.by
 	name = eric m. schmidt

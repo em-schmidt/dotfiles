@@ -1,22 +1,28 @@
-[submodule "vim.symlink/pack/plugins/start/vim-airline"]
-	path = vim.symlink/pack/plugins/start/vim-airline
-	url = https://github.com/vim-airline/vim-airline.git
-[submodule "vim.symlink/pack/plugins/start/vim-fugitive"]
-	path = vim.symlink/pack/plugins/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim.symlink/pack/plugins/start/vim-airline-themes"]
-	path = vim.symlink/pack/plugins/start/vim-airline-themes
-	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "vim.symlink/pack/plugins/start/vim-gitgutter"]
-	path = vim.symlink/pack/plugins/start/vim-gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "vim.symlink/pack/plugins/start/syntastic"]
-	path = vim.symlink/pack/plugins/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "vim.symlink/pack/plugins/start/vim-javascript"]
-	path = vim.symlink/pack/plugins/start/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim.symlink/pack/plugins/start/YouCompleteMe"]
-	path = vim.symlink/pack/plugins/start/YouCompleteMe
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
+[submodule "dotbot-brewfile"]
+	path = dotbot-brewfile
+	url = https://github.com/sobolevn/dotbot-brewfile.git
+[submodule "vim/pack/plugins/start/YouCompleteMe"]
+	path = vim/pack/plugins/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-  ignore = dirty
+[submodule "vim/pack/plugins/start/syntastic"]
+	path = vim/pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/pack/plugins/start/vim-airline-themes"]
+	path = vim/pack/plugins/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/pack/plugins/start/vim-airline"]
+	path = vim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "vim/pack/plugins/start/vim-fugitive"]
+	path = vim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/pack/plugins/start/vim-gitgutter"]
+	path = vim/pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/pack/plugins/start/vim-javascript"]
+	path = vim/pack/plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
