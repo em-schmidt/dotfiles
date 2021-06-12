@@ -23,6 +23,3 @@
   - [git submodule update --init --recursive, Installing Submodules]
   - [macos/set-defaults.sh, Setting macOS preferneces]
   - [homebrew/install.sh, Ensure brew is installed]
-  - [brew update, Update brew]
-  - [brew upgrade, Upgrade brew pacakges]
-  - [brew upgrade --cask, Upgrade brew casks]
