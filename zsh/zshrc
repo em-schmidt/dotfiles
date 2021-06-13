@@ -59,11 +59,7 @@ bindkey -M vicmd '?' history-incremental-search-backward
 
 PATH=$PATH:$HOME/workspace/bin
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -F /Users/eric/workspace/bin/aliyun aliyun
 
 AUTOENV_FILE_ENTER=.env
 source ~/workspace/zsh-autoenv/autoenv.zsh
