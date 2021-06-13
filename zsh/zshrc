@@ -22,11 +22,20 @@ do
   source $file
 done
 
-# load everything but the path and completion files
-for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
-do
-  source $file
-done
+# source *.zsh files explicity (other than path.zsh and completion.zsh)
+
+source ~/.dotfiles/zsh/aliases.zsh
+source ~/.dotfiles/zsh/window.zsh
+source ~/.dotfiles/zsh/prompt.zsh
+source ~/.dotfiles/zsh/editor.zsh
+source ~/.dotfiles/zsh/config.zsh
+
+source ~/.dotfiles/iterm/shell_integration.zsh
+source ~/.dotfiles/git/aliases.zsh
+source ~/.dotfiles/pyenv/pyenv.zsh
+source ~/.dotfiles/nvm/nvm.zsh
+AUTOENV_FILE_ENTER=.env
+source ~/.dotfiles/zsh-autoenv/autoenv.zsh
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
@@ -61,5 +70,3 @@ PATH=$PATH:$HOME/workspace/bin
 
 autoload -U +X bashcompinit && bashcompinit
 
-AUTOENV_FILE_ENTER=.env
-source ~/workspace/zsh-autoenv/autoenv.zsh
