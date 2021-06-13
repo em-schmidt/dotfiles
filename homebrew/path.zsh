@@ -1,4 +1,4 @@
-[[ -e /opt/homebrew/bin ]] && BREWPATH=/opt/homebrew/bin
-[[ -e /usr/local/bin/brew ]] && BREWPATH=/usr/local/bin
+[[ -e /opt/homebrew/bin ]] && BREWPATH=/opt/homebrew
+[[ -e /usr/local/bin/brew ]] && BREWPATH=/usr/local
 
-eval "$(${BREWPATH}/brew shellenv)"
+eval "$(${BREWPATH}/bin/brew shellenv)"
