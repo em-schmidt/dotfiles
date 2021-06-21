@@ -34,6 +34,8 @@ source ~/.dotfiles/iterm/shell_integration.zsh
 source ~/.dotfiles/git/aliases.zsh
 source ~/.dotfiles/pyenv/pyenv.zsh
 source ~/.dotfiles/nvm/nvm.zsh
+source ~/.dotfiles/java/java.zsh
+
 AUTOENV_FILE_ENTER=.env
 source ~/.dotfiles/zsh-autoenv/autoenv.zsh
 

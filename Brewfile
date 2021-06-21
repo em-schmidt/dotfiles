@@ -4,9 +4,11 @@ tap 'homebrew/bundle'
 
 brew 'awscli'
 brew 'azure-cli'
+brew 'bzip2'
 brew 'cfssl'
 brew 'cmake'
 brew 'coreutils'
+brew 'enchant' #kai
 brew 'fluxctl'
 brew 'gh'
 brew 'go'
@@ -17,6 +19,7 @@ brew 'jsonlint'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'kubernetes-helm'
+brew 'libxmlsec1' #kai
 brew 'mas'
 brew 'nvm'
 brew 'proselint'
@@ -25,10 +28,12 @@ brew 'pyenv-virtualenv'
 brew 'readline'
 brew 'tfenv'
 brew 'tree'
+brew 'unixodbc' #kai
 brew 'vim'
 brew 'watch'
 brew 'watchman'
 brew 'wget'
+brew 'zlib'
 brew 'zsh'
 brew 'zsh-git-prompt'
 
