@@ -2,12 +2,14 @@
 #
 # Homebrew
 #
-# This installs some of the common dependencies needed (or at least desired)
-# using Homebrew.
+# This checks for a homebrew install and installs it if not found
+# 
 
 # Check for Homebrew
-if test ! $(which brew)
+if which brew
 then
+  echo "brew found at $(which brew)"
+else
   echo "  Installing Homebrew for you."
 
   # Install the correct homebrew for each OS type
