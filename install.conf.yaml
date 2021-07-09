@@ -1,3 +1,13 @@
+- shell:
+  - [git submodule update --init --recursive, Installing Submodules]
+  - [macos/set-defaults.sh, Setting macOS preferneces]
+  -
+    command: homebrew/install.sh
+    stdin: true
+    stdout: true
+    stderr: true
+    description: Ensure brew is installed
+
 - defaults:
     link:
       create: true
@@ -14,12 +24,8 @@
 
 - link:
     ~/.zshrc: zsh/zshrc
-    ~/.vimrc: 
+    ~/.vimrc:
     ~/.vim:
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
 
-- shell: 
-  - [git submodule update --init --recursive, Installing Submodules]
-  - [macos/set-defaults.sh, Setting macOS preferneces]
-  - [homebrew/install.sh, Ensure brew is installed]
