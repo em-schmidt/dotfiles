@@ -22,6 +22,9 @@
 
 - clean: ['~']
 
+- create:
+  - ~/.nvm
+
 - link:
     ~/.zshrc: zsh/zshrc
     ~/.vimrc:
