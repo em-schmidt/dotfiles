@@ -15,6 +15,7 @@ brew 'go'
 brew 'graphviz'
 brew 'grc'
 brew 'jenv'
+brew 'jmeter'
 brew 'jq'
 brew 'jsonlint'
 brew 'kubectx', args: ["build-from-source"]
