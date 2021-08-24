@@ -54,4 +54,8 @@
 	process = git-lfs filter-process
 [user]
 	name = eric m. schmidt
-	email = eric.schmidt@kasisto.com
+	email = eric@spaceba.by
+[includeIf "gitdir:~/workspace/kasisto/"]
+  path = ~/.gitconfig.kasisto
+[includeIf "gitdir:~/workspace/pcs/"]
+  path = ~/.gitconfig.pcs
