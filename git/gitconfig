@@ -55,3 +55,5 @@
 [user]
 	name = eric m. schmidt
 	useConfigOnly = true
+[init]
+	defaultBranch = main

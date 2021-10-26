@@ -21,6 +21,7 @@ brew 'jsonlint'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'kubernetes-helm'
+brew 'leiningen'
 brew 'libxmlsec1' #kai
 brew 'mas'
 brew 'nvm'
