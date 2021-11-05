@@ -1,9 +1,11 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
+tap 'borkdude/brew'
 
 brew 'awscli'
 brew 'azure-cli'
+brew 'babashka'
 brew 'bzip2'
 brew 'cfssl'
 brew 'cmake'
@@ -39,6 +41,7 @@ brew 'wget'
 brew 'zlib'
 brew 'zsh'
 brew 'zsh-git-prompt'
+
 
 #m1 builds not available yet
 #brew 'kubernetes-cli'
