@@ -29,3 +29,15 @@
 [submodule "zsh-autoenv"]
 	path = zsh-autoenv
 	url = https://github.com/Tarrasch/zsh-autoenv
+[submodule "vim/pack/plugins/start/ctrlp.vim"]
+	path = vim/pack/plugins/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule "vim/pack/plugins/start/repeat"]
+	path = vim/pack/plugins/start/repeat
+	url = https://tpope.io/vim/repeat.git
+[submodule "vim/pack/plugins/start/vim-sexp"]
+	path = vim/pack/plugins/start/vim-sexp
+	url = https://github.com/guns/vim-sexp.git
+[submodule "vim/pack/plugins/start/vim-iced"]
+	path = vim/pack/plugins/start/vim-iced
+	url = https://github.com/liquidz/vim-iced.git

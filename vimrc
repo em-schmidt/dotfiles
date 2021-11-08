@@ -99,4 +99,4 @@ let g:syntastic_go_checkers = ["go"]
 let g:syntastic_json_checkers = ["jsonlint"]
 let g:syntastic_ruby_checkers = ["mri"]
 
-
+let g:iced_enable_default_key_mappings = v:true
