@@ -69,7 +69,7 @@ bindkey -M vicmd 'k' up-line-or-beginning-search # Up
 bindkey -M vicmd 'j' down-line-or-beginning-search # Down
 bindkey -M vicmd '?' history-incremental-search-backward
 
-PATH=$PATH:$HOME/workspace/bin
+PATH=$PATH:$HOME/workspace/bin:$HOME/.vim/pack/plugins/start/vim-iced/bin/
 
 autoload -U +X bashcompinit && bashcompinit
 
