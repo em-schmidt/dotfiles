@@ -53,33 +53,30 @@ let g:netrw_browse_split = 4
 let g:netrw_altv = 1
 let g:netrw_preview = 1
 let g:netrw_winsize = 20
+let g:netrw_isopen = 0
 
 "make netrw explorer toggle nicer
 function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-    let expl_win_num = bufwinnr(t:expl_buf_num)
-    if expl_win_num != -1
-      let cur_win_nr = winnr()
-      exec expl_win_num . 'wincmd w'
-      close
-      exec cur_win_nr . 'wincmd w'
-      unlet t:expl_buf_num
-    else
-      unlet t:expl_buf_num
-    endif
+  if g:netrw_isopen
+    let i = bufnr("$")
+    while (i >= 1)
+      if (getbufvar(i, "&filetype") == "netrw")
+        silent exe "bwipeout " . i
+      endif
+      let i-=1
+    endwhile
+    let g:netrw_isopen = 0
   else
-    exec '1wincmd w'
-    Vexplore
-    let t:expl_buf_num = bufnr("%")
+    let g:netrw_isopen = 1
+    silent Lexplore
   endif
 endfunction
 
-noremap <C-E> :call ToggleVExplorer()<CR>
+noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 
 
 "airline
 let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
 let g:airline#extensions#tabline#enabled = 1
 
 "update time (update git status faster)
