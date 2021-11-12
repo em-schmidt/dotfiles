@@ -1,5 +1,5 @@
 set nocompatible
-syntax on
+syntax enable
 
 set mouse=a
 
@@ -44,7 +44,7 @@ set tgc
 set title
 set titleold=""
 set vb
-colorscheme solarized8_dark
+colorscheme solarized8
 
 "netrw
 let g:netrw_banner = 0

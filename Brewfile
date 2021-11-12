@@ -13,6 +13,7 @@ brew 'coreutils'
 brew 'enchant' #kai
 brew 'fluxctl'
 brew 'gh'
+brew 'glab'
 brew 'go'
 brew 'graphviz'
 brew 'grc'

@@ -41,3 +41,6 @@
 [submodule "vim/pack/plugins/start/vim-iced"]
 	path = vim/pack/plugins/start/vim-iced
 	url = https://github.com/liquidz/vim-iced.git
+[submodule "vim/pack/themes/opt/solarized8"]
+	path = vim/pack/themes/opt/solarized8
+	url = https://github.com/lifepillar/vim-solarized8.git
