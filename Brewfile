@@ -70,3 +70,5 @@ mas "OmniGraffle", id: 1142578753
 mas "Slack", id: 803453959
 mas "Reeder", id: 1529448980
 mas "Xcode", id: 497799835
+mas "Tailscale", id: 1475387142
+
