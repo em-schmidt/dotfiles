@@ -17,13 +17,13 @@ brew 'glab'
 brew 'go'
 brew 'graphviz'
 brew 'grc'
+brew 'helm'
 brew 'jenv'
 brew 'jmeter'
 brew 'jq'
 brew 'jsonlint'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
-brew 'kubernetes-helm'
 brew 'leiningen'
 brew 'libxmlsec1' #kai
 brew 'mas'
