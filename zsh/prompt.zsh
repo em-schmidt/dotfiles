@@ -18,7 +18,7 @@ PROMPT='%B%m:%25<...<%~%<<%b${vcs_info_msg_0_} %# '
 
 function aws_profile {
   if [ -v AWS_PROFILE ]; then
-    echo "[aws: ${AWS_PROFILE}]"
+    echo "[☁️ :${AWS_PROFILE}]"
   fi
 }
 

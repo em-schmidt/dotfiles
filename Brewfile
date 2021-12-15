@@ -19,7 +19,6 @@ brew 'graphviz'
 brew 'grc'
 brew 'helm'
 brew 'jenv'
-brew 'jmeter'
 brew 'jq'
 brew 'jsonlint'
 brew 'kubectx', args: ["build-from-source"]
