@@ -31,6 +31,7 @@ brew 'proselint'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'readline'
+brew 'stern'
 brew 'tfenv'
 brew 'tree'
 brew 'unixodbc' #kai
