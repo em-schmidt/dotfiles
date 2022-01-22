@@ -58,6 +58,7 @@ cask 'insomnia'
 cask 'iterm2'
 cask 'kaleidoscope'
 cask 'kitematic'
+cask 'notion'
 cask 'prince' # installed for dendron to support PDF export
 cask 'steam'
 cask 'transmit'
