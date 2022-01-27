@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
 tap 'borkdude/brew'
+tap 'fluxcd/tap'
 
 brew 'awscli'
 brew 'azure-cli'
@@ -10,8 +11,7 @@ brew 'bzip2'
 brew 'cfssl'
 brew 'cmake'
 brew 'coreutils'
-brew 'enchant' #kai
-brew 'fluxctl'
+brew 'flux'
 brew 'gh'
 brew 'glab'
 brew 'go'
@@ -24,7 +24,6 @@ brew 'jsonlint'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'leiningen'
-brew 'libxmlsec1' #kai
 brew 'mas'
 brew 'nvm'
 brew 'proselint'
@@ -34,7 +33,6 @@ brew 'readline'
 brew 'stern'
 brew 'tfenv'
 brew 'tree'
-brew 'unixodbc' #kai
 brew 'vim'
 brew 'watch'
 brew 'watchman'
@@ -42,12 +40,6 @@ brew 'wget'
 brew 'zlib'
 brew 'zsh'
 brew 'zsh-git-prompt'
-
-
-#m1 builds not available yet
-#brew 'kubernetes-cli'
-#brew 'vault'
-#brew 'packer'
 
 cask 'arq'
 cask 'docker'
