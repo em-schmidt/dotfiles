@@ -21,6 +21,7 @@ brew 'helm'
 brew 'jenv'
 brew 'jq'
 brew 'jsonlint'
+brew 'kcat'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'leiningen'
@@ -42,6 +43,7 @@ brew 'zsh'
 brew 'zsh-git-prompt'
 
 cask 'arq'
+cask 'confluent-cli'
 cask 'docker'
 cask 'github'
 cask 'google-chrome'
@@ -49,12 +51,11 @@ cask 'google-cloud-sdk'
 cask 'insomnia'
 cask 'iterm2'
 cask 'kaleidoscope'
-cask 'kitematic'
 cask 'notion'
-cask 'prince' # installed for dendron to support PDF export
-cask 'steam'
+cask 'prince'                 # installed for dendron to support PDF export
+# cask 'steam'                # haven't played any steam games in awhile
 cask 'transmit'
-cask 'viscosity'
+#cask 'viscosity'             # nice openvpn client, not using it anymore
 cask 'visual-studio-code'
 
 mas "1Password 7", id: 1333542190

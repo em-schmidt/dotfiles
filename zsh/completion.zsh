@@ -7,3 +7,4 @@ zstyle ':completion:*' insert-tab pending
 
 source ${BREWPATH}/share/zsh/site-functions/aws_zsh_completer.sh
 
+source <(kubectl completion zsh)
