@@ -49,7 +49,7 @@ precmd() {
 setopt prompt_subst
 
 zstyle ':prompt:shrink_path' fish
-source shrink-path.zsh
+source ~/.dotfiles/zsh/shrink-path.zsh
 
 [[ -e ${BREWPATH}/opt/kube-ps1/share/kube-ps1.sh ]] && source "${BREWPATH}/opt/kube-ps1/share/kube-ps1.sh"
 
