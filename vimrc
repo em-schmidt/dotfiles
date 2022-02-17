@@ -78,6 +78,8 @@ noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 noremap <Leader>t :term ++close<cr>
 noremap <Leader>T :tab term ++close<cr>
 
+noremap <Leader>p :Clap<cr>
+
 "airline
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
