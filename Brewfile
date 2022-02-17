@@ -32,6 +32,7 @@ brew 'proselint'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'readline'
+brew 'rust' # needed for vim-clap
 brew 'stern'
 brew 'tfenv'
 brew 'tree'
