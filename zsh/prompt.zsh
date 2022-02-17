@@ -48,9 +48,12 @@ precmd() {
 
 setopt prompt_subst
 
+zstyle ':prompt:shrink_path' fish
+source shrink-path.zsh
+
 [[ -e ${BREWPATH}/opt/kube-ps1/share/kube-ps1.sh ]] && source "${BREWPATH}/opt/kube-ps1/share/kube-ps1.sh"
 
-PROMPT='%B%m:%25<...<%~%<<%b${vcs_info_msg_0_} %# '
+PROMPT='%B%m:$(shrink_path -f)%b${vcs_info_msg_0_} %# '
 
 function aws_profile {
   if [ -v AWS_PROFILE ]; then

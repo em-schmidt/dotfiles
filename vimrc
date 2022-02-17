@@ -1,4 +1,5 @@
 set nocompatible
+set clipboard=unnamed
 syntax enable
 
 set mouse=a
@@ -74,6 +75,8 @@ endfunction
 
 noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 
+noremap <Leader>t :term ++close<cr>
+noremap <Leader>T :tab term ++close<cr>
 
 "airline
 let g:airline_theme='solarized'
