@@ -30,6 +30,7 @@ brew 'kube-ps1', args: ["build-from-source"]
 brew 'leiningen'
 brew 'mas'
 brew 'nvm'
+brew 'openjdk@11'
 brew 'proselint'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
