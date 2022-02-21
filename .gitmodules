@@ -47,3 +47,6 @@
 [submodule "vim/pack/plugins/start/vim-clap"]
 	path = vim/pack/plugins/start/vim-clap
 	url = https://github.com/liuchengxu/vim-clap.git
+[submodule "vim/pack/plugins/start/vim-webdevicons"]
+	path = vim/pack/plugins/start/vim-webdevicons
+	url = https://github.com/cj/vim-webdevicons.git

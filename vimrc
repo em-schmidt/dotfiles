@@ -2,6 +2,8 @@ set nocompatible
 set clipboard=unnamed
 syntax enable
 
+let mapleader = " "
+
 set mouse=a
 
 " Set tabs to 2 spaces
@@ -78,7 +80,11 @@ noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 noremap <Leader>t :term ++close<cr>
 noremap <Leader>T :tab term ++close<cr>
 
-noremap <Leader>p :Clap<cr>
+"vim-clap settings
+let g:clap_preview_direction = 'UD'
+let g:clap_layout = { 'width': '85%', 'col': '5%' }
+noremap <Leader>p :Clap command<cr>
+noremap <Leader>f :Clap filer<cr>
 
 "airline
 let g:airline_theme='solarized'
