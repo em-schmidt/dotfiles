@@ -50,3 +50,6 @@
 [submodule "vim/pack/plugins/start/vim-webdevicons"]
 	path = vim/pack/plugins/start/vim-webdevicons
 	url = https://github.com/cj/vim-webdevicons.git
+[submodule "vim/pack/plugins/start/lightline.vim"]
+	path = vim/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git

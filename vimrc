@@ -32,6 +32,9 @@ set showmode
 set number
 set relativenumber
 
+set path+=**
+set wildmenu
+
 " search behavior
 set ignorecase
 set smartcase
@@ -48,6 +51,14 @@ set title
 set titleold=""
 set vb
 colorscheme solarized8
+
+"scrolling
+set scrolloff=1
+set sidescrolloff=5
+
+"autoload external changes
+set autoread
+
 
 "netrw
 let g:netrw_banner = 0
@@ -81,14 +92,18 @@ noremap <Leader>t :term ++close<cr>
 noremap <Leader>T :tab term ++close<cr>
 
 "vim-clap settings
+autocmd FileType * hi ClapDefaultCurrentSelection ctermfg=224 guifg= #d19292 cterm=bold gui=bold
 let g:clap_preview_direction = 'UD'
 let g:clap_layout = { 'width': '85%', 'col': '5%' }
 noremap <Leader>p :Clap command<cr>
 noremap <Leader>f :Clap filer<cr>
+noremap <Leader>cb :Clap buffers<cr>
 
 "airline
 let g:airline_theme='solarized'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_inactive_collapse=1
+
 
 "update time (update git status faster)
 set updatetime=250
@@ -108,3 +123,5 @@ let g:syntastic_json_checkers = ["jsonlint"]
 let g:syntastic_ruby_checkers = ["mri"]
 
 let g:iced_enable_default_key_mappings = v:true
+let g:iced#buffer#stdout#mods = "belowright"
+let g:iced#buffer#stdout#size = 6
