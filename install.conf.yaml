@@ -31,4 +31,5 @@
     ~/.vim:
     ~/.gitignore: git/gitignore
     ~/.gitconfig: git/gitconfig
+    ~/.spacemacs: emacs/dot-spacemacs
 

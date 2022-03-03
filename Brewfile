@@ -5,13 +5,16 @@ tap 'homebrew/cask-fonts'
 tap 'borkdude/brew'
 tap 'fluxcd/tap'
 
+brew 'aspell'                               # for emacs
 brew 'awscli'
 brew 'azure-cli'
 brew 'babashka'
 brew 'bzip2'
 brew 'cfssl'
+brew 'clj-kondo'                            # clojure linting
 brew 'cmake'
 brew 'coreutils'
+brew 'findutils'                            #for emacs
 brew 'flux'
 brew 'fzf'
 brew 'gh'
@@ -28,6 +31,7 @@ brew 'kcat'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'leiningen'
+brew 'libvterm'                            # for emacs
 brew 'mas'
 brew 'nvm'
 brew 'openjdk@11'
@@ -35,7 +39,8 @@ brew 'proselint'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'readline'
-brew 'rust' # needed for vim-clap
+brew 'rg'                                   # for emacs
+brew 'rust'                                 # for vim-clap
 brew 'stern'
 brew 'svn'
 brew 'tfenv'
