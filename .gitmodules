@@ -32,9 +32,6 @@
 [submodule "vim/pack/plugins/start/ctrlp.vim"]
 	path = vim/pack/plugins/start/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule "vim/pack/plugins/start/repeat"]
-	path = vim/pack/plugins/start/repeat
-	url = https://tpope.io/vim/repeat.git
 [submodule "vim/pack/plugins/start/vim-sexp"]
 	path = vim/pack/plugins/start/vim-sexp
 	url = https://github.com/guns/vim-sexp.git
@@ -56,3 +53,15 @@
 [submodule "emacs/spacemacs"]
 	path = emacs/spacemacs
 	url = https://github.com/syl20bnr/spacemacs
+[submodule "vim/pack/plugins/start/vim-sexp-mappings-for-regular-people"]
+	path = vim/pack/plugins/start/vim-sexp-mappings-for-regular-people
+	url = git://github.com/tpope/vim-sexp-mappings-for-regular-people.git
+[submodule "vim/pack/plugins/start/vim-repeat"]
+	path = vim/pack/plugins/start/vim-repeat
+	url = git://github.com/tpope/vim-repeat.git
+[submodule "vim/pack/plugins/start/vim-surround"]
+	path = vim/pack/plugins/start/vim-surround
+	url = git://github.com/tpope/vim-surround.git
+[submodule "vim/pack/plugins/start/--force"]
+	path = vim/pack/plugins/start/--force
+	url = git://github.com/tpope/vim-repeat.git
