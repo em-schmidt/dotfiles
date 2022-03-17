@@ -55,10 +55,10 @@
 	url = https://github.com/syl20bnr/spacemacs
 [submodule "vim/pack/plugins/start/vim-sexp-mappings-for-regular-people"]
 	path = vim/pack/plugins/start/vim-sexp-mappings-for-regular-people
-	url = git://github.com/tpope/vim-sexp-mappings-for-regular-people.git
+	url = https://github.com/tpope/vim-sexp-mappings-for-regular-people.git
 [submodule "vim/pack/plugins/start/vim-surround"]
 	path = vim/pack/plugins/start/vim-surround
-	url = git://github.com/tpope/vim-surround.git
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/pack/plugins/start/vim-repeat"]
 	path = vim/pack/plugins/start/vim-repeat
-	url = git://github.com/tpope/vim-repeat.git
+	url = https://github.com/tpope/vim-repeat.git
