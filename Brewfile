@@ -1,5 +1,6 @@
 cask_args appdir: '/Applications'
 
+tap '1password/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
 tap 'borkdude/brew'
@@ -53,6 +54,7 @@ brew 'zlib'
 brew 'zsh'
 brew 'zsh-git-prompt'
 
+cask '1password-cli'
 cask 'arq'
 cask 'confluent-cli'
 cask 'docker'
@@ -92,7 +94,7 @@ cask 'transmit'
 #cask 'viscosity'             # nice openvpn client, not using it anymore
 cask 'visual-studio-code'
 
-mas "1Password 7", id: 1333542190
+# mas "1Password 7", id: 1333542190   # 1password8
 mas "Navicat Premium Essentials", id: 1256997614
 mas "OmniGraffle", id: 1142578753
 mas "Slack", id: 803453959
