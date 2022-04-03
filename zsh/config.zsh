@@ -2,6 +2,7 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
 
 fpath=($ZSH/zsh/functions $fpath)
+cdpath=($HOME/workspace)
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

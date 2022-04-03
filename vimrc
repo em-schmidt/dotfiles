@@ -88,7 +88,7 @@ endfunction
 
 noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 
-noremap <Leader>t :term ++close<cr>
+noremap <Leader>t :bel term ++close<cr>
 noremap <Leader>T :tab term ++close<cr>
 
 "vim-clap settings
