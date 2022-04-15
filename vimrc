@@ -88,8 +88,20 @@ endfunction
 
 noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 
-noremap <Leader>t :bel term ++close<cr>
-noremap <Leader>T :tab term ++close<cr>
+noremap <Leader>wh <C-w>h
+noremap <Leader>wj <C-w>j
+noremap <Leader>wk <C-w>k
+noremap <Leader>wl <C-w>l
+
+"terminals
+if has('nvim')
+  autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
+  noremap <Leader>t :belowright split <bar> resize 12 <bar> terminal<cr>
+  noremap <Leader>T :tab terminal<cr>
+else
+  noremap <Leader>t :belowright term ++close<cr>
+  noremap <Leader>T :tab term ++close<cr>
+endif
 
 "vim-clap settings
 autocmd FileType * hi ClapDefaultCurrentSelection ctermfg=224 guifg= #d19292 cterm=bold gui=bold
@@ -97,7 +109,7 @@ let g:clap_preview_direction = 'UD'
 let g:clap_layout = { 'width': '85%', 'col': '5%' }
 noremap <Leader>p :Clap command<cr>
 noremap <Leader>f :Clap filer<cr>
-noremap <Leader>cb :Clap buffers<cr>
+noremap <Leader>b :Clap buffers<cr>
 
 "airline
 let g:airline_theme='solarized'

@@ -35,6 +35,7 @@ brew 'kube-ps1', args: ["build-from-source"]
 brew 'leiningen'
 brew 'libvterm'                            # for emacs
 brew 'mas'
+brew 'nvim'
 brew 'nvm'
 brew 'openjdk@11'
 brew 'proselint'

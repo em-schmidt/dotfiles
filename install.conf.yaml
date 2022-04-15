@@ -29,8 +29,9 @@
     ~/.zshrc: zsh/zshrc
     ~/.vimrc:
     ~/.vim:
-    ~/.gitignore: git/gitignore
-    ~/.gitconfig: git/gitconfig
-    ~/.spacemacs: emacs/dot-spacemacs
-    ~/.emacs.d:    emacs/spacemacs
+    ~/.gitignore:             git/gitignore
+    ~/.gitconfig:             git/gitconfig
+    ~/.spacemacs:             emacs/dot-spacemacs
+    ~/.emacs.d:               emacs/spacemacs
+    ~/.config/nvim/init.vim:  nvim/init.vim
 
