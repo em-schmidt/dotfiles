@@ -7,3 +7,8 @@ local opt = vim.opt
 opt.runtimepath:prepend("~/.vim")
 opt.packpath:prepend("~/.vim")
 vim.cmd('source ~/.vimrc')
+
+vim.g["aniseed#env"] = {
+  module = "config.init",
+  compile = true
+}
