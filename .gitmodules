@@ -56,9 +56,9 @@
 [submodule "vim/pack/plugins/start/conjure"]
 	path = nvim/pack/plugins/start/conjure
 	url = https://github.com/Olical/conjure.git
-[submodule "vim/pack/plugins/start/vim-which-key"]
-	path = vim/pack/plugins/start/vim-which-key
-	url = https://github.com/liuchengxu/vim-which-key.git
 [submodule "nvim/pack/plugins/start/aniseed"]
 	path = nvim/pack/plugins/start/aniseed
 	url = https://github.com/Olical/aniseed.git
+[submodule "nvim/pack/plugins/start/which-key.nvim"]
+	path = nvim/pack/plugins/start/which-key.nvim
+	url = https://github.com/folke/which-key.nvim.git

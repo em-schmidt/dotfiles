@@ -143,13 +143,9 @@ noremap <Leader>p :Clap command<cr>
 noremap <Leader>f :Clap filer<cr>
 noremap <Leader>b :Clap buffers<cr>
 
-"which key
-noremap <silent> <leader> :WhichKey '<Space>'<cr>
-noremap <silent> <localleader> :WhichKeyVisual ','<cr>
-set timeoutlen=500
-
 "update time (update git status faster)
 set updatetime=250
+set timeoutlen=500
 
 "syntastic
 let g:syntastic_always_poplulate_loc_list = 1
