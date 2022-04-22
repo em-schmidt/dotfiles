@@ -48,7 +48,7 @@ brew 'stern'
 brew 'svn'
 brew 'tfenv'
 brew 'tree'
-brew 'vim'
+brew 'vim', link: false
 brew 'watch'
 brew 'watchman'
 brew 'wget'
