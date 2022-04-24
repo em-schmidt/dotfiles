@@ -8,10 +8,10 @@
         warn (.. prefix "SignWarn")
         info (.. prefix "SignWarn")
         hint (.. prefix "SignHint")]
-    (vim.fn.sign_define error {:text "" :texthl error})
+    (vim.fn.sign_define error {:text "" :texthl error})
     (vim.fn.sign_define warn {:text "" :texthl warn})
     (vim.fn.sign_define info {:text "" :texthl info})
-    (vim.fn.sign_define hint {:text "" :texthl hint})))
+    (vim.fn.sign_define hint {:text "" :texthl hint})))
 
 (defn- map
   [from to]

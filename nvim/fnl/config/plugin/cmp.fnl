@@ -15,6 +15,8 @@
                                :format (lspkind.cmp_format {:maxwidth 50
                                                             :menu {
                                                                    :buffer (..  "[" "Buffer" "]")
+                                                                   :conjure (.. "[" "Conjure" "]")
+                                                                   :nvim_lsp (.. "[" "LSP" "]")
                                                                    }
                                                             :mode :symbol
                                                             })}
