@@ -29,6 +29,7 @@
 [submodule "vim/pack/plugins/start/vim-sexp"]
 	path = vim/pack/plugins/start/vim-sexp
 	url = https://github.com/guns/vim-sexp.git
+  ignore = dirty
 [submodule "vim/pack/themes/opt/solarized8"]
 	path = vim/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
@@ -38,6 +39,7 @@
 [submodule "vim/pack/plugins/start/vim-webdevicons"]
 	path = vim/pack/plugins/start/vim-webdevicons
 	url = https://github.com/cj/vim-webdevicons.git
+  ignore = dirty
 [submodule "vim/pack/plugins/start/lightline.vim"]
 	path = vim/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
