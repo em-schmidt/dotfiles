@@ -8,5 +8,5 @@
 (set nvim.o.sessionoptions "blank,curdir,folds,help,tabpages,winsize")
 (set nvim.o.inccommand :nosplit)
 
-(nvim.ex.set :spell)
+(nvim.ex.set :nospell)
 (nvim.ex.set :list)

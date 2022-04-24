@@ -136,30 +136,36 @@ else
 endif
 
 "vim-clap settings
-autocmd FileType * hi ClapDefaultCurrentSelection ctermfg=224 guifg= #d19292 cterm=bold gui=bold
-"let g:clap_preview_direction = 'LR'
-"let g:clap_layout = { 'width': '59%', 'col': '50%' }
-noremap <Leader>p :Clap command<cr>
-noremap <Leader>f :Clap filer<cr>
-noremap <Leader>b :Clap buffers<cr>
+if !has('nvim')
+  packadd! vim-clap
+  autocmd FileType * hi ClapDefaultCurrentSelection ctermfg=224 guifg= #d19292 cterm=bold gui=bold
+  "let g:clap_preview_direction = 'LR'
+  "let g:clap_layout = { 'width': '59%', 'col': '50%' }
+  noremap <Leader>p :Clap command<cr>
+  noremap <Leader>f :Clap filer<cr>
+  noremap <Leader>b :Clap buffers<cr>
+endif
 
 "update time (update git status faster)
 set updatetime=250
 set timeoutlen=500
 
 "syntastic
-let g:syntastic_always_poplulate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_id_checkers = 1
+if !has('nvim')
+  packadd! syntastic
+  let g:syntastic_always_poplulate_loc_list = 1
+  let g:syntastic_auto_loc_list = 1
+  let g:syntastic_check_on_open = 1
+  let g:syntastic_check_on_wq = 0
+  let g:syntastic_aggregate_errors = 1
+  let g:syntastic_id_checkers = 1
 
-let g:syntastic_markdown_checkers = ["proselint"]
-let g:syntastic_javascript_checkers = ["eslint"]
-let g:syntastic_go_checkers = ["go"]
-let g:syntastic_json_checkers = ["jsonlint"]
-let g:syntastic_ruby_checkers = ["mri"]
+  let g:syntastic_markdown_checkers = ["proselint"]
+  let g:syntastic_javascript_checkers = ["eslint"]
+  let g:syntastic_go_checkers = ["go"]
+  let g:syntastic_json_checkers = ["jsonlint"]
+  let g:syntastic_ruby_checkers = ["mri"]
+endif
 
 "status line
 set laststatus=2

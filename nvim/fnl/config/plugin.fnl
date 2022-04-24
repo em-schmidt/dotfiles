@@ -4,6 +4,8 @@
 ;
 ; different from Olical's plugin logic since not using packer
 
-
-(require :config.plugin.conjure)
 (require :config.plugin.which-key)
+(require :config.plugin.lspconfig)
+(require :config.plugin.telescope)
+(require :config.plugin.cmp)
+(require :config.plugin.conjure)

@@ -13,8 +13,10 @@ brew 'babashka'
 brew 'bzip2'
 brew 'cfssl'
 brew 'clj-kondo'                            # clojure linting
+brew 'clojure-lsp'
 brew 'cmake'
 brew 'coreutils'
+brew 'fd'                                   #fast find (for nvim telescope)
 brew 'findutils'                            #for emacs
 brew 'flux'
 brew 'fzf'
@@ -34,6 +36,7 @@ brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'leiningen'
 brew 'libvterm'                            # for emacs
+brew 'lua-language-server'
 brew 'mas'
 brew 'nvim'
 brew 'nvm'
