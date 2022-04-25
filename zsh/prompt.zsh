@@ -61,4 +61,14 @@ function aws_profile {
   fi
 }
 
-RPROMPT='$(aws_profile)|$(kube_ps1)'
+function cloud_contexts {
+  aws=$(aws_profile)
+  kube=$(kube_ps1)
+  if [[ ! -z "$aws" && ! -z "$kube" ]]; then
+    echo "$aws $kube"
+  else
+    echo "$aws $kube"
+  fi
+}
+
+RPROMPT='$(cloud_contexts)'

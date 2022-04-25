@@ -37,8 +37,8 @@ source ~/.dotfiles/nvm/nvm.zsh
 source ~/.dotfiles/java/jenv.zsh
 source ~/.dotfiles/java/java.zsh
 
-AUTOENV_FILE_ENTER=.env
-source ~/.dotfiles/zsh-autoenv/autoenv.zsh
+#AUTOENV_FILE_ENTER=.env
+#source ~/.dotfiles/zsh-autoenv/autoenv.zsh
 
 # initialize autocomplete here, otherwise functions won't be loaded
 autoload -U compinit
@@ -73,3 +73,4 @@ PATH=$PATH:$HOME/workspace/bin:$HOME/.vim/pack/plugins/start/vim-iced/bin/
 
 autoload -U +X bashcompinit && bashcompinit
 
+eval "$(direnv hook zsh)"
