@@ -151,6 +151,9 @@ endif
 set updatetime=250
 set timeoutlen=500
 
+"gitgutter 
+let g:gitgutter_sign_priority=9
+
 "syntastic
 if !has('nvim')
   packadd! syntastic

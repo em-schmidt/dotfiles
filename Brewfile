@@ -49,6 +49,7 @@ brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
 brew 'stern'
 brew 'svn'
+brew 'terraform-ls'
 brew 'tfenv'
 brew 'tree'
 brew 'vim', link: false

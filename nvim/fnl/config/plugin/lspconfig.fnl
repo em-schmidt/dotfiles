@@ -8,20 +8,21 @@
         warn (.. prefix "SignWarn")
         info (.. prefix "SignWarn")
         hint (.. prefix "SignHint")]
-    (vim.fn.sign_define error {:text "" :texthl error})
-    (vim.fn.sign_define warn {:text "" :texthl warn})
-    (vim.fn.sign_define info {:text "" :texthl info})
-    (vim.fn.sign_define hint {:text "" :texthl hint})))
+    (vim.fn.sign_define error {:text "☠️" :texthl error})
+    (vim.fn.sign_define warn {:text "⚠️" :texthl warn})
+    (vim.fn.sign_define info {:text "ℹ️" :texthl info})
+    (vim.fn.sign_define hint {:text "🧩" :texthl hint})))
 
 (defn- map
   [from to]
   (util.nnoremap from to))
 
+(defn- lsp_server_setup
+  [server]
+  (server:setup {}))
+
 (let [(ok? lsp) (pcall require :lspconfig)]
   (when ok?
-    (lsp.clojure_lsp.setup {})
-    (lsp.tsserver.setup {})
-    (lsp.sumneko_lua.setup {})
 
     (define-signs "Diagnostic")
     (define-signs "LspDiagnostics")
@@ -36,5 +37,12 @@
     (map :<c-p> "lua vim.lsp.diagnostic.goto_prev()")
 
     (map :<leader>lf "lua vim.lsp.buf.formatting()")
+
+    (let [(ok? installer) (pcall require :nvim-lsp-installer)]
+      (when ok?
+        (installer.on_server_ready lsp_server_setup)))
+
+
+
     ))
 
