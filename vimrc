@@ -45,6 +45,7 @@ set tgc
 set title
 set titleold=""
 set vb
+set linebreak
 colorscheme solarized8
 
 "scrolling
@@ -166,6 +167,9 @@ if !has('nvim')
   let g:syntastic_json_checkers = ["jsonlint"]
   let g:syntastic_ruby_checkers = ["mri"]
 endif
+
+" markdown preview
+let g:mkdp_auto_start = 1
 
 "status line
 set laststatus=2

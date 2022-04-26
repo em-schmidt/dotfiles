@@ -112,3 +112,6 @@
 [submodule "nvim/pack/plugins/start/cmp-conjure"]
 	path = nvim/pack/plugins/start/cmp-conjure
 	url = https://github.com/PaterJason/cmp-conjure.git
+[submodule "vim/pack/plugins/start/markdown-preview.nvim"]
+	path = vim/pack/plugins/start/markdown-preview.nvim
+	url = https://github.com/iamcco/markdown-preview.nvim.git
