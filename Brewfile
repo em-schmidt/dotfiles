@@ -16,6 +16,7 @@ brew 'clj-kondo'                            # clojure linting
 brew 'clojure-lsp'
 brew 'cmake'
 brew 'coreutils'
+brew 'direnv'
 brew 'fd'                                   #fast find (for nvim telescope)
 brew 'findutils'                            #for emacs
 brew 'flux'
