@@ -58,6 +58,7 @@ brew 'vim', link: false
 brew 'watch'
 brew 'watchman'
 brew 'wget'
+brew 'yarn'
 brew 'zlib'
 brew 'zsh'
 brew 'zsh-git-prompt'
