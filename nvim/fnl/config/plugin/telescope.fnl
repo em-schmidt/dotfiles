@@ -2,10 +2,14 @@
   {autoload {nvim aniseed.nvim
              util config.util}})
 
+(def telescope (require :telescope))
+
 (let [(ok? telescope) (pcall require :telescope)]
   (when ok?
 
-    (telescope.setup {})
+    (telescope.setup {:pickers {:buffers {:show_all_buffers true
+                                          :sort_lastused true
+                                          :mappings {:n {:x :delete_buffer}}}}})
 
     (util.lnnoremap :b "Telescope buffers")
     (util.lnnoremap :p "Telescope commands")
