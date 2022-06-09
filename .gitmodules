@@ -116,3 +116,6 @@
 	path = vim/pack/plugins/start/markdown-preview.nvim
 	url = https://github.com/iamcco/markdown-preview.nvim.git
 	ignore = dirty
+[submodule "vim/pack/plugins/start/vim-startify"]
+	path = vim/pack/plugins/start/vim-startify
+	url = https://github.com/mhinz/vim-startify.git

@@ -173,6 +173,9 @@ endif
 " markdown preview
 let g:mkdp_auto_start = 1
 
+" startify
+let g:startify_custom_header = []
+
 "status line
 set laststatus=2
 set ruler
