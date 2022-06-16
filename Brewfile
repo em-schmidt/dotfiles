@@ -55,7 +55,7 @@ brew 'terraform-ls'
 brew 'tfenv'
 brew 'tflint'
 brew 'tree'
-brew 'vim', link: false
+#brew 'vim', link: false
 brew 'watch'
 brew 'watchman'
 brew 'wget'
