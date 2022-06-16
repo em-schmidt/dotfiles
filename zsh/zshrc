@@ -4,14 +4,6 @@ export ZSH=$HOME/.dotfiles
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/workspace
 
-# Stash your environment variables in ~/.localrc. This means they'll stay out
-# of your main dotfiles repository (which may be public, like this one), but
-# you'll have access to them in your scripts.
-if [[ -a ~/.localrc ]]
-then
-  source ~/.localrc
-fi
-
 # all of our zsh files
 typeset -U config_files
 config_files=($ZSH/**/*.zsh)
@@ -74,3 +66,16 @@ PATH=$PATH:$HOME/workspace/bin:$HOME/.vim/pack/plugins/start/vim-iced/bin/
 autoload -U +X bashcompinit && bashcompinit
 
 eval "$(direnv hook zsh)"
+
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+source "$CROSSBEAM_CODE_DIR"/devops/bin/shell-utilities # RAZOR SHELL-UTILITIES
+
+
