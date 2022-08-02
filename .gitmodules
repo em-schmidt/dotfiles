@@ -119,3 +119,12 @@
 [submodule "vim/pack/plugins/start/vim-startify"]
 	path = vim/pack/plugins/start/vim-startify
 	url = https://github.com/mhinz/vim-startify.git
+[submodule "vim/pack/plugins/start/vim-jack-in"]
+	path = vim/pack/plugins/start/vim-jack-in
+	url = https://github.com/clojure-vim/vim-jack-in.git
+[submodule "vim/pack/plugins/start/vim-dispatch"]
+	path = vim/pack/plugins/start/vim-dispatch
+	url = https://github.com/tpope/vim-dispatch.git
+[submodule "nvim/pack/plugins/start/vim-dispatch-neovim"]
+	path = nvim/pack/plugins/start/vim-dispatch-neovim
+	url = https://github.com/radenling/vim-dispatch-neovim.git
