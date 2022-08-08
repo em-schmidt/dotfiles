@@ -1,10 +1,12 @@
 cask_args appdir: '/Applications'
 
 tap '1password/tap'
-tap 'homebrew/bundle'
-tap 'homebrew/cask-fonts'
 tap 'borkdude/brew'
 tap 'fluxcd/tap'
+tap 'homebrew/bundle'
+tap 'homebrew/cask-fonts'
+tap 'remotemobprogramming/brew'
+
 
 brew 'aspell'                               # for emacs
 brew 'awscli'
@@ -39,6 +41,7 @@ brew 'leiningen'
 brew 'libvterm'                            # for emacs
 brew 'lua-language-server'
 brew 'mas'
+brew 'mob'
 brew 'nvim'
 brew 'nvm'
 brew 'openjdk@11'
@@ -48,6 +51,7 @@ brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'pwgen'
 brew 'readline'
+brew 'mob'
 brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
 brew 'stern'
