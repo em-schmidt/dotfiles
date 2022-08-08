@@ -46,6 +46,7 @@ brew 'proselint'
 brew 'postgres'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
+brew 'pwgen'
 brew 'readline'
 brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
