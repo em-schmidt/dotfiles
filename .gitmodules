@@ -128,3 +128,6 @@
 [submodule "nvim/pack/plugins/start/vim-dispatch-neovim"]
 	path = nvim/pack/plugins/start/vim-dispatch-neovim
 	url = https://github.com/radenling/vim-dispatch-neovim.git
+[submodule "vim/pack/plugins/start/zprint.vim"]
+	path = vim/pack/plugins/start/zprint.vim
+	url = https://github.com/bfontaine/zprint.vim.git
