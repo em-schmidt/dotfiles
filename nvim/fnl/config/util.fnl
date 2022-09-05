@@ -1,6 +1,6 @@
 (module config.util
-  {autoload {nvim aniseed.nvim
-             a aniseed.core}})
+  {autoload {core aniseed.core
+             nvim aniseed.nvim}})
 
 (defn expand
   [path]
@@ -20,14 +20,31 @@
 
 (def config-path (nvim.fn.stdpath "config"))
 
+(defn insert-keymap
+  [from to]
+  (let [map-opts {:noremmap true}
+        to (.. ":" to "<cr>")]
+    (nvim.set_keymap :i from to map-opts)))
+
 (defn nnoremap
   [from to opts]
   (let [map-opts {:noremap true}
         to (.. ":" to "<cr>")]
-    (if (a.get opts :local?)
+    (if (core.get opts :local?)
       (nvim.buf_set_keymap 0 :n from to map-opts)
       (nvim.set_keymap :n from to map-opts))))
 
 (defn lnnoremap
   [from to]
   (nnoremap (.. "<leader>" from) to))
+
+(defn set-global-option
+  [key value]
+  "Sets a nvim global option"
+  (core.assoc nvim.o key value))
+
+(defn set-global-variable
+  [key value]
+  "Sets a nvim global variable"
+  (core.assoc nvim.g key value))
+

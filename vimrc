@@ -128,8 +128,6 @@ noremap <silent> <C-E> :call ToggleVExplorer()<CR>
 "terminals
 if has('nvim')
   autocmd TermClose * if !v:event.status | exe 'bdelete! '..expand('<abuf>') | endif
-  noremap <Leader>t :belowright split <bar> resize 12 <bar> terminal<cr>
-  noremap <Leader>T :tab terminal<cr>
 else
   noremap <Leader>t :belowright term ++close<cr>
   noremap <Leader>T :tab term ++close<cr>

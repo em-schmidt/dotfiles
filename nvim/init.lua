@@ -1,14 +1,24 @@
--- Attempting to do a merged vim/nvim config that preserves existing ~/.vimrc 
--- and adds nvim specific config as fennel, this is the bootstrap glue
--- inspiration: https://github.com/rafaeldelboni/nvim-fennel-lsp-conjure-as-clojure-ide
+local execute = vim.api.nvim_command
+local fn = vim.fn
 
-local opt = vim.opt
+local pack_path = fn.stdpath("data") .. "/site/pack"
+local fmt = string.format
 
-opt.runtimepath:prepend("~/.vim")
-opt.packpath:prepend("~/.vim")
-vim.cmd('source ~/.vimrc')
+function ensure (user, repo)
+  -- Ensures a given github.com/USER/REPO is cloned in the pack/packer/start directory.
+  local install_path = fmt("%s/packer/start/%s", pack_path, repo, repo)
+  if fn.empty(fn.glob(install_path)) > 0 then
+    execute(fmt("!git clone https://github.com/%s/%s %s", user, repo, install_path))
+    execute(fmt("packadd %s", repo))
+  end
+end
+
+-- Bootstrap essential plugins required for installing and loading the rest.
+ensure("wbthomason", "packer.nvim")
+ensure("Olical", "aniseed")
 
 vim.g["aniseed#env"] = {
   module = "config.init",
   compile = true
 }
+
