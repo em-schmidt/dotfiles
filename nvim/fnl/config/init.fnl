@@ -110,6 +110,7 @@
        :encoding "utf-8"
        :spelllang "en_us"
        :relativenumber true
+       :number true
        :ruler true
        :completeopt "menuone,noselect"
        :wildmenu true

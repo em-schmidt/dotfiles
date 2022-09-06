@@ -219,6 +219,11 @@ _G.packer_plugins = {
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/nvim-notify",
     url = "https://github.com/rcarriga/nvim-notify"
   },
+  ["nvim-solarized-lua"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/nvim-solarized-lua",
+    url = "https://github.com/ishan9299/nvim-solarized-lua"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -268,11 +273,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
-  },
-  ["startup.nvim"] = {
-    loaded = true,
-    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/startup.nvim",
-    url = "https://github.com/startup-nvim/startup.nvim"
   },
   ["telescope-env.nvim"] = {
     loaded = true,
@@ -373,6 +373,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-startify",
+    url = "https://github.com/mhinz/vim-startify"
   },
   ["vim-surround"] = {
     loaded = true,

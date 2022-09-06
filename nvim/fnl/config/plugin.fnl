@@ -39,10 +39,7 @@
   :kyazdani42/nvim-web-devicons {:mod :web-devicons}
 
   ;; Startup screen
-  :startup-nvim/startup.nvim
-  {:requires [:nvim-telescope/telescope.nvim
-              :nvim-lua/plenary.nvim]
-  :mod :startup}
+  :mhinz/vim-startify {:mod :startify}
 
   ;; Pretty list for all your troubles
   :folke/trouble.nvim {:mod :trouble}
@@ -74,6 +71,7 @@
   :folke/tokyonight.nvim {}
 
   :overcache/NeoSolarized {}
+  :ishan9299/nvim-solarized-lua {}
 
   ;;;; status line
   :nvim-lualine/lualine.nvim
