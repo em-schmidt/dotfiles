@@ -175,8 +175,9 @@
    :mod :treesitter}
 
   ;; lsp
-  :williamboman/mason.nvim {:mod :mason}
-  :neovim/nvim-lspconfig {:mod :lspconfig}
+  :neovim/nvim-lspconfig {:requires [:williamboman/mason.nvim
+                                     :williamboman/mason-lspconfig.nvim]
+                          :mod :lspconfig}
 
   ; snippets
   :L3MON4D3/LuaSnip {:requires [:saadparwaiz1/cmp_luasnip]}

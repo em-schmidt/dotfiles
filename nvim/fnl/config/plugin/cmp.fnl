@@ -18,6 +18,7 @@
   [{:name :nvim_lsp}
    {:name :conjure}
    {:name :buffer}
+   {:name :cmdline}
    {:name :vsnip}
    {:name :luasnip}])
 
@@ -54,14 +55,7 @@
                       }
 
             :snippet {:expand (fn [args] (luasnip.lsp_expand args.body))}
-            :sources [
-                      {:name :conjure}
-                      {:name :nvim_lsp}
-                      {:name :buffer}
-                      {:name :cmdline}
-                      {:name :luasnip}
-                      {:name :path}
-                    ]
+            :sources cmp-srcs
           })
 
 (cmp.setup.cmdline :/ {:mapping (cmp.mapping.preset.cmdline)
