@@ -189,15 +189,15 @@
 
 ;; Enable highlighting of evaluated forms, requires highlight API in Neovim 0.5+.
 ;; Default: `false`
-;; (set nvim.g.conjure#highlight#enabled true)
+(set nvim.g.conjure#highlight#enabled true)
 
 ;; Syntax group to highlight forms
 ;; Default: `"IncSearch"`
-;; (set nvim.g.conjure#highlight#group "IncSearch")
+(set nvim.g.conjure#highlight#group "IncSearch")
 
 ;; Highlight duration in milliseconds
 ;; Default: `500`
-;; (set nvim.g.conjure#highlight#timeout 500)
+(set nvim.g.conjure#highlight#timeout 500)
 
 ;; Width of HUD as percentage of the editor width
 ;; A float between 0.0 and 1.0.
@@ -211,7 +211,7 @@
 
 ;; Display HUD
 ;; Default: `true`
-(set nvim.g.conjure#log#hud#enabled false)
+(set nvim.g.conjure#log#hud#enabled true)
 
 ;; Delay closing HUD passively (milliseconds) e.g. after cursor move
 ;; Default: `0` - closes HUD instantly
@@ -362,7 +362,7 @@
 ;; Start "auto-repl" process, eg. babashka
 ;; when Conjure unable to find candidate REPL process via to an existing nREPL connection
 ;; Default: `true`
-(set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled false)
+(set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#enabled true)
 
 ;; Hide auto-repl buffer when triggered, to avoid the need to interact with that buffer
 ;; Default: `false`
@@ -370,7 +370,7 @@
 
 ;; Command to start the auto-repl
 ;; Default: `"bb nrepl-server localhost:8794"`
-(set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#cmd nil)
+;; (set nvim.g.conjure#client#clojure#nrepl#connection#auto_repl#cmd nil)
 
 ;; REPL port and file name to write port number for the auto-repl
 ;; File deleted on auto-repl exit if port in file is same as auto-repl port
@@ -384,7 +384,7 @@
 
 ;; Print raw evaluation result, suppressing prefix for stdout lines `; (out)`
 ;; Default: `false`
-(set nvim.g.conjure#client#clojure#nrepl#eval#raw_out true)
+;; (set nvim.g.conjure#client#clojure#nrepl#eval#raw_out true)
 
 ;; A hard limit on the number of bytes printed for each value.
 ;; Default: `nil`
@@ -403,7 +403,7 @@
 ;; Automatically require namespace of new buffer or current buffer after connection
 ;; Ensures buffers are loaded, required code to compile and (re)loadable.
 ;; Default: `true`
-(set nvim.g.conjure#client#clojure#nrepl#eval#auto_require false)
+;; (set nvim.g.conjure#client#clojure#nrepl#eval#auto_require false)
 
 ;; Maximum depth of evaluation result with pretty printer. Elide output after number of lines.
 ;; Set it to `false` to disable this limit.

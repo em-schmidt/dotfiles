@@ -13,7 +13,10 @@
                 :tele_tabby {:use_highlighter false}
                 :packer {}
                 :project {}}
-   :pickers {:find-files {:find-command ["rg" "--files" "--iglob" "!.git"]}}})
+   :pickers {:find-files {:find-command ["rg" "--files" "--iglob" "!.git"]}
+             :buffers {:show_all_buffers true
+                       :sort_lastused true
+                       :mappings {:n {:x :delete_buffer}}}}})
 
 ;; Load Extensions
 (telescope.load_extension "env")
