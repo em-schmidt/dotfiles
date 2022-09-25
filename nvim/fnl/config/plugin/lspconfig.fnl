@@ -72,7 +72,7 @@
 
   (mason.setup)
   (mason-lspconfig.setup
-    { :automatic_installation true
+    {:automatic_installation true
      :ensure_installed [
                         "tflint"
                         "jsonls"
@@ -81,7 +81,7 @@
                         ]})
 
   ;; Clojure LSP Server setup
-  (lspconfig.clojure_lsp.setup 
+  (lspconfig.clojure_lsp.setup
     {:on_attach on_attach
      :handlers handlers
      :capabilities capabilities})
@@ -96,9 +96,17 @@
      :handlers handlers
      :capabilities capabilities})
 
+  (lspconfig.tflint.setup 
+    {:on_attach on_attach
+     :handlers handlers
+     :capabilities capabilities})
+
   )
 
 (comment
+  (def servername "clojure_lsp")
+  (lspconfig.servername.setup {:on_attach on_attach})
+
     (mason-lspconfig.get_installed_servers)
     (mason-lspconfig.get_available_servers)
     (map :gd "lua vim.lsp.buf.definition()")

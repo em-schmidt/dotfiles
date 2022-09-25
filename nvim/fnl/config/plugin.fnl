@@ -159,6 +159,9 @@
   ;; :tpope/vim-commentary {}
   :terrortylor/nvim-comment {:mod :nvim-comment}
 
+  ;; formatting
+  :bfontaine/zprint.vim {}
+
   ;; Database Client :DB
   :tpope/vim-dadbod {}
   :tpope/vim-dispatch {}
