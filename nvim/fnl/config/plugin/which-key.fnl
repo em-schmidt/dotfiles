@@ -17,6 +17,7 @@
    :n {:name "Narrow/Numbers"}
    :o {:name "User Bindings"}
    :p {:name "Projects"}
+   :P {:name "Package Management"}
    :q {:name "Quit"}
    :t {:name "Tabs"}
    :T {:name "Toggle"}

@@ -62,6 +62,8 @@
 (util.lnnoremap :Pi "PackerInstall")
 (util.lnnoremap :Ps "PackerSync")
 (util.lnnoremap :Pu "PackerUpdate")
+(util.lnnoremap :Ptu "TSUpdate")
+(util.lnnoremap :Pti "TSInstallInfo")
 
 ;; Treesitter parsers update
 (util.lnnoremap :Ptu "TSUpdate")
