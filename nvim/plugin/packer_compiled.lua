@@ -389,6 +389,11 @@ _G.packer_plugins = {
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
   },
+  ["vim-terraform"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-terraform",
+    url = "https://github.com/hashivim/vim-terraform"
+  },
   ["vim-unimpaired"] = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-unimpaired",

@@ -143,6 +143,12 @@
   ;; Markdown
   :ixru/nvim-markdown {}
 
+        
+  ;; ---------------------
+  ;; hashicorp/terraform
+
+  :hashivim/vim-terraform {}
+
   ;; ---------------------
   ;; LISP related features
 
@@ -152,7 +158,7 @@
   :Olical/conjure {:mod :conjure}
 
   ;; sexp and vim-style editing
-  ;; :guns/vim-sexp {:mod :sexp}
+  :guns/vim-sexp {:mod :sexp}
   :windwp/nvim-autopairs {:mod :autopairs}
 
   :tpope/vim-abolish {}

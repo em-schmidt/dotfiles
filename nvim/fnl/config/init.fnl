@@ -105,6 +105,9 @@
 
 (nvim.ex.autocmd "FocusGained,BufEnter" "*" ":checktime")
 
+;; override shitwidth for some file types.
+(nvim.ex.autocmd "BufNewFile,BufRead" "*.html,*.js,*.json,*.tf,*.tfvars,*.vue,*.scss,*.css" "setlocal shiftwidth=2")
+
 (nvim.ex.set :nowrap)
 
 (let [options
@@ -123,6 +126,8 @@
        :list false
        :listchars (str.join "," ["tab:▶-" "trail:•" "extends:»" "precedes:«"])
        :expandtab true
+       :shiftwidth 4
+       :tabstop 4
        :splitbelow true
        :splitright true
        :hlsearch true

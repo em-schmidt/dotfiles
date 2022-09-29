@@ -5,7 +5,8 @@
 ;; https://github.com/folke/trouble.nvim
 
 (trouble.setup
- {:auto_preview false}) ;; fixes error on TroubleToggle
+ {:auto_preview true
+  :mode :document_diagnostics}) ;; attempt to fix error on TroubleToggle
 
 (util.lnnoremap :et "TroubleToggle")
 

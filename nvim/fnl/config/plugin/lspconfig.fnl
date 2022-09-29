@@ -94,7 +94,8 @@
   (lspconfig.terraformls.setup 
     {:on_attach on_attach
      :handlers handlers
-     :capabilities capabilities})
+     :capabilities capabilities
+     :init_options {:experimentalFeatures {:prefillRequiredFields true}}})
 
   (lspconfig.tflint.setup 
     {:on_attach on_attach

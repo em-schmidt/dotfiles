@@ -13,7 +13,8 @@
    :h {:name "Help"}
    :i {:name "Insertion"}
    :j {:name "Jump"}
-   :l {:name "Layouts"}
+   :l {:name "LSP"}
+   :L {:name "Layouts"}
    :n {:name "Narrow/Numbers"}
    :o {:name "User Bindings"}
    :p {:name "Projects"}

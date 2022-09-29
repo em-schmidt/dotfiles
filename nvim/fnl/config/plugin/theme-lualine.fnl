@@ -6,11 +6,11 @@
 
 ;; Icon for LSP session
 (defn lsp_connection []
-  (if (vim.tbl_isempty (vim.lsp.buf_get_clients 0)) "" ""))
+  (if (vim.tbl_isempty (vim.lsp.buf_get_clients 0)) "" ""))
 
 
 (lualine.setup
-  {:options {:theme :newpaper
+  {:options {:theme :auto
              :icons_enabled true
              :section_separators ["" ""]
              :component_separators ["" ""]}

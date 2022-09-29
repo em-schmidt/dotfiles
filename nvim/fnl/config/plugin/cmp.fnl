@@ -47,11 +47,16 @@
                       :<tab> (cmp.mapping (fn [fallback]
                                             (if (cmp.visible)
                                               (cmp.select_next_item)
-                                              (fallback))))
+                                              (luasnip.expand_or_jumpable) (luasnip.expand_or_jump)
+                                              (has-words-before) (cmp.complete)
+                                              :else (fallback)))
+                                          {1 :i 2 :s})
                       :<s-tab> (cmp.mapping (fn [fallback]
                                             (if (cmp.visible)
                                               (cmp.select_prev_item)
-                                              (fallback))))
+                                              (luasnip.jumpable -1) (luasnip.jump -1)
+                                              :else (fallback)))
+                                            {1 :i 2 :s})
                       }
 
             :snippet {:expand (fn [args] (luasnip.lsp_expand args.body))}
