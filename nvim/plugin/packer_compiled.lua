@@ -369,6 +369,11 @@ _G.packer_plugins = {
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-repeat",
     url = "https://github.com/tpope/vim-repeat"
   },
+  ["vim-sexp"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-sexp",
+    url = "https://github.com/guns/vim-sexp"
+  },
   ["vim-sexp-mappings-for-regular-people"] = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/vim-sexp-mappings-for-regular-people",

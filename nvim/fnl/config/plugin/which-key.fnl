@@ -18,7 +18,9 @@
    :n {:name "Narrow/Numbers"}
    :o {:name "User Bindings"}
    :p {:name "Projects"}
-   :P {:name "Package Management"}
+   :P {:name "Package Management"
+       :m [":Mason<cr>" "Language Support"]
+       :t {:name "TreeSitter"}}
    :q {:name "Quit"}
    :t {:name "Tabs"}
    :T {:name "Toggle"}

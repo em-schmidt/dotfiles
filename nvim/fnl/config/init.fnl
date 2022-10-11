@@ -126,8 +126,8 @@
        :list false
        :listchars (str.join "," ["tab:▶-" "trail:•" "extends:»" "precedes:«"])
        :expandtab true
-       :shiftwidth 4
-       :tabstop 4
+       :shiftwidth 2
+       :tabstop 2
        :splitbelow true
        :splitright true
        :hlsearch true

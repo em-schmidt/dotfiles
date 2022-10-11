@@ -8,6 +8,7 @@ tap 'homebrew/cask-fonts'
 tap 'remotemobprogramming/brew'
 
 
+brew 'age'                                  # used by sops
 brew 'aspell'                               # for emacs
 brew 'awscli'
 brew 'azure-cli'
@@ -54,6 +55,7 @@ brew 'readline'
 brew 'mob'
 brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
+brew 'sops'
 brew 'stern'
 brew 'svn'
 brew 'terraform-ls'
