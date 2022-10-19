@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/aniseed",
     url = "https://github.com/Olical/aniseed"
   },
+  ["b64.nvim"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/b64.nvim",
+    url = "https://github.com/taybart/b64.nvim"
+  },
   ["clojure.vim"] = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/clojure.vim",

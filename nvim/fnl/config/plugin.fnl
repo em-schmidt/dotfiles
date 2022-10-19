@@ -149,6 +149,9 @@
 
   :hashivim/vim-terraform {}
 
+  ;; base64 encode/decode
+  :taybart/b64.nvim {}
+
   ;; ---------------------
   ;; LISP related features
 
