@@ -51,6 +51,9 @@
   :folke/todo-comments.nvim
   {:requires [:nvim-lua/plenary.nvim]
    :mod :todocomments}
+  
+  ;; MacOS auto-switch dark mode
+  :f-person/auto-dark-mode.nvim {:mod :auto-dark-mode}
 
   ;; Newspaper - subtle light and dark themes
   :yorik1984/newpaper.nvim {:mod :theme-newpaper}
