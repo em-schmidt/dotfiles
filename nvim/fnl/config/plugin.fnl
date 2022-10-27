@@ -34,6 +34,8 @@
   ;;;; Menu system & Neovim control
   :folke/which-key.nvim {:mod :which-key}
 
+  :rcarriga/nvim-notify {:mod :notify}
+
   ;;;; themes and icons
   ;; Development related icons
   :kyazdani42/nvim-web-devicons {:mod :web-devicons}
@@ -55,7 +57,7 @@
   ;; MacOS auto-switch dark mode
   :f-person/auto-dark-mode.nvim {:mod :auto-dark-mode}
 
-  ;; Newspaper - subtle light and dark themes
+  ;; Newpaper - subtle light and dark themes
   :yorik1984/newpaper.nvim {:mod :theme-newpaper}
 
   ;; Gruvbox theme with treesitter support

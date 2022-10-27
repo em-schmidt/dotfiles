@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/aniseed",
     url = "https://github.com/Olical/aniseed"
   },
+  ["auto-dark-mode.nvim"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/auto-dark-mode.nvim",
+    url = "https://github.com/f-person/auto-dark-mode.nvim"
+  },
   ["b64.nvim"] = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/b64.nvim",
@@ -193,6 +198,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/eric/.local/share/nvim/site/pack/packer/start/newpaper.nvim",
     url = "https://github.com/yorik1984/newpaper.nvim"
+  },
+  ["noice.nvim"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/noice.nvim",
+    url = "https://github.com/folke/noice.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/eric/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
   },
   ["numb.nvim"] = {
     loaded = true,

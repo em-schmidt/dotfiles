@@ -8,19 +8,18 @@
 (set nvim.o.pumheight 5) ; popup menu height (completions, etc)
 
 (def- cmp-src-menu-items
-  {:buffer "buff"
-   :conjure "conj"
+  {
    :nvim_lsp "lsp"
-   :vsnip "vsnp"
+   :conjure "conj"
+   :buffer "buff"
    :luasnip "lsnp"})
 
 (def- cmp-srcs
   [{:name :nvim_lsp}
    {:name :conjure}
    {:name :buffer}
-   {:name :cmdline}
-   {:name :vsnip}
-   {:name :luasnip}])
+   {:name :luasnip}
+   ])
 
 (fn has-words-before []
   (let [(line col) (unpack (vim.api.nvim_win_get_cursor 0))]
@@ -33,9 +32,9 @@
             :formatting {:fields [:abbr :kind :menu]
                          :format (lspkind.cmp_format {:maxwidth 50
                                                       :menu {
-                                                             :buffer (..  "[" "Buffer" "]")
-                                                             :conjure (.. "[" "Conjure" "]")
                                                              :nvim_lsp (.. "[" "LSP" "]")
+                                                             :conjure (.. "[" "Conjure" "]")
+                                                             :buffer (..  "[" "Buffer" "]")
                                                              }
                                                       :mode :symbol
                                                       })}
@@ -45,11 +44,9 @@
                                                   :select true})
                       :<c-e> (cmp.mapping {:i (cmp.mapping.abort)})
                       :<tab> (cmp.mapping (fn [fallback]
-                                            (if (cmp.visible)
-                                              (cmp.select_next_item)
-                                              (luasnip.expand_or_jumpable) (luasnip.expand_or_jump)
-                                              (has-words-before) (cmp.complete)
-                                              :else (fallback)))
+                                            (if (cmp.visible) (cmp.select_next_item)
+                                                (luasnip.expand_or_jumpable) (luasnip.expand_or_jump)
+                                                :else (fallback)))
                                           {1 :i 2 :s})
                       :<s-tab> (cmp.mapping (fn [fallback]
                                             (if (cmp.visible)

@@ -86,18 +86,18 @@
      :handlers handlers
      :capabilities capabilities})
 
-  (lspconfig.jsonls.setup 
+  (lspconfig.jsonls.setup
     {:on_attach on_attach
      :handlers handlers
      :capabilities capabilities})
 
-  (lspconfig.terraformls.setup 
+  (lspconfig.terraformls.setup
     {:on_attach on_attach
      :handlers handlers
      :capabilities capabilities
      :init_options {:experimentalFeatures {:prefillRequiredFields true}}})
 
-  (lspconfig.tflint.setup 
+  (lspconfig.tflint.setup
     {:on_attach on_attach
      :handlers handlers
      :capabilities capabilities})

@@ -26,3 +26,4 @@
 (telescope.load_extension "project")
 (telescope.load_extension "tele_tabby")
 (telescope.load_extension "ui-select")
+(telescope.load_extension "notify")
