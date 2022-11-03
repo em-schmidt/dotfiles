@@ -61,6 +61,7 @@ brew 'svn'
 brew 'terraform-ls'
 brew 'tfenv'
 brew 'tflint'
+brew 'tmux'
 brew 'tree'
 brew 'unison'                              # for docker-sync
 #brew 'vim', link: false
