@@ -70,6 +70,10 @@
 ;; Treesitter parsers install status
 (util.lnnoremap :Pti "TSInstallInfo")
 
+;; toggles
+(util.lnnoremap :oe "TroubleToggle")
+(util.lnnoremap :of "NvimTreeToggle")
+
 ;; Quit
 (util.lnnoremap :qa "quitall")
 (util.lnnoremap :qq "quit")

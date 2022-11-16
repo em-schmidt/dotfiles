@@ -56,6 +56,7 @@ brew 'readline'
 brew 'mob'
 brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
+brew 'skopeo'
 brew 'sops'
 brew 'stern'
 brew 'svn'
