@@ -148,7 +148,6 @@
   ;; Markdown
   :ixru/nvim-markdown {}
 
-        
   ;; ---------------------
   ;; hashicorp/terraform
 
@@ -178,6 +177,7 @@
 
   ;; Database Client :DB
   :tpope/vim-dadbod {}
+
   :tpope/vim-dispatch {}
   :tpope/vim-fugitive {:mod :fugitive}
   :tpope/vim-repeat {}
@@ -195,6 +195,9 @@
   :neovim/nvim-lspconfig {:requires [:williamboman/mason.nvim
                                      :williamboman/mason-lspconfig.nvim]
                           :mod :lspconfig}
+
+  :SmiteshP/nvim-navic {:requires [:neovim/nvim-lspconfig]
+                        :mod :nvim-navic}
 
   ; snippets
   :L3MON4D3/LuaSnip {:requires [:saadparwaiz1/cmp_luasnip]}

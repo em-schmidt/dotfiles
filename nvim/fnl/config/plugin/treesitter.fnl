@@ -4,6 +4,8 @@
   (treesitter.setup
     {:ensure_installed ["clojure" "fennel" "markdown" "org" "hcl" "json"]
      :sync_intall true
+     :auto_install true
      :indent {:enable true}
      :highlight {:enable true
-                 :additional_vim_regex_hightlighting false}})
+                 :additional_vim_regex_hightlighting false}
+     :textobjects {:enable true}})

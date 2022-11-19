@@ -1,7 +1,10 @@
+#profiling
+#zmodload zsh/zprof
+
 # shortcut to this dotfiles path is $ZSH
 export ZSH=$HOME/.dotfiles
 
-# your project folder that we can `c [tab]` to
+# project folder that we can `c [tab]` to
 export PROJECTS=~/workspace
 
 # all of our zsh files
@@ -29,12 +32,21 @@ source ~/.dotfiles/nvm/nvm.zsh
 source ~/.dotfiles/java/jenv.zsh
 source ~/.dotfiles/java/java.zsh
 
-#AUTOENV_FILE_ENTER=.env
-#source ~/.dotfiles/zsh-autoenv/autoenv.zsh
+# initialize autocomplete
+autoload -Uz compinit
 
-# initialize autocomplete here, otherwise functions won't be loaded
-autoload -U compinit
-compinit
+
+# compile zcomdump if needed
+ZCOMPDUMP=${HOME}/.zcompdump
+if [ $(date +'%j') != $(/usr/bin/stat -f '%Sm' -t '%j' ${ZCOMPDUMP}) ]; then
+  compinit
+else
+  compinit -C
+fi
+
+if [[ -s "${ZCOMPDUMP}" && (! -s "${ZCOMPDUMP}.zwc" || "${ZCOMPDUMP}" -nt "${ZCOMPDUMP}.zwc")  ]]; then
+  zcomdump "${ZCOMPDUMP}"
+fi &!
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -63,10 +75,7 @@ bindkey -M vicmd '?' history-incremental-search-backward
 
 PATH=$PATH:$HOME/workspace/bin:$HOME/.vim/pack/plugins/start/vim-iced/bin/
 
-autoload -U +X bashcompinit && bashcompinit
-
 eval "$(direnv hook zsh)"
-
 
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
@@ -78,4 +87,5 @@ fi
 
 source "$CROSSBEAM_CODE_DIR"/devops/bin/shell-utilities # RAZOR SHELL-UTILITIES
 
-
+#profiling
+#zprof

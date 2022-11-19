@@ -35,3 +35,10 @@
     ~/.emacs.d:               emacs/spacemacs
     ~/.config/nvim:           nvim
 
+- shell:
+  -
+    command: zsh/update_completions.zsh
+    stdin: true
+    stdout: true
+    stderr: true
+    description: Update zsh autocompletions

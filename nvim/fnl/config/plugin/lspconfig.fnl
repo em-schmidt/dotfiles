@@ -1,6 +1,7 @@
 (module config.plugin.lspconfig
   {autoload {nvim aniseed.nvim
              mason mason
+             navic nvim-navic
              lspconfig lspconfig
              mason-lspconfig mason-lspconfig
              cmplsp cmp_nvim_lsp
@@ -52,6 +53,10 @@
       capabilities (cmplsp.default_capabilities (vim.lsp.protocol.make_client_capabilities))
       on_attach (fn [client bufnr]
                   (do
+                    (if client.server_capabilities.documentSymbolProvider
+                      (do
+                        (navic.attach client bufnr)
+                        ))
                     (nvim.buf_set_keymap bufnr :n :gd "<Cmd>lua vim.lsp.buf.definition()<CR>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :K "<Cmd>lua vim.lsp.buf.hover()<CR>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>ld "<Cmd>lua vim.lsp.buf.declaration()<CR>" {:noremap true})
