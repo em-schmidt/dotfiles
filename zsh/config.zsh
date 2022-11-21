@@ -1,5 +1,6 @@
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=true
+export PATH=${PATH}:/usr/local/bin
 
 fpath=($ZSH/zsh/functions $fpath)
 cdpath=($HOME/workspace)

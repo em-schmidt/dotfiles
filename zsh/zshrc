@@ -45,7 +45,7 @@ else
 fi
 
 if [[ -s "${ZCOMPDUMP}" && (! -s "${ZCOMPDUMP}.zwc" || "${ZCOMPDUMP}" -nt "${ZCOMPDUMP}.zwc")  ]]; then
-  zcomdump "${ZCOMPDUMP}"
+  zcompile "${ZCOMPDUMP}"
 fi &!
 
 # load every completion after autocomplete loads
