@@ -83,10 +83,16 @@
     {:requires [:kyazdani42/nvim-web-devicons]
       :mod :theme-lualine}
 
+  ;;  TODO: indent guides might be nice for yaml.
+  ;; indent guides 
+  ;;:lukas-reineke/indent-blankline.nvim
+  ;;  {:mod :indent}
+
   ;;;; Navigation
 
   ;; project management (lua plugin)
   :ahmedkhalf/project.nvim {:mod :project}
+  :GnikDroy/projections.nvim {:mod :projections}
 
   ;; peek at a line number
   :nacro90/numb.nvim {:mod :numb}

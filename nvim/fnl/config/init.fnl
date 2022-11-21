@@ -45,7 +45,6 @@
 (util.lnnoremap :f/ "Telescope live_grep")
 (util.lnnoremap :fb "Telescope file_browser")
 (util.lnnoremap :ff "Telescope find_files")
-(util.lnnoremap :fp "Telescope find_files")
 (util.lnnoremap :fs "write")
 (util.lnnoremap :fe "NvimTreeToggle")
 (util.lnnoremap :pt "TodoTelescope")
