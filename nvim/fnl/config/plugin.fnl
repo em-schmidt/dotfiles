@@ -53,7 +53,7 @@
   :folke/todo-comments.nvim
   {:requires [:nvim-lua/plenary.nvim]
    :mod :todocomments}
-  
+
   ;; MacOS auto-switch dark mode
   :f-person/auto-dark-mode.nvim {:mod :auto-dark-mode}
 
@@ -84,13 +84,12 @@
       :mod :theme-lualine}
 
   ;;  TODO: indent guides might be nice for yaml.
-  ;; indent guides 
   ;;:lukas-reineke/indent-blankline.nvim
   ;;  {:mod :indent}
 
   ;;;; Navigation
 
-  ;; project management (lua plugin)
+  ;; project management
   :ahmedkhalf/project.nvim {:mod :project}
   :GnikDroy/projections.nvim {:mod :projections}
 
@@ -120,6 +119,8 @@
 
   ;; Documentation
   :nvim-orgmode/orgmode {:mod :orgmode}
+
+  :epwalsh/obsidian.nvim {:mod :obsidian}
 
   ;;;; Version control
   ;; diff view
