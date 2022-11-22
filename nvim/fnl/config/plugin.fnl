@@ -144,6 +144,10 @@
               :sindrets/diffview.nvim]
    :mod :neogit}
 
+  ;; git blame virt text
+  :braxtons12/blame_line.nvim
+    {:mod :blame}
+
   ;; text alignment
   :junegunn/vim-easy-align {:mod :easy-align}
 
