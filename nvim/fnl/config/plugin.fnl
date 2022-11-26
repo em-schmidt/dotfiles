@@ -146,8 +146,8 @@
    :mod :neogit}
 
   ;; git blame virt text
-  :braxtons12/blame_line.nvim
-    {:mod :blame}
+  ;;:braxtons12/blame_line.nvim
+  ;;  {:mod :blame}
 
   ;; text alignment
   :junegunn/vim-easy-align {:mod :easy-align}
@@ -204,7 +204,8 @@
 
   ;; lsp
   :neovim/nvim-lspconfig {:requires [:williamboman/mason.nvim
-                                     :williamboman/mason-lspconfig.nvim]
+                                     :williamboman/mason-lspconfig.nvim
+                                     :gbrlsnchs/telescope-lsp-handlers.nvim]
                           :mod :lspconfig}
 
   :SmiteshP/nvim-navic {:requires [:neovim/nvim-lspconfig]

@@ -7,6 +7,7 @@
 (set nvim.g.conjure#log#wrap "true")
 (set nvim.g.conjure#log#fold#enabled "true")
 
+(nvim.ex.autocmd "BufNewFile" "conjure-log-*" "lua vim.diagnostic.disable(0)")
 
 ;; TODO: review conjure options
 

@@ -1,5 +1,6 @@
 (module config.plugin.gitsigns
-  {autoload {gitsigns gitsigns}})
+  {autoload {gitsigns gitsigns
+             util config.util}})
 
 ;; https://github.com/lewis6991/gitsigns.nvim
 
@@ -59,3 +60,5 @@
    :col 1}
 
   :yadm {:enable false}})
+
+(util.lnnoremap :gb "Gitsigns toggle_current_line_blame<cr>")

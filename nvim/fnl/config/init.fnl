@@ -1,7 +1,7 @@
 (module config.init
   {autoload {core aniseed.core
              nvim aniseed.nvim
-             util config.util
+            util config.util
              str aniseed.string}})
 
 ;; inspired by https://github.com/Olical/dotfiles
@@ -12,71 +12,68 @@
 (set nvim.g.maplocalleader ",")
 
 ;; tabs
-(util.lnnoremap :tt "Telescope tele_tabby list")
-(util.lnnoremap :td "tabclose")
-(util.lnnoremap :tn "tabnext")
-(util.lnnoremap :tp "tabprevious")
-(util.lnnoremap :to "tabonly") ;; Only show actie tab
-(util.lnnoremap :tm "tab sp") ;; Creates a new split as a tab
+(util.lnnoremap :tt "Telescope tele_tabby list" "list tabs")
+(util.lnnoremap :td "tabclose" "close current tab")
+(util.lnnoremap :tn "tabnext" "next tab")
+(util.lnnoremap :tN "tabnew" "New tab")
+(util.lnnoremap :tp "tabprevious" "previous tab")
+(util.lnnoremap :to "tabonly" "close other tab") 
+(util.lnnoremap :tm "tab sp" "open current buffer in new tab")
 
 ;; windows - movement
-(util.lnnoremap :wh "wincmd h")
-(util.lnnoremap :wj "wincmd j")
-(util.lnnoremap :wk "wincmd k")
-(util.lnnoremap :wl "wincmd l")
+(util.lnnoremap :wh "wincmd h" "window left")
+(util.lnnoremap :wj "wincmd j" "window down")
+(util.lnnoremap :wk "wincmd k" "widow up")
+(util.lnnoremap :wl "wincmd l" "window right")
 
 ;; windows - splits
-(util.lnnoremap :wm "only")
-(util.lnnoremap :wn "split")
-(util.lnnoremap :ws "split")
-(util.lnnoremap :wv "vsplit")
-(util.lnnoremap :w| "vsplit")
-(util.lnnoremap :wq "close")
+(util.lnnoremap :wm "only" "close other windows")
+(util.lnnoremap :wn "split" "split current window (down)")
+(util.lnnoremap :ws "split" "split current window (down)")
+(util.lnnoremap :wv "vsplit" "split current window (right)")
+(util.lnnoremap :w| "vsplit" "split current window (right)")
+(util.lnnoremap :wq "close" "close current window")
 
 ;; buffers
-(util.lnnoremap :<tab> "b#")
-(util.lnnoremap :ba "ball")
-(util.lnnoremap :bb "Telescope buffers")
-(util.lnnoremap :bd "bdelete")
-(util.lnnoremap :bn "bnext")
-(util.lnnoremap :bp "bprevious")
+(util.lnnoremap :<tab> "b#" 
+                "next buffer")
+(util.lnnoremap :ba "ball" "open all buffers")
+(util.lnnoremap :bb "Telescope buffers" "list buffers")
+(util.lnnoremap :bd "bdelete" "delete current buffer")
+(util.lnnoremap :bn "bnext" "next buffer")
+(util.lnnoremap :bp "bprevious" "previous buffer")
 
 ;; projects and files
-(util.lnnoremap :f/ "Telescope live_grep")
-(util.lnnoremap :fb "Telescope file_browser")
-(util.lnnoremap :ff "Telescope find_files")
+(util.lnnoremap :f/ "Telescope live_grep" "grep in workspace")
+(util.lnnoremap :fb "Telescope file_browser" "browse project")
+(util.lnnoremap :ff "Telescope find_files" "project files")
 (util.lnnoremap :fs "write")
-(util.lnnoremap :fe "NvimTreeToggle")
-(util.lnnoremap :pt "TodoTelescope")
+(util.lnnoremap :fe "NvimTreeToggle" "toggle file tree")
+(util.lnnoremap :pt "TodoTelescope" "project todos")
 
 ;; Help and documentation
-(util.lnnoremap :hh "Telescope help_tags")
+(util.lnnoremap :hh "Telescope help_tags" "vim help")
 
 ;; Colors and themes
-(util.lnnoremap :cs "Telescope colorscheme")
+(util.lnnoremap :cs "Telescope colorscheme" "select colorscheme")
 
 ;; Package Manager
 ;; list packages
-(util.lnnoremap :Pl "Telescope packer")
-(util.lnnoremap :Pi "PackerInstall")
-(util.lnnoremap :Ps "PackerSync")
-(util.lnnoremap :Pu "PackerUpdate")
-(util.lnnoremap :Ptu "TSUpdate")
-(util.lnnoremap :Pti "TSInstallInfo")
-
-;; Treesitter parsers update
-(util.lnnoremap :Ptu "TSUpdate")
-;; Treesitter parsers install status
-(util.lnnoremap :Pti "TSInstallInfo")
+(util.lnnoremap :Pl "Telescope packer" "show installed pacakges")
+(util.lnnoremap :Pi "PackerInstall" "install packages")
+(util.lnnoremap :Ps "PackerSync" "sync packages")
+(util.lnnoremap :Pu "PackerUpdate" "update packates")
+(util.lnnoremap :Ptu "TSUpdate" "update tree sitter parsers")
+(util.lnnoremap :Pti "TSInstallInfo" "show tree sitter info")
 
 ;; toggles
-(util.lnnoremap :oe "TroubleToggle")
-(util.lnnoremap :of "NvimTreeToggle")
+(util.lnnoremap :oe "TroubleToggle" "toggle error window")
+(util.lnnoremap :of "NvimTreeToggle" "toggle file tree")
 
 ;; Quit
-(util.lnnoremap :qa "quitall")
-(util.lnnoremap :qq "quit")
-(util.lnnoremap :qQ "quit!")
+(util.lnnoremap :qa "quitall" "quit all")
+(util.lnnoremap :qq "quit" "quit")
+(util.lnnoremap :qQ "quit!" "force quit")
 
 ;; Git Version control
 (util.lnnoremap :gd "DiffviewOpen")
@@ -127,6 +124,7 @@
        :smartcase true
        :clipboard "unnamedplus"
        :list false
+       :fillchars "vert:┃"
        :listchars (str.join "," ["tab:▶-" "trail:•" "extends:»" "precedes:«"])
        :expandtab true
        :shiftwidth 2
@@ -138,6 +136,8 @@
        }]
   (each [option value (pairs options)]
     (util.set-global-option option value)))
+
+(vim.cmd "highlight VertSplit guifg=fg")
 
 (require :config.core)
 (require :config.plugin)
