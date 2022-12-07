@@ -27,7 +27,7 @@
                                          :no_results_message "No sybols found"}
                                :call_hierarchy {:telescope {}
                                          :no_results_message "No calls found"}
-                               :code_action {:telescope (themes.get_dropdown {})
+                               :code_action {:telescope (themes.get_cursor {})
                                              :no_results_message "No code actions available"
                                              :prefix ""}
                                }
