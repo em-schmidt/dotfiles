@@ -61,4 +61,4 @@
 
   :yadm {:enable false}})
 
-(util.lnnoremap :gb "Gitsigns toggle_current_line_blame<cr>")
+(util.lnnoremap :gb "Gitsigns toggle_current_line_blame<cr>" "toggle git blame")

@@ -62,7 +62,7 @@
 (util.lnnoremap :Pl "Telescope packer" "show installed pacakges")
 (util.lnnoremap :Pi "PackerInstall" "install packages")
 (util.lnnoremap :Ps "PackerSync" "sync packages")
-(util.lnnoremap :Pu "PackerUpdate" "update packates")
+(util.lnnoremap :Pu "PackerUpdate" "update packages")
 (util.lnnoremap :Ptu "TSUpdate" "update tree sitter parsers")
 (util.lnnoremap :Pti "TSInstallInfo" "show tree sitter info")
 
