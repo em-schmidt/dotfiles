@@ -25,6 +25,12 @@
 (util.lnnoremap :wj "wincmd j" "window down")
 (util.lnnoremap :wk "wincmd k" "widow up")
 (util.lnnoremap :wl "wincmd l" "window right")
+(util.lnnoremap :w1 "1 wincmd w" "window 1")
+(util.lnnoremap :w2 "2 wincmd w" "window 2")
+(util.lnnoremap :w3 "3 wincmd w" "window 3")
+(util.lnnoremap :w4 "4 wincmd w" "window 4")
+(util.lnnoremap :w5 "5 wincmd w" "window 5")
+(util.lnnoremap :w6 "6 wincmd w" "window 6")
 
 ;; windows - splits
 (util.lnnoremap :wm "only" "close other windows")

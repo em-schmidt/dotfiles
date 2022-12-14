@@ -59,6 +59,7 @@ brew 'rust'                                 # for vim-clap
 brew 'skopeo'
 brew 'sops'
 brew 'stern'
+brew 'structurizr-cli'
 brew 'svn'
 brew 'terraform-ls'
 brew 'tfenv'
