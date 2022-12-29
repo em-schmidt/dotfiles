@@ -2,10 +2,7 @@ autoload colors && colors
 
 
 # git status prompt bits see: https://github.com/zsh-users/zsh/blob/master/Misc/vcs_info-examples
-#
-# TODO: further enhacements if needed to selectively run git commands for larer repos or automatic get fetch
-#       see the zsh-users link above around line 336
-#
+
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats " (%b|%m%c%u)"

@@ -3,3 +3,5 @@
 
 (notify.setup {})
 
+(set vim.notify notify)
+

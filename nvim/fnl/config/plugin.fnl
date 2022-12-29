@@ -57,20 +57,11 @@
   ;; MacOS auto-switch dark mode
   :f-person/auto-dark-mode.nvim {:mod :auto-dark-mode}
 
-  ;; Newpaper - subtle light and dark themes
-  :yorik1984/newpaper.nvim {:mod :theme-newpaper}
-
-  ;; Gruvbox theme with treesitter support
-  :luisiacc/gruvbox-baby {}
+  ;; Newpaper - subtle light and dark themes 
+  :yorik1984/newpaper.nvim {}
 
   ;; GitHub themes - dark and light variations configured in plugins/theme.fnl
   :projekt0n/github-nvim-theme {:mod :theme}
-
-  ;; Omni dark theme for Neovim - https://github.com/getomni/neovim
-  :getomni/neovim {}
-
-  ;; One dark & light theme for Neovim - https://github.com/disrupted/one.nvim
-  :disrupted/one.nvim {}
 
   ;;dark & light theme with wide plugin support
   :folke/tokyonight.nvim {}
@@ -110,7 +101,6 @@
               ;; Extensions
               :nvim-telescope/telescope-file-browser.nvim
               :LinArcX/telescope-env.nvim
-              :LinArcX/telescope-ports.nvim
               :nvim-telescope/telescope-packer.nvim
               :nvim-telescope/telescope-project.nvim
               :TC72/telescope-tele-tabby.nvim
@@ -132,22 +122,11 @@
   {:tag :release
    :mod :gitsigns}
 
-  ;; GitHub Issues and Pull Requests
-  :pwntester/octo.nvim
-  {:requires [:nvim-lua/plenary.nvim
-              :nvim-telescope/telescope.nvim
-              :kyazdani42/nvim-web-devicons]
-   :mod :octo}
-
   ;; magit style
   :TimUntersberger/neogit
   {:requires [:nvim-lua/plenary.nvim
               :sindrets/diffview.nvim]
    :mod :neogit}
-
-  ;; git blame virt text
-  ;;:braxtons12/blame_line.nvim
-  ;;  {:mod :blame}
 
   ;; text alignment
   :junegunn/vim-easy-align {:mod :easy-align}
@@ -185,9 +164,6 @@
 
   ;; formatting
   :bfontaine/zprint.vim {}
-
-  ;; Database Client :DB
-  :tpope/vim-dadbod {}
 
   :tpope/vim-dispatch {}
   :tpope/vim-fugitive {:mod :fugitive}
