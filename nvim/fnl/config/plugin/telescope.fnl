@@ -14,6 +14,7 @@
 (telescope.load_extension "tele_tabby")
 (telescope.load_extension "ui-select")
 (telescope.load_extension "notify")
+(telescope.load_extension "terraform_doc")
 
 (telescope.setup
   {:defaults {:file-ignore-patterns ["node_modules"]

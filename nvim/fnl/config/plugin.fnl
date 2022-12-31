@@ -74,12 +74,6 @@
     {:requires [:kyazdani42/nvim-web-devicons]
       :mod :theme-lualine}
 
-  ;;  TODO: indent guides might be nice for yaml.
-  ;;:lukas-reineke/indent-blankline.nvim
-  ;;  {:mod :indent}
-
-  ;;;; Navigation
-
   ;; project management
   :ahmedkhalf/project.nvim {:mod :project}
   :GnikDroy/projections.nvim {:mod :projections}
@@ -94,17 +88,19 @@
    :mod :nvim-tree}
 
   :nvim-telescope/telescope.nvim
-  {:requires [:nvim-lua/popup.nvim
-              :nvim-lua/plenary.nvim
-              :rcarriga/nvim-notify  ;; ports extension
-
+  {:requires [
               ;; Extensions
-              :nvim-telescope/telescope-file-browser.nvim
+              :ANGkeith/telescope-terraform-doc.nvim
               :LinArcX/telescope-env.nvim
+              :TC72/telescope-tele-tabby.nvim
+              :nvim-lua/plenary.nvim
+              :nvim-lua/popup.nvim
+              :nvim-telescope/telescope-file-browser.nvim
               :nvim-telescope/telescope-packer.nvim
               :nvim-telescope/telescope-project.nvim
-              :TC72/telescope-tele-tabby.nvim
-              :nvim-telescope/telescope-ui-select.nvim]
+              :nvim-telescope/telescope-ui-select.nvim
+              :rcarriga/nvim-notify
+              ]
    :mod :telescope}
 
   ;; Documentation
