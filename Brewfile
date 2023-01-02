@@ -39,6 +39,7 @@ brew 'kcat'
 brew 'kubeconform'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
+brew 'lazygit'
 brew 'leiningen'
 brew 'libvterm'                            # for emacs
 brew 'lua-language-server'

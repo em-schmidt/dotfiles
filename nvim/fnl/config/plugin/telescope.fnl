@@ -5,17 +5,6 @@
              themes telescope.themes
              }})
 
-;; Load Extensions
-(telescope.load_extension "env")
-(telescope.load_extension "file_browser")
-(telescope.load_extension "lsp_handlers")
-(telescope.load_extension "packer")
-(telescope.load_extension "project")
-(telescope.load_extension "tele_tabby")
-(telescope.load_extension "ui-select")
-(telescope.load_extension "notify")
-(telescope.load_extension "terraform_doc")
-
 (telescope.setup
   {:defaults {:file-ignore-patterns ["node_modules"]
               }
@@ -39,4 +28,16 @@
              :buffers {:show_all_buffers true
                        :sort_lastused true
                        :mappings {:n {:x :delete_buffer}}}}})
+
+;; Load Extensions
+(telescope.load_extension "env")
+(telescope.load_extension "file_browser")
+(telescope.load_extension "lsp_handlers")
+(telescope.load_extension "packer")
+(telescope.load_extension "project")
+(telescope.load_extension "tele_tabby")
+(telescope.load_extension "ui-select")
+(telescope.load_extension "notify")
+(telescope.load_extension "terraform_doc")
+
 

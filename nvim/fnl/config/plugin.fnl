@@ -36,6 +36,7 @@
 
   :rcarriga/nvim-notify {:mod :notify}
 
+  :stevearc/dressing.nvim {}
   ;;;; themes and icons
   ;; Development related icons
   :kyazdani42/nvim-web-devicons {:mod :web-devicons}
@@ -73,6 +74,9 @@
   :nvim-lualine/lualine.nvim
     {:requires [:kyazdani42/nvim-web-devicons]
       :mod :theme-lualine}
+
+  ;; terminal 
+  :akinsho/toggleterm.nvim {:mod :toggleterm}
 
   ;; project management
   :ahmedkhalf/project.nvim {:mod :project}
@@ -126,9 +130,6 @@
 
   ;; text alignment
   :junegunn/vim-easy-align {:mod :easy-align}
-
-  ;; multicursor selector
-  :mg979/vim-visual-multi {}
 
   ;; ----------------------
   ;; Markdown

@@ -31,8 +31,6 @@
     ~/.vim:
     ~/.gitignore:             git/gitignore
     ~/.gitconfig:             git/gitconfig
-    ~/.spacemacs:             emacs/dot-spacemacs
-    ~/.emacs.d:               emacs/spacemacs
     ~/.config/nvim:           nvim
 
 - shell:
