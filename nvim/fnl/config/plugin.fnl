@@ -80,7 +80,6 @@
 
   ;; project management
   :ahmedkhalf/project.nvim {:mod :project}
-  :GnikDroy/projections.nvim {:mod :projections}
 
   ;; peek at a line number
   :nacro90/numb.nvim {:mod :numb}
@@ -152,6 +151,7 @@
   :Olical/conjure {:mod :conjure}
 
   ;; sexp and vim-style editing
+  :gpanders/nvim-parinfer {}
   :guns/vim-sexp {:mod :sexp}
   :windwp/nvim-autopairs {:mod :autopairs}
 

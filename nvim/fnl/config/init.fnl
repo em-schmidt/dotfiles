@@ -20,6 +20,9 @@
 (util.lnnoremap :to "tabonly" "close other tab") 
 (util.lnnoremap :tm "tab sp" "open current buffer in new tab")
 
+;; terminal
+(util.lnnoremap :. "ToggleTerm" "toggle terminal")
+
 ;; windows - movement
 (util.lnnoremap :wh "wincmd h" "window left")
 (util.lnnoremap :wj "wincmd j" "window down")
@@ -56,6 +59,7 @@
 (util.lnnoremap :fs "write")
 (util.lnnoremap :fe "NvimTreeToggle" "toggle file tree")
 (util.lnnoremap :pt "TodoTelescope" "project todos")
+(util.lnnoremap :pp "lua require'telescope'.extensions.project.project{ display_type = 'full' }" "projects")
 
 ;; Help and documentation
 (util.lnnoremap :hh "Telescope help_tags" "vim help")

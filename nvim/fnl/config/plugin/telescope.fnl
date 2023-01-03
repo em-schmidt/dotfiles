@@ -23,7 +23,10 @@
                 :ui-select {1 (themes.get_dropdown {})}
                 :tele_tabby {:use_highlighter false}
                 :packer {}
-                :project {}}
+                :project {:base_dirs ["~/workspace"]
+                          :theme "dropdown"
+                          :order_by "recent"
+                          :sync_with_nvim_tree true}}
    :pickers {:find-files {:find-command ["rg" "--files" "--iglob" "!.git"]}
              :buffers {:show_all_buffers true
                        :sort_lastused true
@@ -39,5 +42,4 @@
 (telescope.load_extension "ui-select")
 (telescope.load_extension "notify")
 (telescope.load_extension "terraform_doc")
-
 

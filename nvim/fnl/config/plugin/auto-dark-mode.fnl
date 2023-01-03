@@ -12,7 +12,7 @@
 (defn- set-dark-mode
   []
   (vim.api.nvim_set_option :background "dark")
-  (vim.cmd "colorscheme NeoSolarized"))
+  (vim.cmd "colorscheme github_dark"))
 
 (adm.setup
  {:update_interval 1000
