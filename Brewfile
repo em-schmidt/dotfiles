@@ -116,6 +116,7 @@ cask 'prince'                 # installed for dendron to support PDF export
 cask 'transmit'
 #cask 'viscosity'             # nice openvpn client, not using it anymore
 cask 'visual-studio-code'
+cask 'zprint'                 # clojure formatter
 
 # mas "1Password 7", id: 1333542190   # 1password8
 mas "Navicat Premium Essentials", id: 1256997614
