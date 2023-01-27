@@ -102,8 +102,8 @@
               :nvim-telescope/telescope-packer.nvim
               :nvim-telescope/telescope-project.nvim
               :nvim-telescope/telescope-ui-select.nvim
-              :rcarriga/nvim-notify
-              ]
+              :rcarriga/nvim-notify]
+              
    :mod :telescope}
 
   ;; Documentation
@@ -118,8 +118,7 @@
    :mod :diffview}
 
   :lewis6991/gitsigns.nvim
-  {:tag :release
-   :mod :gitsigns}
+  {:mod :gitsigns}
 
   ;; magit style
   :TimUntersberger/neogit
@@ -194,6 +193,6 @@
                                 :hrsh7th/cmp-path
                                 :onsails/lspkind.nvim
                                 :PaterJason/cmp-conjure]
-                     :mod :cmp}
-  )
+                     :mod :cmp})
+  
 

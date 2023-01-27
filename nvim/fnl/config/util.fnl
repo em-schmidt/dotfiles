@@ -1,6 +1,5 @@
 (module config.util
   {autoload {core aniseed.core
-
              nvim aniseed.nvim}})
 
 (defn expand

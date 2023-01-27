@@ -53,10 +53,6 @@
       capabilities (cmplsp.default_capabilities (vim.lsp.protocol.make_client_capabilities))
       on_attach (fn [client bufnr]
                   (do
-                    (if client.server_capabilities.documentSymbolProvider
-                      (do
-                        (navic.attach client bufnr)
-                        ))
                     (nvim.buf_set_keymap bufnr :n :gd "<Cmd>lua vim.lsp.buf.definition()<CR>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :K "<Cmd>lua vim.lsp.buf.hover()<CR>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>ld "<cmd>lua vim.lsp.buf.declaration()<CR>" {:noremap true})
@@ -70,10 +66,12 @@
                     (nvim.buf_set_keymap bufnr :n :<leader>lk "<cmd>lua vim.diagnostic.goto_prev()<CR>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>la "<cmd>lua vim.lsp.buf.code_action()<CR>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :v :<leader>la "<cmd>lua vim.lsp.buf.range_code_action()<CR> " {:noremap true})
-                    ;telescope
                     (nvim.buf_set_keymap bufnr :n :<leader>lw ":lua require('telescope.builtin').lsp_workspace_diagnostics()<cr>" {:noremap true})
                     (nvim.buf_set_keymap bufnr :n :<leader>li ":lua require('telescope.builtin').lsp_implementations()<cr>" {:noremap true})
-                    (nvim.buf_set_keymap bufnr :n :<leader>lr ":lua require('telescope.builtin').lsp_references()<cr>" {:noremap true})))]
+                    (nvim.buf_set_keymap bufnr :n :<leader>lr ":lua require('telescope.builtin').lsp_references()<cr>" {:noremap true})
+                    (if client.server_capabilities.documentSymbolProvider
+                      (do
+                        (navic.attach client bufnr)))))]
 
   (mason.setup)
   (mason-lspconfig.setup
@@ -82,19 +80,18 @@
                         "tflint"
                         "jsonls"
                         "terraformls"
-                        "clojure_lsp"
-                        ]})
+                        "clojure_lsp"]})
 
-  ;; Clojure LSP Server setup
+    ;; Clojure LSP Server setup
   (lspconfig.clojure_lsp.setup
     {:on_attach on_attach
      :handlers handlers
      :capabilities capabilities})
 
   (lspconfig.jsonls.setup
-    {:on_attach on_attach
-     :handlers handlers
-     :capabilities capabilities})
+   {:on_attach on_attach
+    :handlers handlers
+    :capabilities capabilities})
 
   (lspconfig.terraformls.setup
     {:on_attach on_attach
@@ -114,25 +111,25 @@
      :settings
      { :yaml
       {:schemaStore { :enable :true
-                      :url    "https://www.schemastore.org/api/json/catalog.json" }
-        }}})
-  )
+                      :url    "https://www.schemastore.org/api/json/catalog.json"}}}}))
 
 (comment
   (def servername "clojure_lsp")
-  (lspconfig.servername.setup {:on_attach on_attach})
+  (servername lspconfig)
 
-    (mason-lspconfig.get_installed_servers)
-    (mason-lspconfig.get_available_servers)
-    (map :gd "lua vim.lsp.buf.definition()")
-    (map :gD "lua vim.lsp.buf.declaration()")
-    (map :gr "lua vim.lsp.buf.references()")
-    (map :gi "lua vim.lsp.buf.implementation()")
-    (map :K "lua vim.lsp.buf.hover()")
+  (: lspconfig servername.setup {:on_attach on_attach})
 
-    (map :<c-n> "lua vim.lsp.diagnostic.goto_next()")
-    (map :<c-p> "lua vim.lsp.diagnostic.goto_prev()")
+  (mason-lspconfig.get_installed_servers)
+  (mason-lspconfig.get_available_servers)
+  (map :gd "lua vim.lsp.buf.definition()")
+  (map :gD "lua vim.lsp.buf.declaration()")
+  (map :gr "lua vim.lsp.buf.references()")
+  (map :gi "lua vim.lsp.buf.implementation()")
+  (map :K "lua vim.lsp.buf.hover()")
 
-    (map :<leader>lf "lua vim.lsp.buf.formatting()")
-)
+  (map :<c-n> "lua vim.lsp.diagnostic.goto_next()")
+  (map :<c-p> "lua vim.lsp.diagnostic.goto_prev()")
+
+  (map :<leader>lf "lua vim.lsp.buf.formatting()"))
+
 
