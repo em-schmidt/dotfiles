@@ -20,3 +20,4 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 # Make VSCode Vim Mode sane
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+

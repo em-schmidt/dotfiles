@@ -57,7 +57,6 @@ brew 'readline'
 brew 'mob'
 brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
-brew 'skopeo'
 brew 'sops'
 brew 'stern'
 brew 'structurizr-cli'
@@ -112,6 +111,7 @@ cask 'kaleidoscope'
 cask 'notion'
 #cask 'obsidian'
 cask 'prince'                 # installed for dendron to support PDF export
+cask 'session-manager-plugin'  # aws sesssion manager plugin
 # cask 'steam'                # haven't played any steam games in awhile
 cask 'transmit'
 #cask 'viscosity'             # nice openvpn client, not using it anymore

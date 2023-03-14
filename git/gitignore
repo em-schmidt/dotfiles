@@ -3,3 +3,4 @@
 *.swp
 .lsp
 .clj-kondo
+.nrepl-port
