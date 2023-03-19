@@ -47,6 +47,7 @@ brew 'mas'
 brew 'mob'
 brew 'nvim'
 brew 'nvm'
+brew 'nvr'
 brew 'openjdk@11'
 brew 'proselint'
 brew 'postgresql@14'
@@ -110,13 +111,14 @@ cask 'iterm2'
 cask 'kaleidoscope'
 cask 'notion'
 #cask 'obsidian'
-cask 'prince'                 # installed for dendron to support PDF export
+cask 'prince'                  # installed for dendron to support PDF export
+cask 'rectangle'               # tile and snap windows
 cask 'session-manager-plugin'  # aws sesssion manager plugin
-# cask 'steam'                # haven't played any steam games in awhile
+# cask 'steam'                 # haven't played any steam games in awhile
 cask 'transmit'
-#cask 'viscosity'             # nice openvpn client, not using it anymore
+#cask 'viscosity'              # nice openvpn client, not using it anymore
 cask 'visual-studio-code'
-cask 'zprint'                 # clojure formatter
+cask 'zprint'                  # clojure formatter
 
 # mas "1Password 7", id: 1333542190   # 1password8
 mas "Navicat Premium Essentials", id: 1256997614
