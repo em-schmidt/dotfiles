@@ -142,8 +142,8 @@
        :splitbelow true
        :splitright true
        :hlsearch true
-       :signcolumn "number"
-       }]
+       :signcolumn "number"}]
+
   (each [option value (pairs options)]
     (util.set-global-option option value)))
 
