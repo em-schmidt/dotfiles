@@ -103,7 +103,6 @@
               :nvim-telescope/telescope-project.nvim
               :nvim-telescope/telescope-ui-select.nvim
               :rcarriga/nvim-notify]
-              
    :mod :telescope}
 
   ;; Documentation
