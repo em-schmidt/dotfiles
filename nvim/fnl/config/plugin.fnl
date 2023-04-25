@@ -75,6 +75,11 @@
     {:requires [:kyazdani42/nvim-web-devicons]
       :mod :theme-lualine}
 
+  ;; copilot
+  :zbirenbaum/copilot-cmp {:requires [:zbirenbaum/copilot.lua]
+                           :mod :copilot-cmp}
+  :zbirenbaum/copilot.lua {:mod :copilot}
+
   ;; terminal 
   :akinsho/toggleterm.nvim {:mod :toggleterm}
 

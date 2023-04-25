@@ -117,7 +117,7 @@
   (def servername "clojure_lsp")
   (servername lspconfig)
 
-  (: lspconfig servername.setup {:on_attach on_attach})
+  (:lspconfig servername.setup {:on_attach on_attach})
 
   (mason-lspconfig.get_installed_servers)
   (mason-lspconfig.get_available_servers)

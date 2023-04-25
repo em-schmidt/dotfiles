@@ -1,8 +1,6 @@
 (module config.plugin.theme
   {autoload {theme github-theme}})
 
-;; Theme variants: dark/dimmed/dark_default/dark_colorblind/light/light_default/light_colorblind
+(theme.setup {:options {:styles {:comments "italic"}}})
 
-(theme.setup {:options {:styles {:comments "italic"
-                                 :functions "NONE"
-                                 :variables "NONE"}}})
+(vim.cmd "colorscheme github_light_high_contrast")
