@@ -27,7 +27,8 @@
                                                              :nvim_lsp (.. "[" "LSP" "]")
                                                              :conjure (.. "[" "Conjure" "]")
                                                              :buffer (..  "[" "Buffer" "]")}
-                                                      :mode :symbol})}
+                                                      :mode :symbol
+                                                      :symbol_map {:Copilot ""}})}
             :mapping {
                       :<c-space> (cmp.mapping (cmp.mapping.complete {:i :c}))
                       :<cr> (cmp.mapping.confirm {:behvior cmp.ConfirmBehavior.Insert
