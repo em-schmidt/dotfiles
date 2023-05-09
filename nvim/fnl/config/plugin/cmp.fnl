@@ -19,7 +19,7 @@
     (and (not= col 0)
          (= (: (: (. (vim.api.nvim_buf_get_lines 0 (- line 1) line true) 1) :sub col col) :match "%s") nil))))
 
-(cmp.setup {:experimental {:ghost_text true}
+(cmp.setup {:experimental {:ghost_text {:hl_group :Comment}}
             :formatting {:fields [:abbr :kind :menu]
                          :format (lspkind.cmp_format {:maxwidth 50
                                                       :menu {
