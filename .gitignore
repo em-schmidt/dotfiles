@@ -1,4 +1,4 @@
 vim.symlink/.netrwhist
 Brewfile.lock.json
 nvim/lua/
-zsh/functions/
+zsh/functions/_*
