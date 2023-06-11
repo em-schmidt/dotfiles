@@ -6,7 +6,7 @@ tap 'fluxcd/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
 tap 'remotemobprogramming/brew'
-
+tap 'teamookla/speedtest'
 
 brew 'age'                                  # used by sops
 brew 'aspell'                               # for emacs
@@ -59,6 +59,7 @@ brew 'mob'
 brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
 brew 'sops'
+brew 'speedtest'
 brew 'stern'
 brew 'structurizr-cli'
 brew 'svn'
