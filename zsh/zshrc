@@ -85,7 +85,5 @@ then
   source ~/.localrc
 fi
 
-source "$CROSSBEAM_CODE_DIR"/devops/bin/shell-utilities # RAZOR SHELL-UTILITIES
-
 #profiling
 #zprof

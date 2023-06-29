@@ -79,6 +79,7 @@ brew 'zsh'
 brew 'zsh-git-prompt'
 
 cask 'amazon-chime'
+cask '1password'
 cask '1password-cli'
 cask 'arq'
 cask 'docker'
@@ -122,7 +123,6 @@ cask 'transmit'
 cask 'visual-studio-code'
 cask 'zprint'                  # clojure formatter
 
-# mas "1Password 7", id: 1333542190   # 1password8
 mas "Navicat Premium Essentials", id: 1256997614
 mas "OmniGraffle", id: 1142578753
 mas "Slack", id: 803453959
