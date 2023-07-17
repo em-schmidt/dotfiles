@@ -45,6 +45,7 @@ brew 'libvterm'                            # for emacs
 brew 'lua-language-server'
 brew 'mas'
 brew 'mob'
+brew 'mongodb-atlas-cli'
 brew 'nvim'
 brew 'nvm'
 brew 'nvr'
