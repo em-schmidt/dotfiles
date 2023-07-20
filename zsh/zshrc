@@ -77,6 +77,11 @@ PATH=$PATH:$HOME/workspace/bin
 
 eval "$(direnv hook zsh)"
 
+# SSH Agent remote
+if [ -z $SSH_TTY ]; then
+  SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+fi
+
 # Stash your environment variables in ~/.localrc. This means they'll stay out
 # of your main dotfiles repository (which may be public, like this one), but
 # you'll have access to them in your scripts.
@@ -84,6 +89,8 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
+
+source "$CROSSBEAM_CODE_DIR"/devops/bin/shell-utilities # RAZOR SHELL-UTILITIES
 
 #profiling
 #zprof
