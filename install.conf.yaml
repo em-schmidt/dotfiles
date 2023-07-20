@@ -24,6 +24,7 @@
 
 - create:
   - ~/.nvm
+  - ~/.ssh
 
 - link:
     ~/.zshrc: zsh/zshrc
@@ -32,6 +33,8 @@
     ~/.gitignore:             git/gitignore
     ~/.gitconfig:             git/gitconfig
     ~/.config/nvim:           nvim
+    ~/.ssh/rc:                ssh/rc
+    ~/.ssh/config:            ssh/config
 
 - shell:
   -
