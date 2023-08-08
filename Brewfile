@@ -37,6 +37,7 @@ brew 'jet'
 brew 'jq'
 brew 'jsonlint'
 brew 'kcat'
+brew 'krew'
 brew 'kubeconform'
 brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]

@@ -74,6 +74,8 @@ bindkey -M vicmd 'j' down-line-or-beginning-search # Down
 bindkey -M vicmd '?' history-incremental-search-backward
 
 PATH=$PATH:$HOME/workspace/bin
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
 
 eval "$(direnv hook zsh)"
 

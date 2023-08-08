@@ -149,7 +149,7 @@
   ;; LISP related features
 
   ;; repl tools
-  :clojure-vim/clojure.vim {}
+  ;;:clojure-vim/clojure.vim {}
   :clojure-vim/vim-jack-in {}
   :Olical/conjure {:mod :conjure}
 
@@ -163,7 +163,7 @@
   :terrortylor/nvim-comment {:mod :nvim-comment}
 
   ;; formatting
-  :bfontaine/zprint.vim {}
+  ;;:bfontaine/zprint.vim {}
 
   :tpope/vim-dispatch {}
   :tpope/vim-fugitive {:mod :fugitive}
