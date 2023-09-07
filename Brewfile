@@ -16,10 +16,12 @@ brew 'azure-cli'
 brew 'babashka'
 brew 'bzip2'
 brew 'cfssl'
+brew 'checkov'                              # IaC scanner/static analysis
 brew 'clj-kondo'                            # clojure linting
 brew 'clojure-lsp'
 brew 'cmake'
 brew 'coreutils'
+brew 'difftastic'
 brew 'direnv'
 brew 'fd'                                   #fast find (for nvim telescope)
 brew 'findutils'                            #for emacs
@@ -48,6 +50,7 @@ brew 'lua-language-server'
 brew 'mas'
 brew 'mob'
 brew 'mongodb-atlas-cli'
+brew 'mongosh'
 brew 'nvim'
 brew 'nvm'
 brew 'nvr'
@@ -83,6 +86,7 @@ brew 'zsh'
 brew 'zsh-git-prompt'
 
 cask 'amazon-chime'
+cask 'confluent-cli'
 cask '1password'
 cask '1password-cli'
 cask 'arq'

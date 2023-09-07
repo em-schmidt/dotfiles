@@ -53,19 +53,21 @@
    :unstaged  {:folded false}
    :staged    {:folded false}
    :stashes   {:folded true}
-   :unpulled  {:folded true}
-   :unmerged  {:folded false}
+   :unpulled  {:folded true
+               :hidden false}
+   :unmerged  {:folded false
+               :hidden false}
    :recent    {:folded true}}
 
   ;; override/add mappings
   :mappings {
     ;; modify status buffer mappings
-    :status {
+             :status {}}})
       ;; Adds a mapping with "B" as key that does the "BranchPopup" command
       ;; :B "BranchPopup"
       ;; Removes the default mapping of "s"
       ;; :s ""
-    }
-  }
- }
-)
+    
+  
+ 
+
