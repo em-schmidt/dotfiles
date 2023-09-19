@@ -8,6 +8,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'remotemobprogramming/brew'
 tap 'teamookla/speedtest'
+tap 'temporalio/tap'
 
 brew 'age'                                  # used by sops
 brew 'aspell'                               # for emacs
@@ -71,6 +72,7 @@ brew 'speedtest'
 brew 'stern'
 brew 'structurizr-cli'
 brew 'svn'
+brew 'temporalio/brew/tcld'                 # temporal CLI
 brew 'terraform-ls'
 brew 'tfenv'
 brew 'tflint'
