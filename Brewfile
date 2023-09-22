@@ -8,7 +8,7 @@ tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'remotemobprogramming/brew'
 tap 'teamookla/speedtest'
-tap 'temporalio/tap'
+tap 'temporalio/brew'
 
 brew 'age'                                  # used by sops
 brew 'aspell'                               # for emacs
