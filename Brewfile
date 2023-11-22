@@ -57,6 +57,7 @@ brew 'nvm'
 brew 'nvr'
 brew 'openjdk@11'
 brew 'parallel'
+brew 'pngpaste'                            # for nvim obsidian plugin
 brew 'proselint'
 brew 'postgresql@14'
 brew 'pgcli'
