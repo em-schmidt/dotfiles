@@ -28,6 +28,7 @@
 
 - link:
     ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
     ~/.vimrc:
     ~/.vim:
     ~/.gitignore:             git/gitignore
