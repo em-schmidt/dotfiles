@@ -7068,7 +7068,7 @@
 			<key>Columns</key>
 			<integer>120</integer>
 			<key>Command</key>
-			<string>ssh cb -t '/opt/homebrew/bin/tmux -CC new -A -s tmssh'</string>
+			<string>ssh cb -t  '/opt/homebrew/bin/tmux -CC new -A -s tmssh'</string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -7649,7 +7649,7 @@
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Shortcut</key>
-			<string></string>
+			<string>A</string>
 			<key>Silence Bell</key>
 			<false/>
 			<key>Sync Title</key>
