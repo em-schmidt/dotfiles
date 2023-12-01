@@ -1,5 +1,11 @@
 -- [nfnl] Compiled from lua/util.fnl by https://github.com/Olical/nfnl, do not edit.
 local fun = require("vendor.fun")
+local function set_vim_global(key, value)
+  return vim.api.nvim_set_var(key, value)
+end
+local function set_vim_option(key, value)
+  return vim.api.nvim_set_option(key, value)
+end
 local function nnoremap(keys, command, description)
   local map_opts = {noremap = true, desc = description}
   local to_command = (":" .. command .. "<cr>")
@@ -24,4 +30,4 @@ local function tx(...)
     return args
   end
 end
-return {tx = tx, lnnoremap = lnnoremap, nnoremap = nnoremap}
+return {tx = tx, lnnoremap = lnnoremap, nnoremap = nnoremap, set_vim_option = set_vim_option, set_vim_global = set_vim_global}

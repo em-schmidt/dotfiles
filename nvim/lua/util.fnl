@@ -1,6 +1,14 @@
 
 (local fun (require :vendor.fun))
 
+(fn set_vim_global
+  [key value]
+  (vim.api.nvim_set_var key value))
+
+(fn set_vim_option
+  [key value]
+  (vim.api.nvim_set_option key value))
+
 (fn nnoremap
   [keys command description]
   "normal mode keymap"
@@ -36,6 +44,8 @@
 {
  : tx
  : lnnoremap
- : nnoremap}
+ : nnoremap
+ : set_vim_option
+ : set_vim_global}
 
 
