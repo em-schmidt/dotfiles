@@ -17,11 +17,6 @@
 
 (vim.opt.rtp:prepend lazypath)
 
-(set vim.g.loaded_netrw 1) ;; for nvim-tree
-(set vim.g.loaded_netrwPlugin 1) ;; for nvim-tree
-(set vim.g.mapleader " ")
-(set vim.g.maplocalleader ",")
-
 (options.set_options)
 
 (mappings.create_keymaps)

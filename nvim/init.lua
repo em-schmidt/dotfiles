@@ -8,10 +8,6 @@ if not vim.loop.fs_stat(lazypath) then
 else
 end
 do end (vim.opt.rtp):prepend(lazypath)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-vim.g.mapleader = " "
-vim.g.maplocalleader = ","
 options.set_options()
 mappings.create_keymaps()
 local lazy = require("lazy")

@@ -30,11 +30,11 @@
                  :splitright true
                  :tabstop 2
                  :wildmenu true}]
+
+    (each [key value (pairs globals)]
+      (u.set_vim_global key value))
+
     (each [key value (pairs options)]
       (u.set_vim_option key value))))
-
-;; (set_options)
-
-;; once more into the breach dear friends once more or close the wall up with our english dead
 
 {: set_options}
