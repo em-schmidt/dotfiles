@@ -6,8 +6,8 @@
   (vim.api.nvim_set_var key value))
 
 (fn set_vim_option
-  [key value]
-  (vim.api.nvim_set_option key value))
+  [key value] 
+  (vim.api.nvim_set_option_value key value {}))
 
 (fn nnoremap
   [keys command description]

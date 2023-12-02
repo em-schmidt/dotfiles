@@ -4,7 +4,7 @@ local function set_vim_global(key, value)
   return vim.api.nvim_set_var(key, value)
 end
 local function set_vim_option(key, value)
-  return vim.api.nvim_set_option(key, value)
+  return vim.api.nvim_set_option_value(key, value, {})
 end
 local function nnoremap(keys, command, description)
   local map_opts = {noremap = true, desc = description}
