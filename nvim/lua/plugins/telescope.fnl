@@ -8,7 +8,7 @@
                    :nvim-telescope/telescope-ui-select.nvim
                    :nvim-telescope/telescope-project.nvim
                    :TC72/telescope-tele-tabby.nvim]
-                  
+
     :config (fn []
               (let [telescope (require :telescope)
                     themes (require :telescope.themes)]

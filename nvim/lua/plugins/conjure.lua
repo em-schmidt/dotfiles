@@ -1,6 +1,10 @@
 -- [nfnl] Compiled from lua/plugins/conjure.fnl by https://github.com/Olical/nfnl, do not edit.
 local u = require("util")
 local function _1_()
+  local function _2_()
+    return vim.diagnostic.disable(0)
+  end
+  vim.api.nvim_create_autocmd("BufNewFile", {group = vim.api.nvim_create_augroup("conjure_log_disable_lsp", {clear = true}), pattern = "conjure-log-*", callback = _2_, desc = "Conjure Log disable LSP diagnostics"})
   vim.g["conjure#eval#result_register"] = "*"
   vim.g["conjure#log#botright"] = true
   vim.g["conjure#log#wrap"] = true
