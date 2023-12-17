@@ -12,5 +12,5 @@
                 :view {:adaptive_size true}
                 :renderer {:group_empty true}
                 :filters {:dotfiles true
-                          :custom [".lua$"]}}))})]
+                          :custom ["\\.lua$"]}}))})]
 
