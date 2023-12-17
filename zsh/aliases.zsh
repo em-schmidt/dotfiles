@@ -5,3 +5,8 @@ alias k=kubectl
 alias kg='kubectl get'
 #alias vi=nvim
 
+alias portal='bb -cp `clojure -Spath -M:portal/cli` -m portal.main'
+alias edn='portal edn'
+alias json='portal json'
+alias transit='portal transit'
+alias yaml='portal yaml'
