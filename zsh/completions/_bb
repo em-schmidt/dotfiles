@@ -1,0 +1,7 @@
+#compdef _bb_tasks bb
+_bb_tasks() {
+    local matches=(`bb tasks |tail -n +3 |cut -f1 -d ' '`)
+    compadd -a matches
+    _files 
+}
+compdef _bb_tasks bb

@@ -1,4 +1,4 @@
-fpath=(${ZSH}/zsh/functions ${BREWPATH}/share/zsh/site-functions $fpath )
+fpath=(${ZSH}/zsh/functions ${BREWPATH}/share/zsh/site-functions $fpath)
 #
 # initialize autocomplete
 #
@@ -24,10 +24,20 @@ zstyle ':completion:*' group-name ''
 # pasting with tabs doesn't perform completion
 zstyle ':completion:*' insert-tab pending
 
-
 autoload -U compinit 
 compinit
 
 source ${BREWPATH}/share/zsh/site-functions/aws_zsh_completer.sh
 
+completions=($ZSH/zsh/functions/_*)
+for completion in $completions
+do
+    source $completion
+done
+
+completions=($ZSH/zsh/completions/_*)
+for completion in $completions
+do
+    source $completion
+done
 

@@ -7,13 +7,13 @@ echo " - kubectl" \
   && test -x $(which kubectl) \
   && kubectl completion zsh > ${COMPDIR}/_kubectl
 
-echo " - kubectx" \
-  && test -x $(which kubectx) \
-  && curl -s https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubectx.zsh > ${COMPDIR}/_kubectx
+#echo " - kubectx" \
+#  && test -x $(which kubectx) \
+#  && curl -s https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubectx.zsh > ${COMPDIR}/_kubectx
 
-echo " - kubens" \
-  && test -x $(which kubens) \
-  && curl -s https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubens.zsh > ${COMPDIR}/_kubens
+#echo " - kubens" \
+#  && test -x $(which kubens) \
+#  && curl -s https://raw.githubusercontent.com/ahmetb/kubectx/master/completion/_kubens.zsh > ${COMPDIR}/_kubens
 
 echo " - flux" \
   && test -x $(which flux) \
