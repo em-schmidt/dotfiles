@@ -2,6 +2,7 @@ cask_args appdir: '/Applications'
 
 tap '1password/tap'
 tap 'borkdude/brew'
+tap 'babashka/brew'
 tap 'fluxcd/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask-fonts'
@@ -15,6 +16,7 @@ brew 'aspell'                               # for emacs
 brew 'awscli'
 brew 'azure-cli'
 brew 'babashka'
+brew 'babashka/brew/bbin'
 brew 'bzip2'
 brew 'cfssl'
 brew 'checkov'                              # IaC scanner/static analysis
