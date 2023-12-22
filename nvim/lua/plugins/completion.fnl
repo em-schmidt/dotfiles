@@ -24,11 +24,6 @@
                (cmp.setup {:experimental {:ghost_text {:hl_group :Comment}}
                            :formatting {:fields [:abbr :kind :menu]
                                         :format (lspkind.cmp_format {:maxwidth 50
-                                                                     :menu {
-                                                                            :copilot (.. "[" "Copilot" "]")
-                                                                            :nvim_lsp (.. "[" "LSP" "]")
-                                                                            :conjure (.. "[" "Conjure" "]")
-                                                                            :buffer (.. "[" "Buffer" "]")}
                                                                      :mode :symbol
                                                                      :symbol_map {:Copilot ""}})}
                            :mapping {
