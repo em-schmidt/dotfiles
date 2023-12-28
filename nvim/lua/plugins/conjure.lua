@@ -5,7 +5,7 @@ local function _1_()
     return vim.diagnostic.disable(0)
   end
   vim.api.nvim_create_autocmd("BufNewFile", {group = vim.api.nvim_create_augroup("conjure_log_disable_lsp", {clear = true}), pattern = "conjure-log-*", callback = _2_, desc = "Conjure Log disable LSP diagnostics"})
-  vim.g["conjure#eval#result_register"] = "*"
+  do end (vim.g)["conjure#eval#result_register"] = "*"
   vim.g["conjure#log#botright"] = true
   vim.g["conjure#log#wrap"] = true
   vim.g["conjure#log#fold#enabled"] = true
@@ -13,9 +13,9 @@ local function _1_()
   vim.g["conjure#highlight#enabled"] = true
   vim.g["conjure#highlight#group"] = "IncSearch"
   vim.g["conjure#highlight#timeout"] = 500
-  vim.g["conjure#log#hud#width"] = 1
+  vim.g["conjure#log#hud#width"] = 0.6
   vim.g["conjure#log#hud#enabled"] = true
-  vim.g["conjure#log#hud#anchor"] = "SE"
+  vim.g["conjure#log#hud#anchor"] = "NE"
   vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = true
   vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true
   vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
