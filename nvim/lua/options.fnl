@@ -9,6 +9,7 @@
         options {:termguicolors true
                  :signcolumn "auto:2"
                  :clipboard "unnamedplus"
+                 :conceallevel 2
                  :completeopt "menu,menuone,noselect"
                  :encoding "utf-8"
                  :expandtab true

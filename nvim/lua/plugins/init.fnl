@@ -34,7 +34,7 @@
  ;; 
  ;; lisp - repl
  ;;
- (u.tx :clojure-vim/vim-jack-in)
+ ;;(u.tx :clojure-vim/vim-jack-in)
 
  (u.tx :windwp/nvim-autopairs
    {:event "InsertEnter"
