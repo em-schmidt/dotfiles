@@ -24,6 +24,7 @@
             (tset vim.g "conjure#log#hud#width" .6)
             (tset vim.g "conjure#log#hud#enabled" true)
             (tset vim.g "conjure#log#hud#anchor" "NE")
+            (tset vim.g "conjure#client#clojure#nrepl#connection#auto_repl#cmd" "bb -Sdeps '{:deps {djblue/portal {:mvn/version \"0.51.1\"}}}' nrepl-server localhost:$port")
             (tset vim.g "conjure#client#clojure#nrepl#connection#auto_repl#enabled" true)
             (tset vim.g "conjure#client#clojure#nrepl#connection#auto_repl#hidden" true)
             (tset vim.g "conjure#client#clojure#nrepl#test#runner" "kaocha")

@@ -16,6 +16,7 @@ local function _1_()
   vim.g["conjure#log#hud#width"] = 0.6
   vim.g["conjure#log#hud#enabled"] = true
   vim.g["conjure#log#hud#anchor"] = "NE"
+  vim.g["conjure#client#clojure#nrepl#connection#auto_repl#cmd"] = "bb -Sdeps '{:deps {djblue/portal {:mvn/version \"0.51.1\"}}}' nrepl-server localhost:$port"
   vim.g["conjure#client#clojure#nrepl#connection#auto_repl#enabled"] = true
   vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true
   vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
