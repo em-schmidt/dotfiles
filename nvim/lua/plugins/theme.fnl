@@ -36,7 +36,7 @@
                       :lualine_c [[:branch]
                                   [:diff]]
                       :lualine_x [[:diagnostics]]
-                      :lualine_y [[:filetype :progress]]
+                      :lualine_y [[:filetype] [:progress]]
                       :lualine_z [(u.tx :location 
                                         {:separator {:right ""} 
                                          :left_padding 1})]}}})]
