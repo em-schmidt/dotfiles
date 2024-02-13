@@ -5,7 +5,7 @@
   {:lazy false
    :priority 1000
    :config (fn []
-             (. (require "github-theme") :setup)
+            (. (require "github-theme") :setup)
             (vim.cmd "colorscheme github_light"))})
 
  (u.tx
@@ -26,19 +26,19 @@
  (u.tx :nvim-lualine/lualine.nvim
    {:dependencies [:nvim-tree/nvim-web-devicons]
     :opts {:options {:theme :auto
-                     :component_separators ""
-                     :section_separators ""}
-           :sections {:lualine_a [[:mode {:upper true}]]
+                     :component_separators "|"
+                     :section_separators {:left "" :right ""}}
+           :sections {:lualine_a [(u.tx :mode 
+                                        {:separator {:left ""} 
+                                         :right_padding 1})]
                       :lualine_b [[:filename {:filestatus true
                                               :path 1}]]
                       :lualine_c [[:branch]
                                   [:diff]]
                       :lualine_x [[:diagnostics]]
-                      :lualine_y [[:location]]
-                      :lualine_z [[:filetype]]}}})]
-
-
- 
-
+                      :lualine_y [[:filetype :progress]]
+                      :lualine_z [(u.tx :location 
+                                        {:separator {:right ""} 
+                                         :left_padding 1})]}}})]
 
 
