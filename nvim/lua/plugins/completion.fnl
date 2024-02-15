@@ -29,7 +29,7 @@
                (cmp.setup {:experimental {:ghost_text {:hl_group :Comment}}
                            :formatting {:fields [:abbr :kind :menu]
                                         :format (lspkind.cmp_format {:maxwidth 50
-                                                                     :mode :symbol
+                                                                     :mode :symbol_text
                                                                      :symbol_map {:Copilot ""}})}
                            :mapping {
                                      :<c-space> (cmp.mapping (cmp.mapping.complete))
@@ -40,20 +40,21 @@
                                                            (if (cmp.visible) (cmp.select_next_item)
                                                                (luasnip.expand_or_jumpable) (luasnip.expand_or_jump)
                                                                (has-words-before-cursor?) (cmp.complete)
-                                                               :else (fallback)))
+                                                               (fallback)))
                                                         {1 :i 2 :s}) 
                                      :<s-tab> (cmp.mapping (fn [fallback]
-                                                             (if (cmp.visible)
-                                                                 (cmp.select_prev_item)
+                                                             (if (cmp.visible) (cmp.select_prev_item)
                                                                  (luasnip.jumpable -1) (luasnip.jump -1)
-                                                                 :else (fallback)))
+                                                                 (fallback)))
                                                           {1 :i 2 :s})}
                            :snippet {:expand (fn [args] (luasnip.lsp_expand args.body))}
                            :sources (cmp.config.sources [{:name :nvim_lsp}
+                                                         {:name :luasnip}
                                                          {:name :copilot}
                                                          {:name :conjure}
-                                                         {:name :buffer}
-                                                         {:name :luasnip}])})
+                                                         {:name :buffer}])
+                           :window {:completion (cmp.config.window.bordered)
+                                    :documentation (cmp.config.window.bordered)}})
 
                (cmp.setup.cmdline [:/ :?] {:mapping (cmp.mapping.preset.cmdline)
                                             :sources [{:name :buffer}]})

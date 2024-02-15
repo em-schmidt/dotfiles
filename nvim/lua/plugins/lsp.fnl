@@ -1,10 +1,10 @@
 (local u (require :util))
 
 [(u.tx :neovim/nvim-lspconfig
-   {:dependencies [:williamboman/mason.nvim
-                   :williamboman/mason-lspconfig.nvim
-                   :hrsh7th/cmp-nvim-lsp
-                   :SmiteshP/nvim-navic]
+  {:dependencies [:williamboman/mason.nvim
+                  :williamboman/mason-lspconfig.nvim
+                  :hrsh7th/cmp-nvim-lsp
+                  :SmiteshP/nvim-navic]
     :config (fn []
               (let [cmp_nvim_lsp (require :cmp_nvim_lsp)
                     capabilites (cmp_nvim_lsp.default_capabilities (vim.lsp.protocol.make_client_capabilities))
@@ -49,4 +49,5 @@
                 (mason-lspconfig.setup_handlers
                   {1 (fn [servername]
                        ((. (. (require :lspconfig) servername) :setup) (ls-configs servername)))})))})]
+
 

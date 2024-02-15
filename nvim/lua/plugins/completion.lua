@@ -22,10 +22,8 @@ local function _2_()
       return luasnip.expand_or_jump()
     elseif has_words_before_cursor_3f() then
       return cmp.complete()
-    elseif "else" then
-      return fallback()
     else
-      return nil
+      return fallback()
     end
   end
   local function _6_(fallback)
@@ -33,16 +31,14 @@ local function _2_()
       return cmp.select_prev_item()
     elseif luasnip.jumpable(-1) then
       return luasnip.jump(-1)
-    elseif "else" then
-      return fallback()
     else
-      return nil
+      return fallback()
     end
   end
   local function _8_(args)
     return luasnip.lsp_expand(args.body)
   end
-  cmp.setup({experimental = {ghost_text = {hl_group = "Comment"}}, formatting = {fields = {"abbr", "kind", "menu"}, format = lspkind.cmp_format({maxwidth = 50, mode = "symbol", symbol_map = {Copilot = "\239\132\147"}})}, mapping = {["<c-space>"] = cmp.mapping(cmp.mapping.complete()), ["<cr>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Insert, select = true}), ["<c-e>"] = cmp.mapping({i = cmp.mapping.abort()}), ["<tab>"] = cmp.mapping(_4_, {"i", "s"}), ["<s-tab>"] = cmp.mapping(_6_, {"i", "s"})}, snippet = {expand = _8_}, sources = cmp.config.sources({{name = "nvim_lsp"}, {name = "copilot"}, {name = "conjure"}, {name = "buffer"}, {name = "luasnip"}})})
+  cmp.setup({experimental = {ghost_text = {hl_group = "Comment"}}, formatting = {fields = {"abbr", "kind", "menu"}, format = lspkind.cmp_format({maxwidth = 50, mode = "symbol_text", symbol_map = {Copilot = "\239\132\147"}})}, mapping = {["<c-space>"] = cmp.mapping(cmp.mapping.complete()), ["<cr>"] = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Insert, select = true}), ["<c-e>"] = cmp.mapping({i = cmp.mapping.abort()}), ["<tab>"] = cmp.mapping(_4_, {"i", "s"}), ["<s-tab>"] = cmp.mapping(_6_, {"i", "s"})}, snippet = {expand = _8_}, sources = cmp.config.sources({{name = "nvim_lsp"}, {name = "luasnip"}, {name = "copilot"}, {name = "conjure"}, {name = "buffer"}}), window = {completion = cmp.config.window.bordered(), documentation = cmp.config.window.bordered()}})
   cmp.setup.cmdline({"/", "?"}, {mapping = cmp.mapping.preset.cmdline(), sources = {{name = "buffer"}}})
   return cmp.setup.cmdline(":", {mapping = cmp.mapping.preset.cmdline(), sources = cmp.config.sources({{name = "path"}, {name = "cmdline"}})})
 end
