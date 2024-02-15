@@ -4,10 +4,11 @@
   {:dependencies [:williamboman/mason.nvim
                   :williamboman/mason-lspconfig.nvim
                   :hrsh7th/cmp-nvim-lsp
-                  :SmiteshP/nvim-navic]
+                  :SmiteshP/nvim-navic
+                  :Afourcat/treesitter-terraform-doc.nvim]
     :config (fn []
               (let [cmp_nvim_lsp (require :cmp_nvim_lsp)
-                    capabilites (cmp_nvim_lsp.default_capabilities (vim.lsp.protocol.make_client_capabilities))
+                    capabilities (cmp_nvim_lsp.default_capabilities (vim.lsp.protocol.make_client_capabilities))
                     mason (require :mason)
                     mason-lspconfig (require :mason-lspconfig)
                     navic (require :nvim-navic)
@@ -30,13 +31,7 @@
                                   (vim.api.nvim_buf_set_keymap bufnr :n :<leader>li ":lua require('telescope.builtin').lsp_implementations()<cr>" {:noremap true :desc "implementations (telescope)"}) 
                                   (vim.api.nvim_buf_set_keymap bufnr :n :<leader>lr ":lua require('telescope.builtin').lsp_references()<cr>" {:noremap true :desc "references (telescope)"}) 
                                   (if client.server_capabilities.documentSymbolProvider
-                                      (do (navic.attach client bufnr)))))
-                    ls-configs (fn [server]
-                                 (let [settings {:fennel_language_server {:fennel {:diagnostics {:globals [:vim]}}}
-                                                 :terraformls {:experimentalFeatures {:prefillRequiredFields true}}}]
-                                   {:capabilites capabilites
-                                    :on_attach on_attach
-                                    :settings (. settings server)}))]
+                                      (do (navic.attach client bufnr)))))]
                 (mason.setup)
                 (mason-lspconfig.setup 
                   {:automatic_installation true
@@ -47,7 +42,23 @@
                                       "fennel_language_server"
                                       "clojure_lsp"]})
                 (mason-lspconfig.setup_handlers
-                  {1 (fn [servername]
-                       ((. (. (require :lspconfig) servername) :setup) (ls-configs servername)))})))})]
-
-
+                  {1 
+                   (fn [servername]
+                     ((. (. (require :lspconfig) servername) :setup) 
+                      {:capabilities capabilities
+                       :on_attach on_attach}))
+                   :fennel_language_server 
+                   (fn []
+                     ((. (. (require :lspconfig) :fennel_language_server) :setup) 
+                      {:capabilities capabilities
+                       :on_attach on_attach
+                       :settings {:fennel {:diagnostics {:globals [:vim]}}}}))
+                   :terraformls
+                   (fn [] 
+                     ((. (. (require :lspconfig) :terraformls ) :setup) 
+                      {:capabilities capabilities
+                       :settings {:experimentalFeatures {:preFillRequiredFields true}}
+                       :on_attach (fn [client bufnr] 
+                                    (on_attach client bufnr)
+                                    ((. (require :treesitter-terraform-doc) :setup) {:command_name :OpenTerraformDoc})
+                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>K "<cmd>OpenTerraformDoc<cr>" {:noremap true :desc "terraform documentation"}))}))})))})] 

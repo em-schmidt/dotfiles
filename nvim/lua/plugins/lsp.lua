@@ -2,7 +2,7 @@
 local u = require("util")
 local function _1_()
   local cmp_nvim_lsp = require("cmp_nvim_lsp")
-  local capabilites = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
+  local capabilities = cmp_nvim_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
   local mason = require("mason")
   local mason_lspconfig = require("mason-lspconfig")
   local navic = require("nvim-navic")
@@ -31,17 +31,22 @@ local function _1_()
     end
   end
   on_attach = _2_
-  local ls_configs
-  local function _4_(server)
-    local settings = {fennel_language_server = {fennel = {diagnostics = {globals = {"vim"}}}}, terraformls = {experimentalFeatures = {prefillRequiredFields = true}}}
-    return {capabilites = capabilites, on_attach = on_attach, settings = settings[server]}
-  end
-  ls_configs = _4_
   mason.setup()
   mason_lspconfig.setup({automatic_installation = true, ensure_installed = {"tflint", "jsonls", "terraformls", "fennel_language_server", "clojure_lsp"}})
-  local function _5_(servername)
-    return ((require("lspconfig"))[servername]).setup(ls_configs(servername))
+  local function _4_(servername)
+    return ((require("lspconfig"))[servername]).setup({capabilities = capabilities, on_attach = on_attach})
   end
-  return mason_lspconfig.setup_handlers({_5_})
+  local function _5_()
+    return ((require("lspconfig")).fennel_language_server).setup({capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim"}}}}})
+  end
+  local function _6_()
+    local function _7_(client, bufnr)
+      on_attach(client, bufnr)
+      do end (require("treesitter-terraform-doc")).setup({command_name = "OpenTerraformDoc"})
+      return vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>K", "<cmd>OpenTerraformDoc<cr>", {noremap = true, desc = "terraform documentation"})
+    end
+    return ((require("lspconfig")).terraformls).setup({capabilities = capabilities, settings = {experimentalFeatures = {preFillRequiredFields = true}}, on_attach = _7_})
+  end
+  return mason_lspconfig.setup_handlers({_4_, fennel_language_server = _5_, terraformls = _6_})
 end
-return {u.tx("neovim/nvim-lspconfig", {dependencies = {"williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "SmiteshP/nvim-navic"}, config = _1_})}
+return {u.tx("neovim/nvim-lspconfig", {dependencies = {"williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "SmiteshP/nvim-navic", "Afourcat/treesitter-terraform-doc.nvim"}, config = _1_})}
