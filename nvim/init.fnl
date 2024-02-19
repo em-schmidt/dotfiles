@@ -5,6 +5,7 @@
 (local lazypath (.. packpath "/lazy.nvim"))
 (local mappings (require :mappings))
 (local options (require :options))
+(local commands (require :commands))
 
 (if (not (vim.loop.fs_stat lazypath))
     (vim.fn.system [
@@ -19,7 +20,10 @@
 
 (options.set_options)
 
+(commands.register_commands)
+
 (mappings.create_keymaps)
+
 
 (local lazy (require "lazy")) 
 
