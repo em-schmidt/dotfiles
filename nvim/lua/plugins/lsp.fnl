@@ -64,5 +64,6 @@
                                     ((. (require :treesitter-terraform-doc) :setup) {:command_name :OpenTerraformDoc})
                                     (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>td "<cmd>OpenTerraformDoc<cr>" {:noremap true :desc "terraform documentation"}) 
                                     (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ta "<cmd>TermExec cmd='terraform apply'<cr>" {:noremap true :desc "terraform apply"}) 
+                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ti "<cmd>TermExec cmd='terraform init'<cr>" {:noremap true :desc "terraform init"}) 
                                     (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>tp "<cmd>TermExec cmd='terraform plan'<cr>" {:noremap true :desc "terraform plan"}) 
                                     (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>tv "<cmd>TermExec cmd='terraform validate'<cr>" {:noremap true :desc "terraform validate"}))}))})))})] 
