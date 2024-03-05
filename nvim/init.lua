@@ -11,6 +11,6 @@ end
 do end (vim.opt.rtp):prepend(lazypath)
 options.set_options()
 commands.register_commands()
-mappings.create_keymaps()
 local lazy = require("lazy")
-return lazy.setup("plugins")
+lazy.setup("plugins")
+return mappings.create_keymaps()

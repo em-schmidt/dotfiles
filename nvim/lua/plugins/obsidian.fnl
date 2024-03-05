@@ -11,5 +11,13 @@
           :attachments {:img_folder "assets/images"}
           :daily_notes {:folder "daily"
                         :date_format "%Y.%m.%d"
-                        :template nil}}})]
+                        :template nil}
+          :sort_by :modified
+          :sort_reversed true
+          :open_notes_in :vsplit
+          :external_link_icon {:char ""
+                               :hl_group "ObsidianExtLinkIcon"}
+          :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}})]
+
+          
 

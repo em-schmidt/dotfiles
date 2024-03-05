@@ -57,8 +57,8 @@
                    (fn [] 
                      ((. (. (require :lspconfig) :terraformls ) :setup) 
                       {:capabilities capabilities
-                       :settings {:terraform {:experimentalFeatures {:preFillRequiredFields true
-                                                                      :validateOnSave true}}}
+                       :init_options {:experimentalFeatures {:prefillRequiredFields true
+                                                             :validateOnSave true}}
                        :on_attach (fn [client bufnr] 
                                     (on_attach client bufnr)
                                     ((. (require :treesitter-terraform-doc) :setup) {:command_name :OpenTerraformDoc})

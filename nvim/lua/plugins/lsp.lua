@@ -49,7 +49,7 @@ local function _1_()
       vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tp", "<cmd>TermExec cmd='terraform plan'<cr>", {noremap = true, desc = "terraform plan"})
       return vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tv", "<cmd>TermExec cmd='terraform validate'<cr>", {noremap = true, desc = "terraform validate"})
     end
-    return ((require("lspconfig")).terraformls).setup({capabilities = capabilities, settings = {terraform = {experimentalFeatures = {preFillRequiredFields = true, validateOnSave = true}}}, on_attach = _7_})
+    return ((require("lspconfig")).terraformls).setup({capabilities = capabilities, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _7_})
   end
   return mason_lspconfig.setup_handlers({_4_, fennel_language_server = _5_, terraformls = _6_})
 end

@@ -4,15 +4,6 @@
   []
   "apply the keymaps"
 
-  ;; tabs
-  (u.lnnoremap :tt "Telescope tele_tabby list" "list tabs")
-  (u.lnnoremap :td "tabclose" "close current tab")
-  (u.lnnoremap :tn "tabnext" "next tab")
-  (u.lnnoremap :tN "tabnew" "New tab")
-  (u.lnnoremap :tp "tabprevious" "previous tab")
-  (u.lnnoremap :to "tabonly" "close other tab") 
-  (u.lnnoremap :tm "tab sp" "open current buffer in new tab")
-
   ;;terminal
   (u.lnnoremap :. "ToggleTerm" "toggle terminal")
   (vim.keymap.set :t :<esc><esc> "<c-\\><c-n>" {:noremap true})

@@ -22,10 +22,11 @@
 
 (commands.register_commands)
 
-(mappings.create_keymaps)
 
 
 (local lazy (require "lazy")) 
 
 ;; loads all plugin definitions in lua/plugins
 (lazy.setup :plugins)
+
+(mappings.create_keymaps)
