@@ -36,7 +36,9 @@
               (wk.register {:g {:name "git"
                                 :b ["<cmd>Gitsigns toggle_current_line_blame<cr>" "toggle git blame"]
                                 :s ["<cmd>Telescope git_status<cr>" "git status"]
-                                :l ["<cmd>Telescope git_commits<cr>" "git log"]}
+                                :l ["<cmd>Telescope git_commits<cr>" "git log"]
+                                :p ["<cmd>Git pull<cr>" "git pull"]
+                                :P ["<cmd>Git push<cr>" "git push"]}
                             :prefix "<leader>"})
 
               (wk.register {:l {:name "lsp"}
