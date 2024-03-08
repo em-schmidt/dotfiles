@@ -25,7 +25,8 @@
 
  (u.tx :nvim-lualine/lualine.nvim
    {:dependencies [:nvim-tree/nvim-web-devicons]
-    :opts {:options {:theme :auto
+    :opts {:extensions ["nvim-tree" "toggleterm" "trouble" "fugitive"]
+           :options {:theme :auto
                      :component_separators "|"
                      :section_separators {:left "" :right ""}}
            :sections {:lualine_a [(u.tx :mode 
