@@ -25,7 +25,7 @@
     :opts {}})
 
  (u.tx :akinsho/toggleterm.nvim
-   {:opts {:winbar {:enabled true}}})
+   {:opts {}})
 
  (u.tx :ahmedkhalf/project.nvim
    {:config (fn []
