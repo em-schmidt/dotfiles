@@ -44,6 +44,12 @@
               (wk.register {:l {:name "lsp"}
                             :prefix "<leader>"})
 
+              (wk.register {:n {:name "notes"
+                                :n ["<cmd>ObsidianQuickSwitch<cr>" "note picker"]
+                                :t ["<cmd>ObsidianToday<cr>" "today's note"]
+                                :T ["<cmd>vimgrep /- \\[ \\]/ **/* | Trouble quickfix<cr>" "unchecked todos"]}
+                            :prefix "<leader>"})
+
               (wk.register {:p {:name "projects"
                                 :t ["<cmd>TodoTelescope<cr>" "project todos"]
                                 :p ["<cmd>lua require'telescope'.extensions.project.project{ display_type = 'full' }<cr>" "project switcher"]}

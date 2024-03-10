@@ -3,7 +3,7 @@
 [(u.tx
   :epwalsh/obsidian.nvim
   {:version "*"
-   :lazy true
+   :lazy false
    :ft :markdown
    :dependencies [:nvim-lua/plenary.nvim]
    :opts {:workspaces [{:name "notes"
@@ -17,7 +17,6 @@
           :open_notes_in :vsplit
           :external_link_icon {:char ""
                                :hl_group "ObsidianExtLinkIcon"}
+          :follow_url_func (fn [url] (vim.fn.jobstart ["open" url]))
           :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}})]
-
-          
 

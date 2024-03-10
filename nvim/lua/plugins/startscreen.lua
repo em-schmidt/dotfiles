@@ -2,7 +2,7 @@
 local u = require("util")
 local function _1_()
   local dashboard = require("alpha.themes.dashboard")
-  local buttons = {type = "group", val = {{type = "text", val = "Quick Actions", opts = {hl = "Bold", position = "center"}}, {type = "padding", val = 1}, dashboard.button("e", "\239\133\155  New file", "<cmd>ene<cr>"), dashboard.button("SPC f f", "\243\176\136\158  Find file"), dashboard.button("SPC f /", "\243\176\138\132  Live grep"), dashboard.button("c", "\238\152\149  Configuration", "<cmd>cd ~/.config/nvim/ <cr>"), dashboard.button("u", "\239\132\185  Update plugins", "<cmd>Lazy sync<cr>"), dashboard.button("q", "\243\176\133\154  Quit", "<cmd>qa<cr>")}, position = "center"}
+  local buttons = {type = "group", val = {{type = "text", val = "Quick Actions", opts = {hl = "Bold", position = "center"}}, {type = "padding", val = 1}, dashboard.button("n", "\243\176\160\174 Today's Note", "<cmd>ObsidianToday 0<cr>"), dashboard.button("e", "\239\133\155  New file", "<cmd>ene<cr>"), dashboard.button("SPC f f", "\243\176\136\158  Find file"), dashboard.button("SPC f /", "\243\176\138\132  Live grep"), dashboard.button("c", "\238\152\149  Configuration", "<cmd>cd ~/.config/nvim/ <cr>"), dashboard.button("u", "\239\132\185  Update plugins", "<cmd>Lazy sync<cr>"), dashboard.button("q", "\243\176\133\154  Quit", "<cmd>qa<cr>")}, position = "center"}
   local config
   local function _2_()
     local function _3_()
