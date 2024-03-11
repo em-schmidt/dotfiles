@@ -7,7 +7,7 @@
                         buttons {:type :group
                                  :val [{:type :text :val "Quick Actions" :opts {:hl "Bold" :position :center}}
                                        {:type :padding :val 1}
-                                       (dashboard.button :n "󰠮  Today's Note" "<cmd>ObsidianToday 0<cr>")
+                                       (dashboard.button :n "󰠮  Today's Note" "<cmd>ObsidianToday<cr>")
                                        (dashboard.button :e "  New file" "<cmd>ene<cr>")
                                        (dashboard.button "SPC f f" "󰈞  Find file")
                                        (dashboard.button "SPC f /" "󰊄  Live grep")
