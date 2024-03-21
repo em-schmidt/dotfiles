@@ -1,7 +1,7 @@
 -- [nfnl] Compiled from lua/plugins/obsidian.fnl by https://github.com/Olical/nfnl, do not edit.
 local u = require("util")
 local function _1_()
-  return (require("markdown")).setup()
+  return (require("render-markdown")).setup()
 end
 local function _2_(url)
   return vim.fn.jobstart({"open", url})

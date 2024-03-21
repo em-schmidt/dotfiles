@@ -3267,6 +3267,8 @@
 			<string>0218986F-5685-4A64-B706-0DC39EBD6F30</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
+			<key>Icon</key>
+			<integer>1</integer>
 			<key>Idle Code</key>
 			<integer>0</integer>
 			<key>Initial Text</key>

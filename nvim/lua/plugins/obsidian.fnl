@@ -2,7 +2,7 @@
 
 [(u.tx :MeanderingProgrammer/markdown.nvim
   {:config (fn [] 
-               ((. (require :markdown) :setup)))}) 
+               ((. (require :render-markdown) :setup)))}) 
 
  (u.tx
   :epwalsh/obsidian.nvim
