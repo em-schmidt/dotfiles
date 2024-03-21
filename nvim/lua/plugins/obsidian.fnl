@@ -1,6 +1,10 @@
 (local u (require :util))
 
-[(u.tx
+[(u.tx :MeanderingProgrammer/markdown.nvim
+  {:config (fn [] 
+               ((. (require :markdown) :setup)))}) 
+
+ (u.tx
   :epwalsh/obsidian.nvim
   {:version "*"
    :lazy false

@@ -35,6 +35,7 @@
 
               (wk.register {:g {:name "git"
                                 :b ["<cmd>Gitsigns toggle_current_line_blame<cr>" "toggle git blame"]
+                                :g ["<cmd>Fugit2<cr>" "fugit2"]
                                 :s ["<cmd>Telescope git_status<cr>" "git status"]
                                 :l ["<cmd>Telescope git_commits<cr>" "git log"]
                                 :p ["<cmd>Git pull<cr>" "git pull"]

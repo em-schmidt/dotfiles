@@ -50,6 +50,7 @@ brew 'kube-ps1', args: ["build-from-source"]
 brew 'lazygit'
 brew 'leiningen'
 brew 'libvterm'                            # for emacs
+brew 'libgit2'
 brew 'lua-language-server'
 brew 'mas'
 brew 'mob'
