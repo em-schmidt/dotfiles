@@ -1,7 +1,8 @@
 (local u (require :util))
 
 [(u.tx :MeanderingProgrammer/markdown.nvim
-  {:config (fn [] 
+  {:dependencies [:nvim-treesitter/nvim-treesitter]
+   :config (fn [] 
                ((. (require :render-markdown) :setup)))}) 
 
  (u.tx

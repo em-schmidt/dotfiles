@@ -11,9 +11,6 @@
  (u.tx :stevearc/dressing.nvim 
    {:event :VeryLazy})
  
- (u.tx :nvim-tree/nvim-web-devicons 
-   {:lazy true})
-
  (u.tx :taybart/b64.nvim)
 
  (u.tx :terrortylor/nvim-comment 
