@@ -61,6 +61,10 @@
                                 :m ["<cmd>Mason<cr>" "lsp manager (mason)"]}
                             :prefix "<leader>"})
 
+              (wk.register {:r {:name "run"
+                                :v ["<cmd>ToggleTermSendVisualLines<cr>" "run visual selection in terminal"]}
+                               :prefix "<leader>"} {:mode :v})
+
               (wk.register {:t {:name "tabs"
                                 :t ["<cmd>Telescope tele_tabby list<cr>" "list tabs"] 
                                 :d ["<cmd>tabclose<cr>" "close current tab"]
