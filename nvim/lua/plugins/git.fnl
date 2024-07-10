@@ -4,6 +4,7 @@
 
  (u.tx :SuperBo/fugit2.nvim
     {:opts {}
+           :libgit2_path "/opt/homebrew/lib/libgit2.dylib"
      :dependencies [:MunifTanjim/nui.nvim
                     :nivm-tree/nvim-web-devicons
                     :nvim-lua/plenary.nvim

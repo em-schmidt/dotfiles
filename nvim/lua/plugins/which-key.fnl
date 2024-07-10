@@ -23,7 +23,7 @@
                             :prefix "<leader>"})
 
               (wk.register {:e {:name "errors"
-                                :t ["<cmd>TroubleToggle<cr>" "toggle trouble view"]}
+                                :t ["<cmd>Trouble diagnostics toggle<cr>" "toggle trouble view"]}
                             :prefix "<leader>"})
 
               (wk.register {:f {:name "files"
