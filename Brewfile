@@ -13,6 +13,7 @@ tap 'temporalio/brew'
 brew 'age'                                  # used by sops
 brew 'aspell'                               # for emacs
 brew 'awscli'
+brew 'aws-cdk'
 brew 'azure-cli'
 brew 'babashka'
 brew 'babashka/brew/bbin'

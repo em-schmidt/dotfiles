@@ -109,39 +109,39 @@
 
               (wk.add [{1 :<leader>l :group "lsp"}])
 
-              (wk.add [{1 :<leader>n :group "notes"}]
-                      {1 :<leader>nn
-                       2 "<cmd>ObsidianQuickSwitch<cr>"
-                       :desc "note picker"
-                       :mode :n}
-                      {1 :<leader>nt
-                       2 "<cmd>ObsidianToday<cr>"
-                       :desc "today's note"
-                       :mode :n}
-                      {1 :<leader>nT
-                       2 "<cmd>vimgrep /- \\[ \\]/ **/* | Trouble quickfix<cr>"
-                       :desc "unchecked todos"
-                       :mode :n})
+              (wk.add [{1 :<leader>n :group "notes"}
+                       {1 :<leader>nn
+                        2 "<cmd>ObsidianQuickSwitch<cr>"
+                        :desc "note picker"
+                        :mode :n}
+                       {1 :<leader>nt
+                        2 "<cmd>ObsidianToday<cr>"
+                        :desc "today's note"
+                        :mode :n}
+                       {1 :<leader>nT
+                        2 "<cmd>vimgrep /- \\[ \\]/ **/* | Trouble quickfix<cr>"
+                        :desc "unchecked todos"
+                        :mode :n}])
 
-              (wk.add [{1 :<leader>p :group "projects"}]
-                     {1 :<leader>pp
-                      2 "<cmd>lua require'telescope'.extensions.project.project{ display_type = 'full' }<cr>"
-                      :desc "project switcher"
-                      :mode :n}
-                     {1 :<leader>pt
-                      2 "<cmd>TodoTelescope<cr>"
-                      :desc "project todos"
-                      :mode :n})
+              (wk.add [{1 :<leader>p :group "projects"}
+                       {1 :<leader>pp
+                        2 "<cmd>lua require'telescope'.extensions.project.project{ display_type = 'full' }<cr>"
+                        :desc "project switcher"
+                        :mode :n}
+                       {1 :<leader>pt
+                        2 "<cmd>TodoTelescope<cr>"
+                        :desc "project todos"
+                        :mode :n}])
 
-              (wk.add [{1 :<leader>P :group "plugins"}]
-                      {1 :<leader>Pl
-                       2 "<cmd>Lazy<cr>"
-                       :desc "plugin manager (lazy.nvim)"
-                       :mode :n}
-                      {1 :<leader>Pm
-                       2 "<cmd>Mason<cr>"
-                       :desc "lsp manager (mason)"
-                       :mode :n})
+              (wk.add [{1 :<leader>P :group "plugins"}
+                       {1 :<leader>Pl
+                        2 "<cmd>Lazy<cr>"
+                        :desc "plugin manager (lazy.nvim)"
+                        :mode :n}
+                       {1 :<leader>Pm
+                        2 "<cmd>Mason<cr>"
+                        :desc "lsp manager (mason)"
+                        :mode :n}])
 
               (wk.add [{1 :<leader>r :group "run"}
                        {1 :<leader>rv
@@ -149,35 +149,35 @@
                         :desc "run visual selection in terminal"
                         :mode :v}])
 
-              (wk.add [{1 :<leader>t :group "tabs"}]
-                      {1 :<leader>tt
-                       2 "<cmd>Telescope tele_tabby list<cr>"
-                       :desc "list tabs"
-                       :mode :n}
-                      {1 :<leader>td
-                       2 "<cmd>tabclose<cr>"
-                       :desc "close current tab"
-                       :mode :n}
-                      {1 :<leader>tn
-                       2 "<cmd>tabnext<cr>"
-                       :desc "next tab"
-                       :mode :n}
-                      {1 :<leader>tN
-                       2 "<cmd>tabnew<cr>"
-                       :desc "New tab"
-                       :mode :n}
-                      {1 :<leader>tp
-                       2 "<cmd>tabprevious<cr>"
-                       :desc "previous tab"
-                       :mode :n}
-                      {1 :<leader>to
-                       2 "<cmd>tabonly<cr>"
-                       :desc "close other tabs"
-                       :mode :n}
-                      {1 :<leader>tm
-                       2 "<cmd>tab sp<cr>"
-                       :desc "open current buffer in new tab"
-                       :mode :n})
+              (wk.add [{1 :<leader>t :group "tabs"}
+                       {1 :<leader>tt
+                        2 "<cmd>Telescope tele_tabby list<cr>"
+                        :desc "list tabs"
+                        :mode :n}
+                       {1 :<leader>td
+                        2 "<cmd>tabclose<cr>"
+                        :desc "close current tab"
+                        :mode :n}
+                       {1 :<leader>tn
+                        2 "<cmd>tabnext<cr>"
+                        :desc "next tab"
+                        :mode :n}
+                       {1 :<leader>tN
+                        2 "<cmd>tabnew<cr>"
+                        :desc "New tab"
+                        :mode :n}
+                       {1 :<leader>tp
+                        2 "<cmd>tabprevious<cr>"
+                        :desc "previous tab"
+                        :mode :n}
+                       {1 :<leader>to
+                        2 "<cmd>tabonly<cr>"
+                        :desc "close other tabs"
+                        :mode :n}
+                       {1 :<leader>tm
+                        2 "<cmd>tab sp<cr>"
+                        :desc "open current buffer in new tab"
+                        :mode :n}])
 
               (wk.add [{1 :<leader>w :group "windows"}
                        {1 :<leader>wh 
