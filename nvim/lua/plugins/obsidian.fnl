@@ -1,9 +1,27 @@
 (local u (require :util))
 
-[(u.tx :MeanderingProgrammer/markdown.nvim
-  {:dependencies [:nvim-treesitter/nvim-treesitter]
-   :config (fn [] 
-               ((. (require :render-markdown) :setup)))}) 
+[
+ ; (u.tx :MeanderingProgrammer/markdown.nvim
+ ;  {:dependencies [:nvim-treesitter/nvim-treesitter]
+ ;   :config (fn [] 
+ ;               ((. (require :render-markdown) :setup)))}) 
+ ;
+
+ (u.tx
+  :OXY2DEV/markview.nvim
+  {:lazy false
+   :dependencies [:nvim-treesitter/nvim-treesitter
+                  :nvim-tree/nvim-web-devicons]
+   :opts {:code_blocks {:style :language
+                        :hl :CursorLine}
+          :inline_codes {:hl :CursorLine}
+          :headings {:enable true
+                     :heading_1 {:hl "@markup.heading.1"}
+                     :heading_2 {:hl "@markup.heading.2"}
+                     :heading_3 {:hl "@markup.heading.3"}
+                     :heading_4 {:hl "@markup.heading.4"}
+                     :heading_5 {:hl "@markup.heading.5"}
+                     :heading_6 {:hl "@markup.heading.6"}}}})
 
  (u.tx
   :epwalsh/obsidian.nvim
