@@ -22,7 +22,7 @@
   "normal mode leader keymap"
   (nnoremap (.. "<leader>" keys) command description))
 
-;;some funcitons from olical's dotfiles
+;;some functions from olical's dotfiles
 (fn last [xs]
   (fun.nth (fun.length xs) xs))
 

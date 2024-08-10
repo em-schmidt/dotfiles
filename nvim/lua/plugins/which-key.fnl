@@ -61,7 +61,7 @@
               (wk.add [
                        {1 :<leader>e :group "errors"}
                        {1 :<leader>et
-                        2 "<cmd>Trouble diagnistics toggle<cr>"
+                        2 "<cmd>Trouble diagnostics toggle<cr>"
                         :desc "toggle diagnostics view"
                         :mode :n}])
 
