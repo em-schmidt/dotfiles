@@ -22,6 +22,8 @@
                      :heading_4 {:hl "@markup.heading.4"}
                      :heading_5 {:hl "@markup.heading.5"}
                      :heading_6 {:hl "@markup.heading.6"}}}})
+ (u.tx
+  :jubnzv/mdeval.nvim)
 
  (u.tx
   :epwalsh/obsidian.nvim

@@ -3,8 +3,8 @@ Match host * exec "test -S ~/.ssh/ssh_auth_sock"
     IdentityAgent ~/.ssh/ssh_auth_sock
 
 # use 1password ssh agent as default
-Match host *
-    IdentityAgent ~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
+Host *
+  IdentityAgent "~/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
     ForwardAgent yes
 
 Host cb
