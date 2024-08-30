@@ -35,7 +35,7 @@
                         :path "~/workspace/spaceba.by/notes"}]
           :attachments {:img_folder "assets/images"}
           :daily_notes {:folder "daily"
-                        :date_format "%Y.%m.%d"
+                        :date_format "%Y/%m/%Y.%m.%d"
                         :template nil}
           :sort_by :modified
           :sort_reversed true
