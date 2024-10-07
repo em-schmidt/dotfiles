@@ -1,5 +1,6 @@
 (local u (require :util))
 
+
 [(u.tx
    :folke/which-key.nvim
    {:event :VeryLazy
@@ -121,6 +122,16 @@
                        {1 :<leader>nT
                         2 "<cmd>vimgrep /- \\[ \\]/ **/* | Trouble quickfix<cr>"
                         :desc "unchecked todos"
+                        :mode :n}])
+
+              (wk.add [{1 :<leader>o :group "overseer"}
+                       {1 :<leader>or 
+                        2 "<cmd>OverseerRun<cr>"
+                        :desc "Run Task"
+                        :mode :n}
+                       {1 :<leader>ot
+                        2 "<cmd>OverseerToggle<cr>"
+                        :desc "Toggle Overseer"
                         :mode :n}])
 
               (wk.add [{1 :<leader>p :group "projects"}
