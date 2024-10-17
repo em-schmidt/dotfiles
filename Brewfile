@@ -80,6 +80,7 @@ brew 'structurizr-cli'
 brew 'svn'
 brew 'temporalio/brew/tcld'                 # temporal CLI
 brew 'terraform-ls'
+brew 'terraform'
 brew 'tfenv'
 brew 'tflint'
 brew 'tmux'
