@@ -8,18 +8,28 @@
               (let [notify (require :notify)]
                 (set vim.notify notify)))})
 
- (u.tx :stevearc/dressing.nvim 
+ (u.tx :stevearc/dressing.nvim
    {:event :VeryLazy})
  
  (u.tx :taybart/b64.nvim)
 
- (u.tx :terrortylor/nvim-comment 
+ (u.tx :terrortylor/nvim-comment
    {:config (fn []
               ((. (require :nvim_comment) :setup) {}))})
 
  (u.tx :folke/todo-comments.nvim
    {:dependencies [:nvim-lua/plenary.nvim]
     :opts {}})
+
+ (u.tx :folke/snacks.nvim
+   {:proiority 1000
+    :lazy false
+    :opts
+      {:gitbrowse {:enabled true}}
+    :keys
+      {1 {1 :<leader>gB
+          2 (fn [] (Snacks:gitbrowse)) 
+          :desc "open git in browser"}}})
 
  (u.tx :akinsho/toggleterm.nvim
    {:opts {}})
