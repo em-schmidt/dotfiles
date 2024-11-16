@@ -27,9 +27,10 @@
     :opts
       {:gitbrowse {:enabled true}}
     :keys
-      {1 {1 :<leader>gB
-          2 (fn [] (Snacks:gitbrowse)) 
-          :desc "open git in browser"}}})
+      [(u.tx
+        :<leader>gB
+        (fn [] (Snacks:gitbrowse)) 
+        {:desc "open git in browser"})]})
 
  (u.tx :akinsho/toggleterm.nvim
    {:opts {}})

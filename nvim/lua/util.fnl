@@ -41,8 +41,16 @@
         (fun.zip (fun.range 1 len) (fun.take (- len 1) args)))
       args)))
 
+(fn nlkm
+  [keys command description]
+  "generates a normal mode leader keymap table"
+  (let [lhs (.. "<leader>" keys)
+        rhs (.. "<cmd>" command "<cr>")]
+    (tx lhs rhs {:desc description :mode :n})))
+
 {
  : tx
+ : nlkm
  : lnnoremap
  : nnoremap
  : set_vim_option

@@ -1,229 +1,133 @@
 (local u (require :util))
 
-
 [(u.tx
    :folke/which-key.nvim
    {:event :VeryLazy
     :init (fn []
             (let [wk (require "which-key")]
 
-              (wk.add [
-                       {1 :<leader>.
-                        2 "<cmd>ToggleTerm<cr>"
-                        :desc "toggle terminal"
-                        :mode :n}
-                       {1 :<leader><tab>
-                        2 "<cmd>b#<cr>"
-                        :desc "next buffer"
-                        :mode :n}
-                       {1 :<leader>+
-                        2 "<cmd>resize +3<cr>"
-                        :desc "increase height"
-                        :mode :n}
-                       {1 :<leader>=
-                        2 "<cmd>resize +3<cr>"
-                        :desc "increase height"
-                        :mode :n}
-                       {1 :<leader>-
-                        2 "<cmd>resize -3<cr>"
-                        :desc "decrease height"
-                        :mode :n}
-                       {1 :<leader><char-62>
-                        2 "<cmd>vertical resize +3<cr>"
-                        :desc "increase width"
-                        :mode :n}
-                       {1 :<leader><lt>
-                        2 "<cmd>vertical resize -3<cr>"
-                        :desc "decrease width"
-                        :mode :n}])
+              (wk.add [(u.nlkm :.         :ToggleTerm          "toggle terminal")
+                       (u.nlkm :<tab>     :b#                  "next buffer")
+                       (u.nlkm :+         "resize +3"          "increase height") 
+                       (u.nlkm :=         "resize +3"          "increase height") 
+                       (u.nlkm :-         "resize -3"          "decrease height") 
+                       (u.nlkm :<char-62> "vertical resize +3" "increase width") 
+                       (u.nlkm :<lt>      "vertical resize -3" "decrease width")]) 
 
-              (wk.add [{1 :<leader>b :group "buffers"}
-                       {1 :<leader>ba 
-                        2 "<cmd>ball<cr>"
-                        :desc "open all buffers"
-                        :mode :n}
-                       {1 :<leader>bb
-                        2 "<cmd>Telescope buffers<cr>"
-                        :desc "list buffers"
-                        :mode :n}
-                       {1 :<leader>bd
-                        2 "<cmd>bdelete<cr>"
-                        :desc "delete current buffer"
-                        :mode :n}
-                       {1 :<leader>bn
-                        2 "<cmd>bnext<cr>"
-                        :desc "next buffer"
-                        :mode :n}
-                       {1 :<leader>bp
-                        2 "<cmd>bprevious<cr>"
-                        :desc "previous buffer"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>b {:group :buffers})
+                       (u.nlkm :ba :ball               "open all buffers")
+                       (u.nlkm :bb "Telescope buffers" "list buffers")
+                       (u.nlkm :bd :bdelete            "delete current buffer")
+                       (u.nlkm :bn :bnext              "next buffer")
+                       (u.nlkm :bp :bprevious          "previous buffer")])
 
-              (wk.add [
-                       {1 :<leader>e :group "errors"}
-                       {1 :<leader>et
-                        2 "<cmd>Trouble diagnostics toggle<cr>"
-                        :desc "toggle diagnostics view"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>e {:group :errors})
+                       (u.nlkm :et "Trouble diagnostics toggle" "toggle diagnostics view")])
 
-              (wk.add [
-                       {1 :<leader>f :group "files"}
-                       {1 :<leader>ff
-                        2 "<cmd>Telescope find_files<cr>"
-                        :desc "project files"
-                        :mode :n}
-                       {1 :<leader>f/
-                        2 "<cmd>Telescope live_grep<cr>"
-                        :desc "grep in workspace"
-                        :mode :n}
-                       {1 :<leader>ft
-                        2 "<cmd>NvimTreeToggle<cr>"
-                        :desc "toggle file tree"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>f {:group :files})
+                       (u.nlkm :ff "Telescope find_files" "project files")
+                       (u.nlkm :f/ "Telescope live_grep"  "grep in workspace")
+                       (u.nlkm :ft "NvimTreeToggle"       "toggle file tree")])
 
-              (wk.add [
-                       {1 :<leader>g :group "git"}
-                       {1 :<leader>gb
-                        2 "<cmd>Gitsigns toggle_current_line_blame<cr>"
-                        :desc "toggle git blame"
-                        :mode :n}
-                       {1 :<leader>gg
-                        2 "<cmd>Fugit2<cr>"
-                        :desc "fugit 2"
-                        :mode :n}
-                       {1 :<leader>gl
-                        2 "<cmd>Telescope git_commits<cr>"
-                        :desc "git log"
-                        :mode :n}
-                       {1 :<leader>gp
-                        2 "<cmd>Git pull<cr>"
-                        :desc "git pull"
-                        :mode :n}
-                       {1 :<leader>gP
-                        2 "<cmd>Git push<cr>"
-                        :desc "git push"
-                        :mode :n}
-                       {1 :<leader>gs
-                        2 "<cmd>Telescope git_status<cr>"
-                        :desc "git status"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>g {:group :git})
+                       (u.nlkm :gb
+                               "Gitsigns toggle_current_line_blame"
+                               "toggle git blame")
+                       (u.nlkm :gg
+                               :Fugit2
+                               "fugit2")
+                       (u.nlkm :gl
+                               "Telescope git_commits"
+                               "git log")
+                       (u.nlkm :gp
+                               "Git pull"
+                               "git pull")
+                       (u.nlkm :gP
+                               "Git push"
+                               "git push")
+                       (u.nlkm :gs
+                               "Telescope git_status"
+                               "git status")])
 
-              (wk.add [{1 :<leader>l :group "lsp"}])
+              (wk.add [(u.tx :<leader>l {:group :lsp})]) 
 
-              (wk.add [{1 :<leader>n :group "notes"}
-                       {1 :<leader>nn
-                        2 "<cmd>ObsidianQuickSwitch<cr>"
-                        :desc "note picker"
-                        :mode :n}
-                       {1 :<leader>nt
-                        2 "<cmd>ObsidianToday<cr>"
-                        :desc "today's note"
-                        :mode :n}
-                       {1 :<leader>nT
-                        2 "<cmd>vimgrep /- \\[ \\]/ **/* | Trouble quickfix<cr>"
-                        :desc "unchecked todos"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>n> {:group :notes})
+                       (u.nlkm :nn 
+                               :ObsidianQuickSwitch
+                               "note picker") 
+                       (u.nlkm :nt 
+                               :ObsidianToday
+                               "today's note") 
+                       (u.nlkm :nT 
+                               "vimgrep /- \\[ \\]/ **/* |Trouble quickfix" 
+                               "unchecked todos")])
 
-              (wk.add [{1 :<leader>o :group "overseer"}
-                       {1 :<leader>or 
-                        2 "<cmd>OverseerRun<cr>"
-                        :desc "Run Task"
-                        :mode :n}
-                       {1 :<leader>ot
-                        2 "<cmd>OverseerToggle<cr>"
-                        :desc "Toggle Overseer"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>o {:group :overseer})
+                       (u.nlkm :or :OverseerRun    "run task")
+                       (u.nlkm :ot :OverseerToggle "toggle overseer")])
 
-              (wk.add [{1 :<leader>p :group "projects"}
-                       {1 :<leader>pp
-                        2 "<cmd>lua require'telescope'.extensions.project.project{ display_type = 'full' }<cr>"
-                        :desc "project switcher"
-                        :mode :n}
-                       {1 :<leader>pt
-                        2 "<cmd>TodoTelescope<cr>"
-                        :desc "project todos"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>p {:group :projects})
+                       (u.nlkm :pp 
+                               "lua require'telescope'.extensions.project.project{ display_type = 'full' }"
+                               "project switcher")
+                       (u.nlkm :pt
+                               :TodoTelescope
+                               "project todos")])
 
-              (wk.add [{1 :<leader>P :group "plugins"}
-                       {1 :<leader>Pl
-                        2 "<cmd>Lazy<cr>"
-                        :desc "plugin manager (lazy.nvim)"
-                        :mode :n}
-                       {1 :<leader>Pm
-                        2 "<cmd>Mason<cr>"
-                        :desc "lsp manager (mason)"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>P {:group :plugins})
+                       (u.nlkm :Pl 
+                               :Lazy
+                               "plugin manager (lazy.nvim)")
+                       (u.nlkm :Pm
+                               :Mason
+                               "lsp manager (mason)")])
 
-              (wk.add [{1 :<leader>r :group "run"}
-                       {1 :<leader>rv
-                        2 "<cmd>ToggleTermSendVisualLines<cr>"
-                        :desc "run visual selection in terminal"
-                        :mode :v}])
+              (wk.add [(u.tx :<leader>r> {:group :run})
+                       (u.tx :<leader>rv
+                            "<cmd>ToggleTermSendVisualLines<cr>"
+                            {:desc "run visual selection in terminal"
+                             :mode :v})]) 
 
-              (wk.add [{1 :<leader>t :group "tabs"}
-                       {1 :<leader>tt
-                        2 "<cmd>Telescope tele_tabby list<cr>"
-                        :desc "list tabs"
-                        :mode :n}
-                       {1 :<leader>td
-                        2 "<cmd>tabclose<cr>"
-                        :desc "close current tab"
-                        :mode :n}
-                       {1 :<leader>tn
-                        2 "<cmd>tabnext<cr>"
-                        :desc "next tab"
-                        :mode :n}
-                       {1 :<leader>tN
-                        2 "<cmd>tabnew<cr>"
-                        :desc "New tab"
-                        :mode :n}
-                       {1 :<leader>tp
-                        2 "<cmd>tabprevious<cr>"
-                        :desc "previous tab"
-                        :mode :n}
-                       {1 :<leader>to
-                        2 "<cmd>tabonly<cr>"
-                        :desc "close other tabs"
-                        :mode :n}
-                       {1 :<leader>tm
-                        2 "<cmd>tab sp<cr>"
-                        :desc "open current buffer in new tab"
-                        :mode :n}])
+              (wk.add [(u.tx :<leader>t {:group :tabs})
+                       (u.nlkm :tt "Telescope tele_tabby list" 
+                               "list tabs")
+                       (u.nlkm :td :tabclose 
+                               "close current tab")
+                       (u.nlkm :tn :tabnext
+                               "next tab")
+                       (u.nlkm :tN :tabnew
+                               "new tab")
+                       (u.nlkm :tp :tabprevious
+                               "previous tab")
+                       (u.nlkm :to :tabonly
+                               "close other tabs")
+                       (u.nlkm :tm "tab sp"
+                               "open current buffer in new tab")])
 
-              (wk.add [{1 :<leader>w :group "windows"}
-                       {1 :<leader>wh 
-                        2 "<cmd>wincmd h<cr>"
-                        :desc "window left" :mode :n}
-                       {1 :<leader>wj 
-                        2 "<cmd>wincmd j<cr>"
-                        :desc "window down" :mode :n}
-                       {1 :<leader>wk 
-                        2 "<cmd>wincmd k<cr>"
-                        :desc "window up" :mode :n}
-                       {1 :<leader>wl 
-                        2 "<cmd>wincmd l<cr>"
-                        :desc "window right" :mode :n}
-                       {1 :<leader>w1 
-                        2 "<cmd>1 wincmd w<cr>"
-                        :desc "window 1" :mode :n}
-                       {1 :<leader>w2 
-                        2 "<cmd>2 wincmd w<cr>"
-                        :desc "window 2" :mode :n}
-                       {1 :<leader>w3 
-                        2 "<cmd>3 wincmd w<cr>"
-                        :desc "window 3" :mode :n}
-                       {1 :<leader>wo 
-                        2 "<cmd>only<cr>"
-                        :desc "close other windows" :mode :n}
-                       {1 :<leader>wn 
-                        2 "<cmd>split<cr>"
-                        :desc "split (horizontal)" :mode :n}
-                       {1 :<leader>w| 
-                        2 "<cmd>vsplit<cr>"
-                        :desc "split (vertical)" :mode :n}
-                       {1 :<leader>wq 
-                        2 "<cmd>close<cr>"
-                        :desc "close"}]))
+
+              (wk.add [(u.tx :<leader>w> {:group :windows})
+                       (u.nlkm :wh "wincmd h"
+                               "window left")
+                       (u.nlkm :wj "wincmd j"
+                               "window down")
+                       (u.nlkm :wk "wincmd k"
+                               "window up")
+                       (u.nlkm :wl "wincmd l"
+                               "window right")
+                       (u.nlkm :w1 "1 wincmd w"
+                               "window 1")
+                       (u.nlkm :w2 "2 wincmd w"
+                               "window 2")
+                       (u.nlkm :w3 "3 wincmd w"
+                               "window 3")
+                       (u.nlkm :wo "only"
+                               "close other windows")
+                       (u.nlkm :wn "split"
+                               "split (horizontal)")
+                       (u.nlkm :w| "vsplit"
+                               "split (vertical)")
+                       (u.nlkm :wq "close"
+                               "close")]))
 
             (set vim.o.timeoutlen 300))
     :opts {}})]

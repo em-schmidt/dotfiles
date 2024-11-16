@@ -30,4 +30,9 @@ local function tx(...)
     return args
   end
 end
-return {tx = tx, lnnoremap = lnnoremap, nnoremap = nnoremap, set_vim_option = set_vim_option, set_vim_global = set_vim_global}
+local function nlkm(keys, command, description)
+  local lhs = ("<leader>" .. keys)
+  local rhs = ("<cmd>" .. command .. "<cr>")
+  return tx(lhs, rhs, {desc = description, mode = "n"})
+end
+return {tx = tx, nlkm = nlkm, lnnoremap = lnnoremap, nnoremap = nnoremap, set_vim_option = set_vim_option, set_vim_global = set_vim_global}
