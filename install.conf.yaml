@@ -33,6 +33,7 @@
     ~/.vim:
     ~/.gitignore:             git/gitignore
     ~/.gitconfig:             git/gitconfig
+    ~/.config/ghostty:        ghostty
     ~/.config/nvim:           nvim
     ~/.ssh/rc:                ssh/rc
     ~/.ssh/config:            ssh/config
