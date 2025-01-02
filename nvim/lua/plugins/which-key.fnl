@@ -51,7 +51,12 @@
 
               (wk.add [(u.tx :<leader>l {:group :lsp})]) 
 
-              (wk.add [(u.tx :<leader>n> {:group :notes})
+              (wk.add [(u.tx :<leader>m {:group :markdown}) 
+                       (u.nlkm :mt 
+                               "Markview toggle"
+                               "toggle markdown rendering")]) 
+
+              (wk.add [(u.tx :<leader>n {:group :notes})
                        (u.nlkm :nn 
                                :ObsidianQuickSwitch
                                "note picker") 
@@ -105,7 +110,7 @@
                                "open current buffer in new tab")])
 
 
-              (wk.add [(u.tx :<leader>w> {:group :windows})
+              (wk.add [(u.tx :<leader>w {:group :windows})
                        (u.nlkm :wh "wincmd h"
                                "window left")
                        (u.nlkm :wj "wincmd j"

@@ -31,6 +31,7 @@ brew 'findutils'                            #for emacs
 brew 'fluxcd/tap/flux'
 brew 'fzf'
 brew 'gh'
+brew 'ghostty'
 brew 'glab'
 brew 'go'
 brew 'goenv'

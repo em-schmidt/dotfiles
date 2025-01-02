@@ -1,6 +1,16 @@
 -- [nfnl] Compiled from lua/plugins/obsidian.fnl by https://github.com/Olical/nfnl, do not edit.
 local u = require("util")
-local function _1_(url)
+local function _1_()
+  local presets = require("markview.presets")
+  return require("markview").setup({checkboxes = presets.checkboxes.nerd, code_blocks = {style = "minimal"}, headings = presets.headings.glow, horizontal_rules = presets.horizontal_rules.thick})
+end
+local function _2_()
+  return require("diagram").setup({integrations = {require("diagram.integrations.markdown")}})
+end
+local function _3_()
+  return require("markdown-table-mode").setup()
+end
+local function _4_(url)
   return vim.fn.jobstart({"open", url})
 end
-return {u.tx("OXY2DEV/markview.nvim", {dependencies = {"nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons"}, opts = {code_blocks = {style = "language", hl = "CursorLine"}, inline_codes = {hl = "CursorLine"}, headings = {enable = true, heading_1 = {hl = "@markup.heading.1"}, heading_2 = {hl = "@markup.heading.2"}, heading_3 = {hl = "@markup.heading.3"}, heading_4 = {hl = "@markup.heading.4"}, heading_5 = {hl = "@markup.heading.5"}, heading_6 = {hl = "@markup.heading.6"}}}, lazy = false}), u.tx("jubnzv/mdeval.nvim"), u.tx("epwalsh/obsidian.nvim", {version = "*", ft = "markdown", dependencies = {"nvim-lua/plenary.nvim"}, opts = {workspaces = {{name = "notes", path = "~/workspace/spaceba.by/notes"}}, attachments = {img_folder = "assets/images"}, daily_notes = {folder = "daily", date_format = "%Y/%m/%Y.%m.%d", template = nil}, sort_by = "modified", sort_reversed = true, open_notes_in = "vsplit", external_link_icon = {char = "\239\130\142", hl_group = "ObsidianExtLinkIcon"}, follow_url_func = _1_, hl_groups = {ObsidianTodo = {bold = true, fg = "#f78c6c"}}}, lazy = false})}
+return {u.tx("OXY2DEV/markview.nvim", {dependencies = {"nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons"}, config = _1_, lazy = false}), u.tx("jubnzv/mdeval.nvim"), u.tx("3rd/image.nvim", {opts = {}}), u.tx("3rd/diagram.nvim", {dependencies = {"3rd/image.nvim"}, opts = {}, config = _2_}), u.tx("Kicamon/markdown-table-mode.nvim", {config = _3_}), u.tx("epwalsh/obsidian.nvim", {version = "*", ft = "markdown", dependencies = {"nvim-lua/plenary.nvim"}, opts = {workspaces = {{name = "notes", path = "~/workspace/spaceba.by/notes"}}, ui = {enable = false}, attachments = {img_folder = "assets/images"}, daily_notes = {folder = "daily", date_format = "%Y/%m/%Y.%m.%d", template = nil}, sort_by = "modified", sort_reversed = true, open_notes_in = "vsplit", follow_url_func = _4_, hl_groups = {ObsidianTodo = {bold = true, fg = "#f78c6c"}}}, lazy = false})}
