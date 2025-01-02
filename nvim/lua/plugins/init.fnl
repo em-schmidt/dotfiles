@@ -22,14 +22,14 @@
     :opts {}})
 
  (u.tx :folke/snacks.nvim
-   {:proiority 1000
+   {:priority 1000
     :lazy false
     :opts
       {:gitbrowse {:enabled true}}
     :keys
       [(u.tx
         :<leader>gB
-        (fn [] (Snacks:gitbrowse)) 
+        (fn [] (Snacks.gitbrowse)) 
         {:desc "open git in browser"})]})
 
  (u.tx :akinsho/toggleterm.nvim
