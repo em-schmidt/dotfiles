@@ -1,1 +1,7 @@
 theme = dark:GitHub Dark,light:GitHub
+
+
+font-size = 22
+window-height = 34
+window-width = 180
+
