@@ -24,11 +24,13 @@
               (set vim.o.winbar "%{%v:lua.require'nvim-navic'.get_location()%}"))})
 
  (u.tx :nvim-lualine/lualine.nvim
-   {:dependencies [:nvim-tree/nvim-web-devicons]
-    :opts {:extensions ["nvim-tree" "toggleterm" "trouble" "fugitive"]
+   {:dependencies [:nvim-tree/nvim-web-devicons
+                   :AndreM222/copilot-lualine]
+    :opts {:extensions ["nvim-tree" "toggleterm" "trouble" "fugitive" "lazy"]
            :options {:theme :auto
                      :component_separators "|"
-                     :section_separators {:left "" :right ""}}
+                     :section_separators {:left "" :right ""}
+                     :always_show_tabline false}
            :sections {:lualine_a [(u.tx :mode 
                                         {:separator {:left ""} 
                                          :right_padding 1})]
@@ -36,10 +38,12 @@
                                               :path 1}]]
                       :lualine_c [[:branch]
                                   [:diff]]
-                      :lualine_x [[:diagnostics]]
+                      :lualine_x [[:diagnostics]
+                                  [:copilot]]
                       :lualine_y [[:filetype] [:progress]]
                       :lualine_z [(u.tx :location 
                                         {:separator {:right ""} 
-                                         :left_padding 1})]}}})]
+                                         :left_padding 1})]}
+           :tabline {:lualine_z [(u.tx :tabs {:mode 2})]}}})]
 
 
