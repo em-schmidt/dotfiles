@@ -3,6 +3,7 @@
 [(u.tx
    :folke/which-key.nvim
    {:event :VeryLazy
+    :dependencies [:echasnovski/mini.icons]
     :init (fn []
             (let [wk (require "which-key")]
 

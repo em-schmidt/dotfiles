@@ -21,4 +21,4 @@ local function _1_()
   vim.o.timeoutlen = 300
   return nil
 end
-return {u.tx("folke/which-key.nvim", {event = "VeryLazy", init = _1_, opts = {}})}
+return {u.tx("folke/which-key.nvim", {event = "VeryLazy", dependencies = {"echasnovski/mini.icons"}, init = _1_, opts = {}})}

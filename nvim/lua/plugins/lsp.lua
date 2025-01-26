@@ -34,22 +34,22 @@ local function _1_()
   mason.setup()
   mason_lspconfig.setup({automatic_installation = true, ensure_installed = {"tflint", "jsonls", "terraformls", "fennel_language_server", "clojure_lsp"}})
   local function _4_(servername)
-    return ((require("lspconfig"))[servername]).setup({capabilities = capabilities, on_attach = on_attach})
+    return require("lspconfig")[servername].setup({capabilities = capabilities, on_attach = on_attach})
   end
   local function _5_()
-    return ((require("lspconfig")).fennel_language_server).setup({capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim"}}}}})
+    return require("lspconfig").fennel_language_server.setup({capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim"}}}}})
   end
   local function _6_()
     local function _7_(client, bufnr)
       on_attach(client, bufnr)
-      do end (require("treesitter-terraform-doc")).setup({command_name = "OpenTerraformDoc"})
+      require("treesitter-terraform-doc").setup({command_name = "OpenTerraformDoc"})
       vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>td", "<cmd>OpenTerraformDoc<cr>", {noremap = true, desc = "terraform documentation"})
       vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ta", "<cmd>TermExec cmd='terraform apply'<cr>", {noremap = true, desc = "terraform apply"})
       vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ti", "<cmd>TermExec cmd='terraform init'<cr>", {noremap = true, desc = "terraform init"})
       vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tp", "<cmd>TermExec cmd='terraform plan'<cr>", {noremap = true, desc = "terraform plan"})
       return vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tv", "<cmd>TermExec cmd='terraform validate'<cr>", {noremap = true, desc = "terraform validate"})
     end
-    return ((require("lspconfig")).terraformls).setup({capabilities = capabilities, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _7_})
+    return require("lspconfig").terraformls.setup({capabilities = capabilities, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _7_})
   end
   return mason_lspconfig.setup_handlers({_4_, fennel_language_server = _5_, terraformls = _6_})
 end

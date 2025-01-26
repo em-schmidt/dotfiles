@@ -1,8 +1,8 @@
 -- [nfnl] Compiled from lua/plugins/completion.fnl by https://github.com/Olical/nfnl, do not edit.
 local u = require("util")
 local function _1_()
-  do end (require("copilot")).setup({})
-  return (require("copilot_cmp")).setup({})
+  require("copilot").setup({})
+  return require("copilot_cmp").setup({})
 end
 local function _2_()
   local cmp = require("cmp")
@@ -11,7 +11,7 @@ local function _2_()
   local has_words_before_cursor_3f
   local function _3_()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-    return ((col ~= 0) and (((vim.api.nvim_buf_get_lines(0, (line - 1), line, true))[1]):sub(col, col):match("%s") == nil))
+    return ((col ~= 0) and (vim.api.nvim_buf_get_lines(0, (line - 1), line, true)[1]:sub(col, col):match("%s") == nil))
   end
   has_words_before_cursor_3f = _3_
   vim.o.completeopt = "menu,menuone,noselect"
@@ -42,4 +42,4 @@ local function _2_()
   cmp.setup.cmdline({"/", "?"}, {mapping = cmp.mapping.preset.cmdline(), sources = {{name = "buffer"}}})
   return cmp.setup.cmdline(":", {mapping = cmp.mapping.preset.cmdline(), sources = cmp.config.sources({{name = "path"}, {name = "cmdline"}})})
 end
-return {u.tx("zbirenbaum/copilot-cmp", {dependencies = {"zbirenbaum/copilot.lua"}, config = _1_}), u.tx("hrsh7th/nvim-cmp", {dependencies = {"hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-cmdline", "hrsh7th/cmp-path", "onsails/lspkind.nvim", "PaterJason/cmp-conjure", "saadparwaiz1/cmp_luasnip", "L3MON4D3/LuaSnip"}, config = _2_})}
+return {u.tx("zbirenbaum/copilot-cmp", {dependencies = {"zbirenbaum/copilot.lua"}, config = _1_}), u.tx("L3MON4D3/LuaSnip", {build = "make install_jsregexp"}), u.tx("hrsh7th/nvim-cmp", {dependencies = {"hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-cmdline", "hrsh7th/cmp-path", "onsails/lspkind.nvim", "PaterJason/cmp-conjure", "saadparwaiz1/cmp_luasnip", "L3MON4D3/LuaSnip"}, config = _2_})}

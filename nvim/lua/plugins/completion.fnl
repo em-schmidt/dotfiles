@@ -8,6 +8,10 @@
               ((. (require :copilot_cmp) :setup) {}))})
 
  (u.tx
+   :L3MON4D3/LuaSnip
+   {:build "make install_jsregexp"})
+
+ (u.tx
   :hrsh7th/nvim-cmp
   {:dependencies [:hrsh7th/cmp-buffer
                   :hrsh7th/cmp-nvim-lsp

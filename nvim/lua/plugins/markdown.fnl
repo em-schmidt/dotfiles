@@ -4,13 +4,14 @@
   :OXY2DEV/markview.nvim
   {:lazy false
    :dependencies [:nvim-treesitter/nvim-treesitter
-                  :nvim-tree/nvim-web-devicons]
+                  :nvim-tree/nvim-web-devicons
+                  :echasnovski/mini.icons]
    :config (fn [] (let [presets (. (require :markview.presets))]
                     ((. (require :markview) :setup) 
-                     {:checkboxes (. presets :checkboxes :nerd)
-                      :code_blocks {:style :minimal}
-                      :headings (. presets :headings :glow)
-                      :horizontal_rules (. presets :horizontal_rules :thick)})))})
+                     {:markdown {:code_blocks {:style :simple}
+                                 :headings (. presets :headings :glow)
+                                 :horizontal_rules (. presets :horizontal_rules :thick)
+                                 :tables (. presets :tables :rounded)}})))})
 
  (u.tx
   :jubnzv/mdeval.nvim)
