@@ -1,6 +1,11 @@
 (local u (require :util))
 
-[(u.tx :neovim/nvim-lspconfig
+[(u.tx :Wansmer/symbol-usage.nvim
+  {:event :LspAttach
+   :config (fn []
+             ((. (require :symbol-usage) :setup) {:references {:enabled true}}))})
+
+ (u.tx :neovim/nvim-lspconfig
   {:dependencies [:williamboman/mason.nvim
                   :williamboman/mason-lspconfig.nvim
                   :hrsh7th/cmp-nvim-lsp
@@ -27,7 +32,7 @@
                                   (vim.api.nvim_buf_set_keymap bufnr :n :<leader>lk "<cmd>lua vim.diagnostic.goto_prev()<cr>"      {:noremap true}) 
                                   (vim.api.nvim_buf_set_keymap bufnr :n :<leader>la "<cmd>lua vim.lsp.buf.code_action()<cr>"       {:noremap true :desc "code actions"}) 
                                   (vim.api.nvim_buf_set_keymap bufnr :v :<leader>la "<cmd>lua vim.lsp.buf.range_code_action()<cr>" {:noremap true :desc "code actions"}) 
-                                  (vim.api.nvim_buf_set_keymap bufnr :n :<leader>lw "<cmd>Trouble workspace_diagnostics<cr>"       {:noremap true :desc "workspace diagnostics (trouble)"}) 
+                                  (vim.api.nvim_buf_set_keymap bufnr :n :<leader>lw "<cmd>Trouble diagnostics<cr>"                 {:noremap true :desc "workspace diagnostics (trouble)"}) 
                                   (vim.api.nvim_buf_set_keymap bufnr :n :<leader>li "<cmd>Telescope lsp_implementations<cr>"       {:noremap true :desc "implementations (telescope)"}) 
                                   (vim.api.nvim_buf_set_keymap bufnr :n :<leader>lr "<cmd>Telescope lsp_references<cr>"            {:noremap true :desc "references (telescope)"}) 
                                   (if client.server_capabilities.documentSymbolProvider
@@ -42,28 +47,30 @@
                                       "fennel_language_server"
                                       "clojure_lsp"]})
                 (mason-lspconfig.setup_handlers
-                  {1 
-                   (fn [servername]
-                     ((. (. (require :lspconfig) servername) :setup) 
-                      {:capabilities capabilities
-                       :on_attach on_attach}))
-                   :fennel_language_server 
-                   (fn []
-                     ((. (. (require :lspconfig) :fennel_language_server) :setup) 
-                      {:capabilities capabilities
-                       :on_attach on_attach
-                       :settings {:fennel {:diagnostics {:globals [:vim]}}}}))
+                  {1
+                     (fn [servername]
+                       ((. (. (require :lspconfig) servername) :setup) 
+                        {:capabilities capabilities
+                         :on_attach on_attach}))
+                   :fennel_language_server
+                     (fn []
+                       ((. (. (require :lspconfig) :fennel_language_server) :setup)
+                        {:capabilities capabilities
+                         :on_attach on_attach
+                         :settings {:fennel {:diagnostics {:globals [:vim]}}}}))
                    :terraformls
-                   (fn [] 
-                     ((. (. (require :lspconfig) :terraformls ) :setup) 
-                      {:capabilities capabilities
-                       :init_options {:experimentalFeatures {:prefillRequiredFields true
-                                                             :validateOnSave true}}
-                       :on_attach (fn [client bufnr] 
-                                    (on_attach client bufnr)
-                                    ((. (require :treesitter-terraform-doc) :setup) {:command_name :OpenTerraformDoc})
-                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>td "<cmd>OpenTerraformDoc<cr>" {:noremap true :desc "terraform documentation"}) 
-                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ta "<cmd>TermExec cmd='terraform apply'<cr>" {:noremap true :desc "terraform apply"}) 
-                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ti "<cmd>TermExec cmd='terraform init'<cr>" {:noremap true :desc "terraform init"}) 
-                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>tp "<cmd>TermExec cmd='terraform plan'<cr>" {:noremap true :desc "terraform plan"}) 
-                                    (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>tv "<cmd>TermExec cmd='terraform validate'<cr>" {:noremap true :desc "terraform validate"}))}))})))})] 
+                     (fn []
+                       ((. (. (require :lspconfig) :terraformls ) :setup)
+                        {:capabilities capabilities
+                         :init_options {:experimentalFeatures {:prefillRequiredFields true
+                                                               :validateOnSave true}}
+                         :on_attach (fn [client bufnr] 
+                                      (on_attach client bufnr)
+                                      ((. (require :treesitter-terraform-doc) :setup) {:command_name :OpenTerraformDoc})
+                                      (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>td "<cmd>OpenTerraformDoc<cr>" {:noremap true :desc "terraform documentation"}) 
+                                      (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ta "<cmd>TermExec cmd='terraform apply'<cr>" {:noremap true :desc "terraform apply"}) 
+                                      (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ti "<cmd>TermExec cmd='terraform init'<cr>" {:noremap true :desc "terraform init"}) 
+                                      (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>tp "<cmd>TermExec cmd='terraform plan'<cr>" {:noremap true :desc "terraform plan"}) 
+                                      (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>tv "<cmd>TermExec cmd='terraform validate'<cr>" {:noremap true :desc "terraform validate"}))}))}) 
+                {:codelens {:enabled true}
+                 :inlay_hints {:enabled true}}))})]
