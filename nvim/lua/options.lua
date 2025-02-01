@@ -9,6 +9,6 @@ local function set_options()
   for key, value in pairs(options) do
     u.set_vim_option(key, value)
   end
-  return nil
+  return vim.filetype.add({extension = {tf = "terraform"}})
 end
 return {set_options = set_options}

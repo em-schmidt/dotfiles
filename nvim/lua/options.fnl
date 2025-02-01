@@ -35,6 +35,8 @@
       (u.set_vim_global key value))
 
     (each [key value (pairs options)]
-      (u.set_vim_option key value))))
+      (u.set_vim_option key value))
+
+    (vim.filetype.add {:extension {:tf :terraform}})))
 
 {: set_options}
