@@ -28,7 +28,7 @@ brew 'difftastic'
 brew 'direnv'
 brew 'fd'                                   #fast find (for nvim telescope)
 brew 'findutils'                            #for emacs
-brew 'fluxcd/tap/flux'
+brew 'fluxcd/tap/flux@2.2'
 brew 'fzf'
 brew 'gh'
 brew 'glab'
