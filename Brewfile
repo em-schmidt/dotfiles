@@ -6,12 +6,10 @@ tap 'babashka/brew'
 tap 'fluxcd/tap'
 tap 'homebrew/bundle'
 tap 'homebrew/cask-versions'
-tap 'remotemobprogramming/brew'
 tap 'teamookla/speedtest'
 tap 'temporalio/brew'
 
 brew 'age'                                  # used by sops
-brew 'aspell'                               # for emacs
 brew 'awscli'
 brew 'aws-cdk'
 brew 'azure-cli'
@@ -27,7 +25,6 @@ brew 'coreutils'
 brew 'difftastic'
 brew 'direnv'
 brew 'fd'                                   #fast find (for nvim telescope)
-brew 'findutils'                            #for emacs
 brew 'fluxcd/tap/flux@2.2'
 brew 'fzf'
 brew 'gh'
@@ -51,7 +48,6 @@ brew 'kubectx', args: ["build-from-source"]
 brew 'kube-ps1', args: ["build-from-source"]
 brew 'lazygit'
 brew 'leiningen'
-brew 'libvterm'                            # for emacs
 brew 'libgit2'
 brew 'luarocks'
 brew 'lua-language-server'
@@ -73,7 +69,6 @@ brew 'pyenv-virtualenv'
 brew 'pwgen'
 brew 'readline'
 brew 'mob'
-brew 'rg'                                   # for emacs
 brew 'rust'                                 # for vim-clap
 brew 'sops'
 brew 'speedtest'
@@ -87,8 +82,6 @@ brew 'terraform'
 brew 'tflint'
 brew 'tmux'
 brew 'tree'
-brew 'unison'                              # for docker-sync
-#brew 'vim', link: false
 brew 'watch'
 brew 'watchman'
 brew 'wget'
@@ -103,7 +96,6 @@ cask '1password'
 cask '1password-cli'
 cask 'arq'
 cask 'docker'
-cask 'emacs'
 cask 'font-inconsolata-go-nerd-font'
 cask 'font-inconsolata-lgc-nerd-font'
 cask 'font-inconsolata-nerd-font'
@@ -130,7 +122,6 @@ cask 'github'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'insomnia'
-cask 'iterm2@nightly'
 cask 'kaleidoscope'
 cask 'multipass'
 cask 'notion'
@@ -138,9 +129,7 @@ cask 'notion'
 cask 'prince'                  # installed for dendron to support PDF export
 cask 'rectangle'               # tile and snap windows
 cask 'session-manager-plugin'  # aws sesssion manager plugin
-# cask 'steam'                 # haven't played any steam games in awhile
 cask 'transmit'
-#cask 'viscosity'              # nice openvpn client, not using it anymore
 cask 'visual-studio-code'
 cask 'zprint'                  # clojure formatter
 
