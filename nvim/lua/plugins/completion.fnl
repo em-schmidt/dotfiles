@@ -54,9 +54,10 @@
                            :snippet {:expand (fn [args] (luasnip.lsp_expand args.body))}
                            :sources (cmp.config.sources [{:name :nvim_lsp}
                                                          {:name :luasnip}
-                                                         {:name :copilot}
                                                          {:name :conjure}
-                                                         {:name :buffer}])
+                                                         {:name :buffer}
+                                                         {:name :path}
+                                                         {:name :copilot}])
                            :window {:completion (cmp.config.window.bordered)
                                     :documentation (cmp.config.window.bordered)}})
 
