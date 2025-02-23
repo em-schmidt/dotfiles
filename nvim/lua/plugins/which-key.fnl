@@ -17,7 +17,6 @@
 
               (wk.add [(u.tx :<leader>b {:group :buffers})
                        (u.nlkm :ba :ball               "open all buffers")
-                       (u.nlkm :bb "Telescope buffers" "list buffers")
                        (u.nlkm :bd :bdelete            "delete current buffer")
                        (u.nlkm :bn :bnext              "next buffer")
                        (u.nlkm :bp :bprevious          "previous buffer")])
@@ -26,8 +25,6 @@
                        (u.nlkm :et "Trouble diagnostics toggle" "toggle diagnostics view")])
 
               (wk.add [(u.tx :<leader>f {:group :files})
-                       (u.nlkm :ff "Telescope find_files" "project files")
-                       (u.nlkm :f/ "Telescope live_grep"  "grep in workspace")
                        (u.nlkm :ft "NvimTreeToggle"       "toggle file tree")])
 
               (wk.add [(u.tx :<leader>g {:group :git})
@@ -37,18 +34,12 @@
                        (u.nlkm :gg
                                :Fugit2
                                "fugit2")
-                       (u.nlkm :gl
-                               "Telescope git_commits"
-                               "git log")
                        (u.nlkm :gp
                                "Git pull"
                                "git pull")
                        (u.nlkm :gP
                                "Git push"
-                               "git push")
-                       (u.nlkm :gs
-                               "Telescope git_status"
-                               "git status")])
+                               "git push")])
 
               (wk.add [(u.tx :<leader>l {:group :lsp})]) 
 
@@ -72,13 +63,7 @@
                        (u.nlkm :or :OverseerRun    "run task")
                        (u.nlkm :ot :OverseerToggle "toggle overseer")])
 
-              (wk.add [(u.tx :<leader>p {:group :projects})
-                       (u.nlkm :pp 
-                               "lua require'telescope'.extensions.project.project{ display_type = 'full' }"
-                               "project switcher")
-                       (u.nlkm :pt
-                               :TodoTelescope
-                               "project todos")])
+              (wk.add [(u.tx :<leader>p {:group :projects})])
 
               (wk.add [(u.tx :<leader>P {:group :plugins})
                        (u.nlkm :Pl 
@@ -95,8 +80,6 @@
                              :mode :v})]) 
 
               (wk.add [(u.tx :<leader>t {:group :tabs})
-                       (u.nlkm :tt "Telescope tele_tabby list" 
-                               "list tabs")
                        (u.nlkm :td :tabclose 
                                "close current tab")
                        (u.nlkm :tn :tabnext

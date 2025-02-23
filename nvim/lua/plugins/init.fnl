@@ -26,12 +26,16 @@
     :lazy false
     :opts
       {:gitbrowse {:enabled true}
-       :image {:enabled true}}
+       :image {:enabled true}
+       :picker {:enabled true}}
     :keys
-      [(u.tx
-        :<leader>gB
-        (fn [] (Snacks.gitbrowse)) 
-        {:desc "open git in browser"})]})
+      [(u.tx :<leader>gB (fn [] (Snacks.gitbrowse)) {:desc "open git in browser"})
+       (u.tx :<leader>gl (fn [] (Snacks.picker.git_log)) {:desc "git log"})
+       (u.tx :<leader>gs (fn [] (Snacks.picker.git_status)) {:desc "git status"})
+       (u.tx :<leader>ff (fn [] (Snacks.picker.smart)) {:desc "files"})
+       (u.tx :<leader>f/ (fn [] (Snacks.picker.grep)) {:desc "grep"})
+       (u.tx :<leader>pp (fn [] (Snacks.picker.projects)) {:desc "projects"})
+       (u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})]})
 
  (u.tx :akinsho/toggleterm.nvim
    {:opts {}})
