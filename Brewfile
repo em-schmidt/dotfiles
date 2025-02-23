@@ -70,6 +70,7 @@ brew 'pwgen'
 brew 'readline'
 brew 'mob'
 brew 'rust'                                 # for vim-clap
+brew 'syncthing'
 brew 'sops'
 brew 'speedtest'
 brew 'stern'
