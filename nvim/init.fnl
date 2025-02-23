@@ -24,7 +24,7 @@
 
 
 
-(local lazy (require "lazy")) 
+(local lazy (require "lazy"))
 
 ;; loads all plugin definitions in lua/plugins
 (lazy.setup :plugins)

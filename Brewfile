@@ -75,6 +75,7 @@ brew 'speedtest'
 brew 'stern'
 brew 'structurizr-cli'
 brew 'svn'
+brew 'tectonic'                             # rendering latex
 brew 'temporalio/brew/tcld'                 # temporal CLI
 brew 'terraform-ls'
 brew 'terraform'

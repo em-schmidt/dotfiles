@@ -25,7 +25,8 @@
    {:priority 1000
     :lazy false
     :opts
-      {:gitbrowse {:enabled true}}
+      {:gitbrowse {:enabled true}
+       :image {:enabled true}}
     :keys
       [(u.tx
         :<leader>gB

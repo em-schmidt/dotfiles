@@ -17,16 +17,6 @@
   :jubnzv/mdeval.nvim)
 
  (u.tx
-   :3rd/image.nvim
-   {:opts {}})
-
- (u.tx
-   :3rd/diagram.nvim
-   {:dependencies [:3rd/image.nvim]
-    :opts {}
-    :config (fn [] ((. (require :diagram) :setup) {:integrations [(require :diagram.integrations.markdown)]}))})
-
- (u.tx 
    :Kicamon/markdown-table-mode.nvim
    {:config (fn [] ((. (require :markdown-table-mode) :setup)))})
 

@@ -49,3 +49,10 @@ IAM
 athena
 S3
 nginx
+#3tables/!
+s3tables/!
+s3tables
+s3tablescatalog
+github
+kafka
+S3Tables
