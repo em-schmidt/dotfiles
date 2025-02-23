@@ -11,7 +11,6 @@
                                 "fennel"
                                 "markdown"
                                 "markdown_inline"
-                                "org"
                                 "hcl"
                                 "json"]
                              :sync_install true
