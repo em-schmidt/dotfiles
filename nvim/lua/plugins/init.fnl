@@ -19,15 +19,17 @@
        :notifier {:enabled true}
        :picker {:enabled true}}
     :keys
-      [(u.tx :<leader>gB (fn [] (Snacks.gitbrowse)) {:desc "open git in browser"})
-       (u.tx :<leader>gl (fn [] (Snacks.picker.git_log)) {:desc "git log"})
-       (u.tx :<leader>gs (fn [] (Snacks.picker.git_status)) {:desc "git status"})
+      [(u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})
        (u.tx :<leader>fe (fn [] (Snacks.picker.explorer)) {:desc "explorer"})
        (u.tx :<leader>ff (fn [] (Snacks.picker.smart)) {:desc "files"})
        (u.tx :<leader>f/ (fn [] (Snacks.picker.grep)) {:desc "grep"})
+       (u.tx :<leader>gB (fn [] (Snacks.gitbrowse)) {:desc "open git in browser"})
+       (u.tx :<leader>gl (fn [] (Snacks.picker.git_log)) {:desc "git log"})
+       (u.tx :<leader>gs (fn [] (Snacks.picker.git_status)) {:desc "git status"})
+       (u.tx :<leader>Nh (fn [] (Snacks.picker.notifications)) {:desc "notificaiton history"})
+       (u.tx :<leader>Nd (fn [] (Snacks.notifier.hide)) {:desc "dismiss notifications"})
        (u.tx :<leader>pp (fn [] (Snacks.picker.projects)) {:desc "projects"})
-       (u.tx :<leader>pt (fn [] (Snacks.picker.todo_comments)) {:desc "TODOs"})
-       (u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})]})
+       (u.tx :<leader>pt (fn [] (Snacks.picker.todo_comments)) {:desc "TODOs"})]})
 
  (u.tx :folke/trouble.nvim
    {:opts {:auto_preview true
