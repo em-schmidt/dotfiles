@@ -37,7 +37,7 @@ local function _1_()
     return require("lspconfig")[servername].setup({capabilities = capabilities, on_attach = on_attach})
   end
   local function _5_()
-    return require("lspconfig").fennel_language_server.setup({capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim"}}}}})
+    return require("lspconfig").fennel_language_server.setup({capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim", "Snacks"}}}}})
   end
   local function _6_()
     local function _7_(client, bufnr)

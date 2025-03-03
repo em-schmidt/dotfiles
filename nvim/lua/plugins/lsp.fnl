@@ -52,7 +52,7 @@
                      ((. (. (require :lspconfig) :fennel_language_server) :setup) 
                       {:capabilities capabilities
                        :on_attach on_attach
-                       :settings {:fennel {:diagnostics {:globals [:vim]}}}}))
+                       :settings {:fennel {:diagnostics {:globals [:vim :Snacks]}}}}))
                    :terraformls
                    (fn [] 
                      ((. (. (require :lspconfig) :terraformls ) :setup) 
