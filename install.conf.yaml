@@ -7,6 +7,12 @@
     stdout: true
     stderr: true
     description: Ensure brew is installed
+  - 
+    command: brew bundle
+    stdin: true
+    stdout: true
+    stderr: true
+    description: Install/Update brew pacakges
 
 - defaults:
     link:
@@ -16,9 +22,6 @@
       stdout: true
       stderr: true
       include: ['tap', 'brew', 'cask', 'mas']
-
-- brewfile:
-    file: Brewfile
 
 - clean: ['~']
 
