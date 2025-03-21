@@ -32,8 +32,6 @@
 - link:
     ~/.zshrc: zsh/zshrc
     ~/.zshenv: zsh/zshenv
-    ~/.vimrc:
-    ~/.vim:
     ~/.gitignore:             git/gitignore
     ~/.gitconfig:             git/gitconfig
     ~/.config/ghostty:        ghostty
