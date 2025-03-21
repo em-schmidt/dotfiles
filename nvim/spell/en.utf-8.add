@@ -93,3 +93,8 @@ PVCs
 EFS
 filesystem
 VPN
+buildkit
+buildx
+TODOs
+eyebeams
+ECR
