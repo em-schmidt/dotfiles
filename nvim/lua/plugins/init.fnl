@@ -17,10 +17,12 @@
        :input {:enabled true}
        :image {:enabled true}
        :notifier {:enabled true}
-       :picker {:enabled true}}
+       :picker {:enabled true}
+       :explorer {}}
     :keys
       [(u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})
        (u.tx :<leader>fe (fn [] (Snacks.picker.explorer)) {:desc "explorer"})
+       (u.tx :<leader>ft (fn [] (Snacks.picker.explorer)) {:desc "explorer"})
        (u.tx :<leader>ff (fn [] (Snacks.picker.smart)) {:desc "files"})
        (u.tx :<leader>f/ (fn [] (Snacks.picker.grep)) {:desc "grep"})
        (u.tx :<leader>gB (fn [] (Snacks.gitbrowse)) {:desc "open git in browser"})

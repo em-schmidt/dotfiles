@@ -26,13 +26,20 @@
  (u.tx :nvim-lualine/lualine.nvim
    {:dependencies [:nvim-tree/nvim-web-devicons
                    :AndreM222/copilot-lualine]
-    :opts {:extensions ["nvim-tree" "toggleterm" "trouble" "fugitive" "lazy"]
+    :opts {:extensions [
+                                           "nvim-tree"
+                                           "toggleterm"
+                                           "trouble"
+                                           "fugitive"
+                                           "lazy"
+                                           "overseer"
+                                           "snacks"]
            :options {:theme :auto
                      :component_separators "|"
                      :section_separators {:left "" :right ""}
                      :always_show_tabline false}
-           :sections {:lualine_a [(u.tx :mode 
-                                        {:separator {:left ""} 
+           :sections {:lualine_a [(u.tx :mode
+                                        {:separator {:left ""}
                                          :right_padding 1})]
                       :lualine_b [[:filename {:filestatus true
                                               :path 1}]]
@@ -42,8 +49,17 @@
                                   [:copilot]]
                       :lualine_y [[:filetype] [:progress]]
                       :lualine_z [(u.tx :location 
-                                        {:separator {:right ""} 
+                                        {:separator {:right ""}
                                          :left_padding 1})]}
            :tabline {:lualine_z [(u.tx :tabs {:mode 2})]}}})]
 
-
+; (fn winspect []
+;   "window info"
+;   (each [_ winno (pairs (vim.api.nvim_list_wins))]
+;     (let [bufno (vim.api.nvim_win_get_buf winno)
+;           ft (vim.api.nvim_buf_get_option bufno :filetype)]
+;       (vim.notify (.. "winno: " winno " bufno: " bufno " ft:" ft) :info {:title "WinInfo"}))))
+;
+; (winspect)
+;
+;

@@ -24,8 +24,7 @@
               (wk.add [(u.tx :<leader>e {:group :errors})
                        (u.nlkm :et "Trouble diagnostics toggle" "toggle diagnostics view")])
 
-              (wk.add [(u.tx :<leader>f {:group :files})
-                       (u.nlkm :ft "NvimTreeToggle"       "toggle file tree")])
+              (wk.add [(u.tx :<leader>f {:group :files})])
 
               (wk.add [(u.tx :<leader>g {:group :git})
                        (u.nlkm :gb
