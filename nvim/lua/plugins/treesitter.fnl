@@ -9,10 +9,11 @@
              (configs.setup {:ensure_installed
                                ["clojure"
                                 "fennel"
+                                "json"
+                                "hcl"
                                 "markdown"
                                 "markdown_inline"
-                                "hcl"
-                                "json"]
+                                "regex"]
                              :sync_install true
                              :auto_install true
                              :indent {:enable true}

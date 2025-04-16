@@ -4,6 +4,10 @@
   []
   (let [globals {:loaded_netrw 1 ;;nvim-tree
                  :loaded_netwrwPlugin 1 ;;nvim-tree
+                 :loaded_node_provider 0
+                 :loaded_perl_provider 0
+                 :loaded_python3_provider 0
+                 :loaded_ruby_provider 0
                  :mapleader " "
                  :maplocalleader ","}
         options {:termguicolors true
