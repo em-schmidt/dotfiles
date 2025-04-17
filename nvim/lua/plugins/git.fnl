@@ -14,4 +14,4 @@
    {:opts {}})
 
  (u.tx :lewis6991/gitsigns.nvim
-    {:opts {}})]
+   {:opts {}})]

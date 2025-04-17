@@ -18,6 +18,7 @@
        :image {:enabled true}
        :notifier {:enabled true}
        :picker {:enabled true}
+       :statuscolumn {}
        :explorer {}}
     :keys
       [(u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})
@@ -34,8 +35,7 @@
        (u.tx :<leader>pt (fn [] (Snacks.picker.todo_comments)) {:desc "TODOs"})]})
 
  (u.tx :folke/trouble.nvim
-   {:opts {:auto_preview true
-           :mode :document_diagnostics}})
+   {:opts {}})
 
  (u.tx :akinsho/toggleterm.nvim
    {:opts {}})

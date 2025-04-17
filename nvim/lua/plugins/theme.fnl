@@ -53,13 +53,3 @@
                                          :left_padding 1})]}
            :tabline {:lualine_z [(u.tx :tabs {:mode 2})]}}})]
 
-; (fn winspect []
-;   "window info"
-;   (each [_ winno (pairs (vim.api.nvim_list_wins))]
-;     (let [bufno (vim.api.nvim_win_get_buf winno)
-;           ft (vim.api.nvim_buf_get_option bufno :filetype)]
-;       (vim.notify (.. "winno: " winno " bufno: " bufno " ft:" ft) :info {:title "WinInfo"}))))
-;
-; (winspect)
-;
-;

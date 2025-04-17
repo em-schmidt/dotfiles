@@ -9,6 +9,27 @@
     :config (fn []
               (let [cmp_nvim_lsp (require :cmp_nvim_lsp)
                     capabilities (cmp_nvim_lsp.default_capabilities (vim.lsp.protocol.make_client_capabilities))
+                    diagnostics {:float {:border "rounded"
+                                         :focusable true
+                                         :source "always"
+                                         :style "minimal"}
+                                 :jump {:float false :wrap true}
+                                 :severity_sort true
+                                 :signs {:linehl {vim.diagnostic.severity.ERROR :ErrorMsg
+                                                  vim.diagnostic.severity.WARN :WarningMsg
+                                                  vim.diagnostic.severity.HINT :HintMsg
+                                                  vim.diagnostic.severity.INFO :InfoMsg}
+                                         :numhl {vim.diagnostic.severity.ERROR :ErrorMsg
+                                                 vim.diagnostic.severity.WARN :WarningMsg
+                                                 vim.diagnostic.severity.HINT :HintMsg
+                                                 vim.diagnostic.severity.INFO :InfoMsg}
+                                         :text {vim.diagnostic.severity.ERROR " "
+                                                vim.diagnostic.severity.WARN " "
+                                                vim.diagnostic.severity.HINT " "
+                                                vim.diagnostic.severity.INFO " "}}
+                                 :underline true
+                                 :update_in_insert false
+                                 :virtual_lines true}
                     mason (require :mason)
                     mason-lspconfig (require :mason-lspconfig)
                     navic (require :nvim-navic)
@@ -44,17 +65,20 @@
                 (mason-lspconfig.setup_handlers
                   {1 
                    (fn [servername]
+                     (vim.diagnostic.config diagnostics)
                      ((. (. (require :lspconfig) servername) :setup) 
                       {:capabilities capabilities
                        :on_attach on_attach}))
                    :fennel_language_server 
                    (fn []
+                     (vim.diagnostic.config diagnostics)
                      ((. (. (require :lspconfig) :fennel_language_server) :setup) 
                       {:capabilities capabilities
                        :on_attach on_attach
                        :settings {:fennel {:diagnostics {:globals [:vim :Snacks]}}}}))
                    :terraformls
                    (fn [] 
+                     (vim.diagnostic.config diagnostics)
                      ((. (. (require :lspconfig) :terraformls ) :setup) 
                       {:capabilities capabilities
                        :init_options {:experimentalFeatures {:prefillRequiredFields true
