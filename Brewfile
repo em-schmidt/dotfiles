@@ -7,6 +7,7 @@ tap 'fluxcd/tap'
 tap 'homebrew/cask-versions'
 tap 'teamookla/speedtest'
 tap 'temporalio/brew'
+tap 'superbrothers/opener'
 
 brew 'age'                                  # used by sops
 brew 'awscli'
@@ -69,12 +70,13 @@ brew 'pwgen'
 brew 'readline'
 brew 'mob'
 brew 'rust'                                 # for vim-clap
-brew 'syncthing'
 brew 'sops'
 brew 'speedtest'
 brew 'stern'
 brew 'structurizr-cli'
+brew 'superbrothers/opener/opener'
 brew 'svn'
+brew 'syncthing'
 brew 'tectonic'                             # rendering latex
 brew 'temporalio/brew/tcld'                 # temporal CLI
 brew 'terraform-ls'

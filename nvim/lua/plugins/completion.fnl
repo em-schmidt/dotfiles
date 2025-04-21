@@ -1,11 +1,7 @@
 (local u (require :util))
 
 [
- (u.tx :zbirenbaum/copilot-cmp
-   {:dependencies [:zbirenbaum/copilot.lua]
-    :config (fn []
-              ((. (require :copilot) :setup) {})
-              ((. (require :copilot_cmp) :setup) {}))})
+ (u.tx :zbirenbaum/copilot.lua)
 
  (u.tx
    :L3MON4D3/LuaSnip
@@ -33,8 +29,7 @@
                (cmp.setup {:experimental {:ghost_text {:hl_group :Comment}}
                            :formatting {:fields [:abbr :kind :menu]
                                         :format (lspkind.cmp_format {:maxwidth 50
-                                                                     :mode :symbol_text
-                                                                     :symbol_map {:Copilot ""}})}
+                                                                     :mode :symbol_text})}
                            :mapping {
                                      :<c-space> (cmp.mapping (cmp.mapping.complete))
                                      :<cr> (cmp.mapping.confirm {:behavior cmp.ConfirmBehavior.Insert
@@ -56,8 +51,7 @@
                                                          {:name :luasnip}
                                                          {:name :conjure}
                                                          {:name :buffer}
-                                                         {:name :path}
-                                                         {:name :copilot}])
+                                                         {:name :path}])
                            :window {:completion (cmp.config.window.bordered)
                                     :documentation (cmp.config.window.bordered)}})
 
