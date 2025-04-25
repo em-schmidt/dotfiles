@@ -38,4 +38,4 @@ local function _1_()
   cmp.setup.cmdline({"/", "?"}, {mapping = cmp.mapping.preset.cmdline(), sources = {{name = "buffer"}}})
   return cmp.setup.cmdline(":", {mapping = cmp.mapping.preset.cmdline(), sources = cmp.config.sources({{name = "path"}, {name = "cmdline"}})})
 end
-return {u.tx("zbirenbaum/copilot.lua"), u.tx("L3MON4D3/LuaSnip", {build = "make install_jsregexp"}), u.tx("hrsh7th/nvim-cmp", {dependencies = {"hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-cmdline", "hrsh7th/cmp-path", "onsails/lspkind.nvim", "PaterJason/cmp-conjure", "saadparwaiz1/cmp_luasnip", "L3MON4D3/LuaSnip"}, config = _1_})}
+return {u.tx("L3MON4D3/LuaSnip", {build = "make install_jsregexp"}), u.tx("hrsh7th/nvim-cmp", {dependencies = {"hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-cmdline", "hrsh7th/cmp-path", "onsails/lspkind.nvim", "PaterJason/cmp-conjure", "saadparwaiz1/cmp_luasnip", "L3MON4D3/LuaSnip"}, config = _1_})}

@@ -1,11 +1,8 @@
 (local u (require :util))
 
-[
- (u.tx :zbirenbaum/copilot.lua)
-
- (u.tx
-   :L3MON4D3/LuaSnip
-   {:build "make install_jsregexp"})
+[(u.tx
+  :L3MON4D3/LuaSnip
+  {:build "make install_jsregexp"})
 
  (u.tx
   :hrsh7th/nvim-cmp

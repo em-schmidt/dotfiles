@@ -7,6 +7,8 @@
     :init (fn []
             (let [wk (require "which-key")]
 
+              (wk.add [(u.tx :<leader>a {:group "AI"})])
+
               (wk.add [(u.nlkm :.         :ToggleTerm          "toggle terminal")
                        (u.nlkm :<tab>     :b#                  "next buffer")
                        (u.nlkm :+         "resize +3"          "increase height") 

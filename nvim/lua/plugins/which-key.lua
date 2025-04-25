@@ -1,8 +1,9 @@
--- [nfnl] Compiled from lua/plugins/which-key.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] lua/plugins/which-key.fnl
 local u = require("util")
 local function _1_()
   do
     local wk = require("which-key")
+    wk.add({u.tx("<leader>a", {group = "AI"})})
     wk.add({u.nlkm(".", "ToggleTerm", "toggle terminal"), u.nlkm("<tab>", "b#", "next buffer"), u.nlkm("+", "resize +3", "increase height"), u.nlkm("=", "resize +3", "increase height"), u.nlkm("-", "resize -3", "decrease height"), u.nlkm("<char-62>", "vertical resize +3", "increase width"), u.nlkm("<lt>", "vertical resize -3", "decrease width")})
     wk.add({u.tx("<leader>b", {group = "buffers"}), u.nlkm("ba", "ball", "open all buffers"), u.nlkm("bd", "bdelete", "delete current buffer"), u.nlkm("bn", "bnext", "next buffer"), u.nlkm("bp", "bprevious", "previous buffer")})
     wk.add({u.tx("<leader>e", {group = "errors"}), u.nlkm("et", "Trouble diagnostics toggle", "toggle diagnostics view")})

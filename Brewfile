@@ -11,7 +11,6 @@ tap 'superbrothers/opener'
 
 brew 'age'                                  # used by sops
 brew 'awscli'
-brew 'aws-cdk'
 brew 'azure-cli'
 brew 'babashka'
 brew 'babashka/brew/bbin'
