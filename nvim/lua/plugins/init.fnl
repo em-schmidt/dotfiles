@@ -13,13 +13,30 @@
    {:priority 1000
     :lazy false
     :opts
-      {:gitbrowse {:enabled true}
-       :input {:enabled true}
-       :image {:enabled true}
-       :notifier {:enabled true}
-       :picker {:enabled true}
-       :statuscolumn {}
-       :explorer {}}
+        ;; TODO: add note management section, today's note, yesterday's note, recent notes
+       {:dashboard {:sections [{:icon " "
+                                :title "Keymaps"
+                                :section "keys"
+                                :indent 2
+                                :padding 1}
+                               {:icon " "
+                                :title "Recent Files"
+                                :section "recent_files"
+                                :indent 2
+                                :padding 1}
+                               {:icon " "
+                                :title "Projects"
+                                :section "projects"
+                                :indent 2
+                                :padding 1}
+                               {:section "startup"}]}
+        :explorer {}
+        :image {:enabled true}
+        :input {:enabled true}
+        :notifier {:enabled true}
+        :picker {:enabled true}
+        :statuscolumn {}
+        :gitbrowse {:enabled true}}
     :keys
       [(u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})
        (u.tx :<leader>fe (fn [] (Snacks.picker.explorer)) {:desc "explorer"})
@@ -57,6 +74,5 @@
  (u.tx :gpanders/nvim-parinfer)
 
  (u.tx :julienvincent/nvim-paredit
-  {:config (fn []
-            ((. (require :nvim-paredit) :setup) {}))})]
+   {:opts {}})]
 
