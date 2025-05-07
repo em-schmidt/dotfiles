@@ -21,7 +21,7 @@
    {:config (fn [] ((. (require :markdown-table-mode) :setup)))})
 
  (u.tx
-  :epwalsh/obsidian.nvim
+  :obsidian-nvim/obsidian.nvim
   {:version "*"
    :lazy false
    :ft :markdown

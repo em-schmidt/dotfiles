@@ -42,27 +42,18 @@ local function _1_()
   on_attach = _2_
   mason.setup()
   mason_lspconfig.setup({automatic_installation = true, ensure_installed = {"tflint", "jsonls", "terraformls", "fennel_language_server", "clojure_lsp"}})
-  local function _6_(servername)
-    vim.diagnostic.config(diagnostics)
-    return require("lspconfig")[servername].setup({capabilities = capabilities, on_attach = on_attach})
+  vim.diagnostic.config(diagnostics)
+  vim.lsp.config("*", {capabilities = capabilities, on_attach = on_attach})
+  vim.lsp.config("fennel_language_server", {capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim", "Snacks"}}}}})
+  local function _6_(client, bufnr)
+    on_attach(client, bufnr)
+    require("treesitter-terraform-doc").setup({command_name = "OpenTerraformDoc"})
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>td", "<cmd>OpenTerraformDoc<cr>", {noremap = true, desc = "terraform documentation"})
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ta", "<cmd>TermExec cmd='terraform apply'<cr>", {noremap = true, desc = "terraform apply"})
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ti", "<cmd>TermExec cmd='terraform init'<cr>", {noremap = true, desc = "terraform init"})
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tp", "<cmd>TermExec cmd='terraform plan'<cr>", {noremap = true, desc = "terraform plan"})
+    return vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tv", "<cmd>TermExec cmd='terraform validate'<cr>", {noremap = true, desc = "terraform validate"})
   end
-  local function _7_()
-    vim.diagnostic.config(diagnostics)
-    return require("lspconfig").fennel_language_server.setup({capabilities = capabilities, on_attach = on_attach, settings = {fennel = {diagnostics = {globals = {"vim", "Snacks"}}}}})
-  end
-  local function _8_()
-    vim.diagnostic.config(diagnostics)
-    local function _9_(client, bufnr)
-      on_attach(client, bufnr)
-      require("treesitter-terraform-doc").setup({command_name = "OpenTerraformDoc"})
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>td", "<cmd>OpenTerraformDoc<cr>", {noremap = true, desc = "terraform documentation"})
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ta", "<cmd>TermExec cmd='terraform apply'<cr>", {noremap = true, desc = "terraform apply"})
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ti", "<cmd>TermExec cmd='terraform init'<cr>", {noremap = true, desc = "terraform init"})
-      vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tp", "<cmd>TermExec cmd='terraform plan'<cr>", {noremap = true, desc = "terraform plan"})
-      return vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tv", "<cmd>TermExec cmd='terraform validate'<cr>", {noremap = true, desc = "terraform validate"})
-    end
-    return require("lspconfig").terraformls.setup({capabilities = capabilities, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _9_})
-  end
-  return mason_lspconfig.setup_handlers({_6_, fennel_language_server = _7_, terraformls = _8_})
+  return vim.lsp.config("terraformls", {capabilities = capabilities, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _6_})
 end
-return {u.tx("neovim/nvim-lspconfig", {dependencies = {"williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "SmiteshP/nvim-navic", "Afourcat/treesitter-terraform-doc.nvim"}, config = _1_})}
+return {u.tx("neovim/nvim-lspconfig", {dependencies = {"mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "SmiteshP/nvim-navic", "Afourcat/treesitter-terraform-doc.nvim"}, config = _1_})}
