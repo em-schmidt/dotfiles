@@ -1,4 +1,4 @@
--- [nfnl] Compiled from lua/plugins/conjure.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] lua/plugins/conjure.fnl
 local u = require("util")
 local function _1_()
   do

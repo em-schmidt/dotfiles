@@ -18,10 +18,10 @@
                                            {:group augroup
                                             :pattern ["clojure"]
                                             :callback on-filetype}))
-            (vim.api.nvim_create_autocmd :BufNewFile 
+            (vim.api.nvim_create_autocmd :BufNewFile
                                          {
                                           :group (vim.api.nvim_create_augroup :conjure_log_disable_lsp {:clear true})
-                                          :pattern ["conjure-log-*"] 
+                                          :pattern ["conjure-log-*"]
                                           :callback (fn [] (vim.diagnostic.disable 0))
                                           :desc "Conjure Log disable LSP diagnostics"})
             (tset vim.g "conjure#eval#result_register" "*")

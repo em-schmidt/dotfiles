@@ -50,12 +50,6 @@
                                "toggle markdown rendering")]) 
 
               (wk.add [(u.tx :<leader>n {:group :notes})
-                       (u.nlkm :nn 
-                               :ObsidianQuickSwitch
-                               "note picker") 
-                       (u.nlkm :nt 
-                               :ObsidianToday
-                               "today's note") 
                        (u.nlkm :nT 
                                "vimgrep /- \\[ \\]/ **/* |Trouble quickfix" 
                                "unchecked todos")])

@@ -23,7 +23,7 @@
  (u.tx
   :obsidian-nvim/obsidian.nvim
   {:version "*"
-   :lazy false
+   :lazy true
    :ft :markdown
    :dependencies [:nvim-lua/plenary.nvim]
    :opts {:workspaces [{:name "notes"
@@ -37,5 +37,8 @@
           :sort_reversed true
           :open_notes_in :vsplit
           :follow_url_func (fn [url] (vim.fn.jobstart ["open" url]))
-          :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}})]
+          :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}
+   :keys 
+     [(u.nlkm :nt :ObsidianToday "today's note")
+      (u.nlkm :nn "Obsidian dailies -10" "note picker")]})]
 

@@ -75,7 +75,9 @@
                                      :on_attach on_attach})
                 (vim.lsp.config :fennel_language_server {:capabilities capabilities
                                                          :on_attach on_attach
-                                                         :settings {:fennel {:diagnostics {:globals [:vim :Snacks]}}}})
+                                                         :single_file_support true
+                                                         :settings {:fennel {:diagnostics {:globals [:vim :Snacks]}
+                                                                             :workspace {:library (vim.api.nvim_list_runtime_paths)}}}})
                 (vim.lsp.config :terraformls {:capabilities capabilities
                                               :init_options {:experimentalFeatures {:prefillRequiredFields true
                                                                                     :validateOnSave true}}
