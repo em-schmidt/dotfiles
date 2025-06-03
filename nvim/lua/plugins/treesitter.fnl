@@ -8,12 +8,21 @@
             (let [configs (require "nvim-treesitter.configs")]
              (configs.setup {:ensure_installed
                                ["clojure"
+                                "css"
                                 "fennel"
-                                "json"
                                 "hcl"
+                                "html"
+                                "json"
+                                "latex"
                                 "markdown"
                                 "markdown_inline"
-                                "regex"]
+                                "norg"
+                                "regex"
+                                "scss"
+                                "svelte"
+                                "tsx"
+                                "typst"
+                                "vue"]
                              :sync_install true
                              :auto_install true
                              :indent {:enable true}
