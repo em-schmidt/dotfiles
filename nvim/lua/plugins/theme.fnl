@@ -46,7 +46,7 @@
                       :lualine_c [[:branch]
                                   [:diff]]
                       :lualine_x [[:diagnostics]
-                                  [:copilot]]
+                                  [:overseer]]
                       :lualine_y [[:filetype] [:progress]]
                       :lualine_z [(u.tx :location 
                                         {:separator {:right ""}
