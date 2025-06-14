@@ -13,13 +13,15 @@
    :openai
    {:env {:api_key "cmd:op read --account my.1password.com op://AI/OpenAI/credential --no-newline"}}))
 
-[(u.tx :zbirenbaum/copilot.lua
+[;; https://github.com/zbirenbaum/copilot.lua
+ (u.tx :zbirenbaum/copilot.lua
    {:lazy true
     :cmd "Copilot"
     :event "InsertEnter"
     :opts {}
     :keys [(u.nlkm :ap "Copilot panel" "panel")]})
 
+ ;; https://github.com/olimorris/codecompanion.nvim
  (u.tx :olimorris/codecompanion.nvim
    {:dependencies ["nvim-lua/plenary.nvim"
                    "nvim-treesitter/nvim-treesitter"]
@@ -32,6 +34,7 @@
     :keys [(u.nlkm :ac "CodeCompanionChat Toggle" "chat")
            (u.nlkm :aa "CodeCompanionActions" "chat")]})
 
+ ;; https://github.com/echasnovski/mini.diff
  (u.tx :echasnovski/mini.diff
    {:config (fn []
               (let [diff (require :mini.diff)]

@@ -1,6 +1,7 @@
 (local u (require :util))
 
-[(u.tx
+[;; https://github.com/OXY2DEV/markview.nvim/
+ (u.tx
   :OXY2DEV/markview.nvim
   {:lazy false
    :dependencies [:nvim-treesitter/nvim-treesitter
@@ -11,15 +12,20 @@
                      {:markdown {:code_blocks {:style :simple}
                                  :headings (. presets :headings :glow)
                                  :horizontal_rules (. presets :horizontal_rules :thick)
-                                 :tables (. presets :tables :rounded)}})))})
+                                 :tables (. presets :tables :rounded)}
+                      :preview {:filetypes ["markdown" "codecompanion"]
+                                :ignore_buftypes []}})))})
 
+ ;; https://github.com/jubnzv/mdeval.nvim
  (u.tx
   :jubnzv/mdeval.nvim)
 
+ ;; https://github.com/Kicamon/markdown-table-mode.nvim
  (u.tx
    :Kicamon/markdown-table-mode.nvim
    {:config (fn [] ((. (require :markdown-table-mode) :setup)))})
 
+ ;; https://github.com/obsidian-nvim/obsidian.nvim
  (u.tx
   :obsidian-nvim/obsidian.nvim
   {:version "*"

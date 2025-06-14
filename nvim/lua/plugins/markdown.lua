@@ -2,7 +2,7 @@
 local u = require("util")
 local function _1_()
   local presets = require("markview.presets")
-  return require("markview").setup({markdown = {code_blocks = {style = "simple"}, headings = presets.headings.glow, horizontal_rules = presets.horizontal_rules.thick, tables = presets.tables.rounded}})
+  return require("markview").setup({markdown = {code_blocks = {style = "simple"}, headings = presets.headings.glow, horizontal_rules = presets.horizontal_rules.thick, tables = presets.tables.rounded}, preview = {filetypes = {"markdown", "codecompanion"}, ignore_buftypes = {}}})
 end
 local function _2_()
   return require("markdown-table-mode").setup()
