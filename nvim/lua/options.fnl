@@ -2,9 +2,7 @@
 
 (fn set_options
  []
- (let [globals {:loaded_netrw 1 ;;nvim-tree
-                :loaded_netwrwPlugin 1 ;;nvim-tree
-                :loaded_node_provider 0
+ (let [globals {:loaded_node_provider 0
                 :loaded_perl_provider 0
                 :loaded_python3_provider 0
                 :loaded_ruby_provider 0
@@ -17,6 +15,7 @@
                  :encoding "utf-8"
                  :expandtab true
                  :fillchars "vert:┃"
+                 :guifont "JetBrainsMono Nerd Font:h18"
                  :hlsearch true
                  :ignorecase true
                  :list true
