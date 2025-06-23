@@ -36,6 +36,7 @@ local function _1_()
   vim.g["conjure#client#clojure#nrepl#connection#auto_repl#hidden"] = true
   vim.g["conjure#client#clojure#nrepl#test#runner"] = "kaocha"
   vim.g["conjure#client#clojure#nrepl#test#raw_out"] = true
+  vim.g["conjure#client#python#stdio#command"] = "uv run python -iq"
   return nil
 end
 return {u.tx("olical/conjure", {ft = {"clojure", "fennel", "python"}, init = _1_})}

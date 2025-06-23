@@ -39,5 +39,6 @@
             (tset vim.g "conjure#client#clojure#nrepl#connection#auto_repl#enabled" true)
             (tset vim.g "conjure#client#clojure#nrepl#connection#auto_repl#hidden" true)
             (tset vim.g "conjure#client#clojure#nrepl#test#runner" "kaocha")
-            (tset vim.g "conjure#client#clojure#nrepl#test#raw_out" true))})]
+            (tset vim.g "conjure#client#clojure#nrepl#test#raw_out" true)
+            (tset vim.g "conjure#client#python#stdio#command" "uv run python -iq"))})]
 
