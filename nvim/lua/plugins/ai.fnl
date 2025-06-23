@@ -18,8 +18,7 @@
    {:lazy true
     :cmd "Copilot"
     :event "InsertEnter"
-    :opts {}
-    :keys [(u.nlkm :ap "Copilot panel" "panel")]})
+    :opts {}})
 
  ;; https://github.com/olimorris/codecompanion.nvim
  (u.tx :olimorris/codecompanion.nvim
@@ -27,12 +26,23 @@
                    "nvim-treesitter/nvim-treesitter"]
     :opts {:adapters {:anthropic setup-anthropic-adapter
                       :openai setup-openai-adapter}
+           :extensions {:mcphub {:callback "mcphub.extensions.codecompanion"
+                                 :opts {:make_vars true
+                                        :make_slash_commands true
+                                        :show_results_in_chat true}}}
            :strategies {:chat {:adapter "copilot"}}
            :opts {:log_level "DEBUG"}
            :display {:diff {:enabled true
                             :provider "mini_diff"}}}
     :keys [(u.nlkm :ac "CodeCompanionChat Toggle" "chat")
            (u.nlkm :aa "CodeCompanionActions" "chat")]})
+
+ ;; https://github.com/ravitemer/mcphub.nvim
+ (u.tx :ravitemer/mcphub.nvim
+   {:dependencies ["nvim-lua/plenary.nvim"]
+    :build :bundled_build.lua
+    :config (fn [] 
+              ((. (require :mcphub) :setup) {:use_bundled_binary true}))}) 
 
  ;; https://github.com/echasnovski/mini.diff
  (u.tx :echasnovski/mini.diff
