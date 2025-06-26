@@ -4,8 +4,7 @@
  (u.tx
   :OXY2DEV/markview.nvim
   {:lazy false
-   :dependencies [:nvim-treesitter/nvim-treesitter
-                  :nvim-tree/nvim-web-devicons
+   :dependencies [:nvim-tree/nvim-web-devicons
                   :echasnovski/mini.icons]
    :config (fn [] (let [presets (. (require :markview.presets))]
                     ((. (require :markview) :setup) 
@@ -13,6 +12,7 @@
                                  :headings (. presets :headings :glow)
                                  :horizontal_rules (. presets :horizontal_rules :thick)
                                  :tables (. presets :tables :rounded)}
+                      :experimental {:check_rtp_message false}
                       :preview {:filetypes ["markdown" "codecompanion"]
                                 :ignore_buftypes []}})))})
 

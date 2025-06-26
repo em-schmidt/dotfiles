@@ -2,6 +2,7 @@
 
 [(u.tx :nvim-treesitter/nvim-treesitter
   {
+   :dependencies [:OXY2DEV/markview.nvim]
    :build (fn [] 
            (((. (require :nvim-treesitter.install) :update) {:with_sync true})))
    :config (fn []
@@ -17,6 +18,7 @@
                                 "markdown"
                                 "markdown_inline"
                                 "norg"
+                                "python"
                                 "regex"
                                 "scss"
                                 "svelte"
