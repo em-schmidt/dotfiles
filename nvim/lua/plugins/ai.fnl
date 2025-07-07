@@ -30,7 +30,8 @@
                                  :opts {:make_vars true
                                         :make_slash_commands true
                                         :show_results_in_chat true}}}
-           :strategies {:chat {:adapter "copilot"}}
+           :strategies {:chat {:adapter "anthropic"}
+                        :inline {:adapter "anthropic"}}
            :opts {:log_level "DEBUG"}
            :display {:diff {:enabled true
                             :provider "mini_diff"}}}

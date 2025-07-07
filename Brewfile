@@ -98,7 +98,7 @@ cask 'confluent-cli'
 cask '1password'
 cask '1password-cli'
 cask 'arq'
-cask 'docker'
+#cask 'docker' # install not idempotent as of 2025-06-30
 cask 'font-inconsolata-go-nerd-font'
 cask 'font-inconsolata-lgc-nerd-font'
 cask 'font-inconsolata-nerd-font'
