@@ -40,8 +40,9 @@
     :keys
       [(u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})
        (u.tx :<leader>fe (fn [] (Snacks.picker.explorer)) {:desc "explorer"})
+       (u.tx :<leader>ff (fn [] (Snacks.picker.files)) {:desc "files"})
+       (u.tx :<leader>fs (fn [] (Snacks.picker.smart)) {:desc "explorer"})
        (u.tx :<leader>ft (fn [] (Snacks.picker.explorer)) {:desc "explorer"})
-       (u.tx :<leader>ff (fn [] (Snacks.picker.smart)) {:desc "files"})
        (u.tx :<leader>f/ (fn [] (Snacks.picker.grep)) {:desc "grep"})
        (u.tx :<leader>gB (fn [] (Snacks.gitbrowse)) {:desc "open git in browser"})
        (u.tx :<leader>gl (fn [] (Snacks.picker.git_log)) {:desc "git log"})
