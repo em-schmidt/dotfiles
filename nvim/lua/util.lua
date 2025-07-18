@@ -1,4 +1,4 @@
--- [nfnl] Compiled from lua/util.fnl by https://github.com/Olical/nfnl, do not edit.
+-- [nfnl] lua/util.fnl
 local fun = require("vendor.fun")
 local function set_vim_global(key, value)
   return vim.api.nvim_set_var(key, value)
@@ -35,4 +35,9 @@ local function nlkm(keys, command, description)
   local rhs = ("<cmd>" .. command .. "<cr>")
   return tx(lhs, rhs, {desc = description, mode = "n"})
 end
-return {tx = tx, nlkm = nlkm, lnnoremap = lnnoremap, nnoremap = nnoremap, set_vim_option = set_vim_option, set_vim_global = set_vim_global}
+local function vlkm(keys, command, description)
+  local lhs = ("<leader>" .. keys)
+  local rhs = ("<cmd>" .. command .. "<cr>")
+  return tx(lhs, rhs, {desc = description, mode = "v"})
+end
+return {tx = tx, nlkm = nlkm, vlkm = vlkm, lnnoremap = lnnoremap, nnoremap = nnoremap, set_vim_option = set_vim_option, set_vim_global = set_vim_global}

@@ -25,15 +25,16 @@
 
  (u.tx :nvim-lualine/lualine.nvim
    {:dependencies [:nvim-tree/nvim-web-devicons
-                   :AndreM222/copilot-lualine]
-    :opts {:extensions [
-                                           "nvim-tree"
-                                           "toggleterm"
-                                           "trouble"
-                                           "fugitive"
-                                           "lazy"
-                                           "overseer"
-                                           "snacks"]
+                   :AndreM222/copilot-lualine
+                   :franco-ruggeri/codecompanion-lualine.nvim]
+    :opts {:extensions ["nvim-tree"
+                        "toggleterm"
+                        "trouble"
+                        "fugitive"
+                        "lazy"
+                        "overseer"
+                        "snacks"]
+                        
            :options {:theme :auto
                      :component_separators "|"
                      :section_separators {:left "" :right ""}
@@ -46,7 +47,8 @@
                       :lualine_c [[:branch]
                                   [:diff]]
                       :lualine_x [[:diagnostics]
-                                  [:overseer]]
+                                  [:overseer]
+                                  [:codecompanion]]
                       :lualine_y [[:filetype] [:progress]]
                       :lualine_z [(u.tx :location 
                                         {:separator {:right ""}

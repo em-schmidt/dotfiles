@@ -48,9 +48,17 @@
         rhs (.. "<cmd>" command "<cr>")]
     (tx lhs rhs {:desc description :mode :n})))
 
+(fn vlkm
+  [keys command description]
+  "generates a visual mode leader keymap table"
+  (let [lhs (.. "<leader>" keys)
+        rhs (.. "<cmd>" command "<cr>")]
+    (tx lhs rhs {:desc description :mode :v})))
+
 {
  : tx
  : nlkm
+ : vlkm
  : lnnoremap
  : nnoremap
  : set_vim_option

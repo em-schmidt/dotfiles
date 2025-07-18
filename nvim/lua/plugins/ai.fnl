@@ -30,13 +30,17 @@
                                  :opts {:make_vars true
                                         :make_slash_commands true
                                         :show_results_in_chat true}}}
-           :strategies {:chat {:adapter "anthropic"}
-                        :inline {:adapter "anthropic"}}
+           :strategies {:chat {:adapter "anthropic"
+                               :model "claude-opus-4-20250514"}
+                        :inline {:adapter "anthropic"
+                                 :model "claude-opus-4-20250514"}}
            :opts {:log_level "DEBUG"}
            :display {:diff {:enabled true
                             :provider "mini_diff"}}}
     :keys [(u.nlkm :ac "CodeCompanionChat Toggle" "chat")
-           (u.nlkm :aa "CodeCompanionActions" "chat")]})
+           (u.vlkm :ac "CodeCompanionChat Toggle" "chat")
+           (u.nlkm :aa "CodeCompanionActions" "chat")
+           (u.vlkm :aa "CodeCompanionActions" "chat")]})
 
  ;; https://github.com/ravitemer/mcphub.nvim
  (u.tx :ravitemer/mcphub.nvim
