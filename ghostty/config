@@ -1,7 +1,8 @@
-theme = dark:GitHub-Dark-Default,light:GitHub
+theme = dark:GitHub-Dark-High-Contrast,light:GitHub-Light-High-Contrast
 
 
 font-size = 22
 window-height = 34
 window-width = 180
 
+keybind = shift+enter=text:\n
