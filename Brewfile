@@ -71,6 +71,7 @@ brew 'mob'
 brew 'rust'                                 # for vim-clap
 brew 'sops'
 brew 'speedtest'
+brew 'sst/tap/opencode'
 brew 'stern'
 brew 'structurizr-cli'
 brew 'superbrothers/opener/opener'
