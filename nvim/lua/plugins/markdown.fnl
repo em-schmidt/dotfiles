@@ -31,7 +31,8 @@
   {:version "*"
    :lazy true
    :ft :markdown
-   :dependencies [:nvim-lua/plenary.nvim]
+   :dependencies [:nvim-lua/plenary.nvim
+                  :OXY2DEV/markview.nvim]
    :opts {:workspaces [{:name "notes"
                         :path "~/workspace/spaceba.by/notes"}]
           :ui {:enable false}

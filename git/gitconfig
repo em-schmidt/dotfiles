@@ -64,3 +64,6 @@
 
 [init]
   defaultBranch = main
+
+[includeIf "gitdir:~/workspace/spaceba.by/"]
+  path = ~/workspace/spaceba.by/.gitconfig
