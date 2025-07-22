@@ -27,6 +27,6 @@
 (local lazy (require "lazy"))
 
 ;; loads all plugin definitions in lua/plugins
-(lazy.setup :plugins)
+(lazy.setup :plugins {:rocks {:hererocks true}})
 
 (mappings.create_keymaps)
