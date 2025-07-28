@@ -32,6 +32,9 @@
                        (u.nlkm :gb
                                "Gitsigns toggle_current_line_blame"
                                "toggle git blame")
+                       (u.nlkm :gd
+                               "DiffviewOpen"
+                               "git difftool")
                        (u.nlkm :gg
                                :Fugit2
                                "fugit2")
