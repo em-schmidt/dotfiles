@@ -46,6 +46,6 @@
           :follow_url_func (fn [url] (vim.fn.jobstart ["open" url]))
           :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}
    :keys 
-     [(u.nlkm :nt :ObsidianToday "today's note")
+     [(u.nlkm :nt "Obsidian today" "today's note")
       (u.nlkm :nn "Obsidian dailies -10" "note picker")]})]
 
