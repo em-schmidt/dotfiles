@@ -43,9 +43,11 @@
           :sort_by :modified
           :sort_reversed true
           :open_notes_in :vsplit
+          :legacy_commands false
           :follow_url_func (fn [url] (vim.fn.jobstart ["open" url]))
           :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}
    :keys 
      [(u.nlkm :nt "Obsidian today" "today's note")
       (u.nlkm :nn "Obsidian dailies -10" "note picker")]})]
+
 
