@@ -53,4 +53,16 @@
  (u.tx :echasnovski/mini.diff
    {:config (fn []
               (let [diff (require :mini.diff)]
-                (diff.setup {:source (diff.gen_source.none)})))})]
+                (diff.setup {:source (diff.gen_source.none)})))})
+ ;; https://github.com/NickvanDyke/opencode.nvim
+ (u.tx :NickvanDyke/opencode.nvim
+   {:dependencies ["folke/snacks.nvim"]
+    :keys [(u.nlkm :ot "lua require('opencode').toggle()" "toggle embeded opencode")
+           (u.nlkm :oa "lua require('opencode').ask()" "ask opencode")
+           (u.vlkm :oa "lua require('opencode').ask('@selection: ')" "ask opencode about selection")
+           (u.nlkm :op "lua require('opencode').select_prompt()" "select prompt")
+           (u.vlkm :op "lua require('opencode').select_prompt()" "select prompt")
+           (u.nlkm :on "lua require('opencode').command('session_new')" "new session")
+           (u.nlkm :os "lua require('opencode').command('switch_mode')" "switch mode")
+           (u.nlkm :oy "lua require('opencode').command('messages_copy')" "copy messages")]})]
+

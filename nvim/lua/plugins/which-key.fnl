@@ -57,9 +57,9 @@
                                "vimgrep /- \\[ \\]/ **/* |Trouble quickfix" 
                                "unchecked todos")])
 
-              (wk.add [(u.tx :<leader>o {:group :overseer})
-                       (u.nlkm :or :OverseerRun    "run task")
-                       (u.nlkm :ot :OverseerToggle "toggle overseer")])
+              (wk.add [(u.tx :<leader>O {:group :overseer})
+                       (u.nlkm :Or :OverseerRun    "run task")
+                       (u.nlkm :Ot :OverseerToggle "toggle overseer")])
 
               (wk.add [(u.tx :<leader>p {:group :projects})])
 
