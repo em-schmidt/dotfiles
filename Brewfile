@@ -63,14 +63,14 @@ brew 'nvr'
 brew 'openjdk@11'
 brew 'parallel'
 brew 'pngpaste'                            # for nvim obsidian plugin
-brew 'proselint'
+brew 'podman'
 brew 'postgresql@14'
+brew 'proselint'
 brew 'pgcli'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'pwgen'
 brew 'readline'
-brew 'mob'
 brew 'rust'                                 # for vim-clap
 brew 'sops'
 brew 'speedtest'
@@ -94,6 +94,7 @@ brew 'watchman'
 brew 'wget'
 brew 'yarn'
 brew 'zlib'
+brew 'zoxide'
 brew 'zsh'
 brew 'zsh-git-prompt'
 
@@ -134,6 +135,7 @@ cask 'kaleidoscope'
 cask 'multipass'
 cask 'notion'
 #cask 'obsidian'
+cask 'podman-desktop'
 cask 'prince'                  # installed for dendron to support PDF export
 cask 'rectangle'               # tile and snap windows
 cask 'session-manager-plugin'  # aws sesssion manager plugin

@@ -14,7 +14,7 @@
                  :completeopt "menu,menuone,noselect"
                  :encoding "utf-8"
                  :expandtab true
-                 :fillchars "vert:┃"
+                 :fillchars "vert:┃,diff:╱"
                  :guifont "JetBrainsMono Nerd Font:h18"
                  :hlsearch true
                  :ignorecase true

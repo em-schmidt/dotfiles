@@ -20,10 +20,10 @@ source ~/.dotfiles/zsh/window.zsh
 source ~/.dotfiles/zsh/prompt.zsh
 source ~/.dotfiles/zsh/editor.zsh
 source ~/.dotfiles/zsh/config.zsh
+source ~/.dotfiles/zsh/zoxide.zsh
 
 source ~/.dotfiles/iterm/shell_integration.zsh
 source ~/.dotfiles/git/aliases.zsh
-source ~/.dotfiles/pyenv/pyenv.zsh
 source ~/.dotfiles/nvm/nvm.zsh
 source ~/.dotfiles/java/jenv.zsh
 source ~/.dotfiles/java/java.zsh
@@ -60,7 +60,7 @@ fi
 
 # remote browser open forwarding see: https://github.com/superbrothers/opener
 
-if [ -n $SSH_TTY ]; then
+if [ -n "$SSH_TTY" ]; then
   export BROWSER=~/bin/open
 fi
 
@@ -72,5 +72,4 @@ then
   source ~/.localrc
 fi
 
-source "$CROSSBEAM_CODE_DIR"/devops/bin/shell-utilities # RAZOR SHELL-UTILITIES
-
+# RAZOR SHELL-UTILITIES

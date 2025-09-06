@@ -54,11 +54,13 @@
    {:config (fn []
               (let [diff (require :mini.diff)]
                 (diff.setup {:source (diff.gen_source.none)})))})
+
  ;; https://github.com/NickvanDyke/opencode.nvim
  (u.tx :NickvanDyke/opencode.nvim
    {:dependencies ["folke/snacks.nvim"]
     :keys [(u.nlkm :ot "lua require('opencode').toggle()" "toggle embeded opencode")
-           (u.nlkm :oa "lua require('opencode').ask()" "ask opencode")
+           (u.nlkm :oA "lua require('opencode').ask()" "ask opencode")
+           (u.nlkm :oa "lua require('opencode').ask('@cursor: ')" "ask opencode about this")
            (u.vlkm :oa "lua require('opencode').ask('@selection: ')" "ask opencode about selection")
            (u.nlkm :op "lua require('opencode').select_prompt()" "select prompt")
            (u.vlkm :op "lua require('opencode').select_prompt()" "select prompt")
