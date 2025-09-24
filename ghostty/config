@@ -1,4 +1,4 @@
-theme = dark:GitHub-Dark-High-Contrast,light:GitHub-Light-High-Contrast
+theme = dark:"GitHub Dark High Contrast",light:"GitHub Light High Contrast"
 
 
 font-size = 22
