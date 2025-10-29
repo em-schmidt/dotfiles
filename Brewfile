@@ -3,6 +3,7 @@ cask_args appdir: '/Applications'
 tap '1password/tap'
 tap 'borkdude/brew'
 tap 'babashka/brew'
+tap 'f/mcptools'
 tap 'fluxcd/tap'
 tap 'sst/tap'
 tap 'nikitabobko/tap'
@@ -52,6 +53,7 @@ brew 'libgit2'
 brew 'luarocks'
 brew 'lua-language-server'
 brew 'mas'
+brew 'mcp'
 brew 'mermaid-cli'
 brew 'mob'
 brew 'mongodb-atlas-cli'
@@ -142,10 +144,10 @@ cask 'transmit'
 cask 'visual-studio-code'
 cask 'zprint'                  # clojure formatter
 
-mas "Navicat Premium Essentials", id: 1256997614
-mas "OmniGraffle", id: 1142578753
-mas "Slack", id: 803453959
-mas "Reeder", id: 1529448980
-mas "Xcode", id: 497799835
-mas "Tailscale", id: 1475387142
+#mas "Navicat Premium Essentials", id: 1256997614
+#mas "OmniGraffle", id: 1142578753
+#mas "Slack", id: 803453959
+#mas "Reeder", id: 1529448980
+#mas "Xcode", id: 497799835
+#mas "Tailscale", id: 1475387142
 

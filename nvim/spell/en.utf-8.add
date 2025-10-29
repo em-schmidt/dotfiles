@@ -120,3 +120,12 @@ neovide
 sixel
 imgcat
 observability
+CloudFront
+Balancer
+ACLs
+WebACLs
+WebACL
+CAPTCHAs
+DNS
+CORS
+ARN

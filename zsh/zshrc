@@ -48,6 +48,9 @@ bindkey -M vicmd 'k' up-line-or-beginning-search # Up
 bindkey -M vicmd 'j' down-line-or-beginning-search # Down
 bindkey -M vicmd '?' history-incremental-search-backward
 
+# shift-tab to go back in autocomplete menus
+bindkey '^[[Z' reverse-menu-complete 
+
 PATH=$PATH:$HOME/.local/bin:$HOME/workspace/bin:
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 

@@ -4,5 +4,6 @@ theme = dark:"GitHub Dark High Contrast",light:"GitHub Light High Contrast"
 font-size = 22
 window-height = 34
 window-width = 180
+macos-titlebar-style = tabs
 
 keybind = shift+enter=text:\n
