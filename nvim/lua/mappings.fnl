@@ -5,7 +5,7 @@
 
   ;;terminal mode double esscape to get to normal mode
   (vim.keymap.set :t :<esc><esc> "<c-\\><c-n>" {:noremap true})
-  (vim.keymap.set :t :<esc><leader>. "<cmd>ToggleTerm<cr>" {:noremap true})
+  (vim.keymap.set :t :<esc><leader>. "Snacks.terminal.toggle()" {:noremap true})
   (vim.keymap.set :ca :cc :CodeCompanion))
 
 

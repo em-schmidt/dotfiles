@@ -9,13 +9,13 @@
 
               (wk.add [(u.tx :<leader>a {:group "AI"})])
 
-              (wk.add [(u.nlkm :.         :ToggleTerm          "toggle terminal")
-                       (u.nlkm :<tab>     :b#                  "next buffer")
-                       (u.nlkm :+         "resize +3"          "increase height") 
-                       (u.nlkm :=         "resize +3"          "increase height") 
-                       (u.nlkm :-         "resize -3"          "decrease height") 
-                       (u.nlkm :<char-62> "vertical resize +3" "increase width") 
-                       (u.nlkm :<lt>      "vertical resize -3" "decrease width")]) 
+              (wk.add [(u.nlkm :.         "lua Snacks.terminal.toggle()"  "toggle terminal")
+                       (u.nlkm :<tab>     :b#                             "next buffer")
+                       (u.nlkm :+         "resize +3"                     "increase height") 
+                       (u.nlkm :=         "resize +3"                     "increase height") 
+                       (u.nlkm :-         "resize -3"                     "decrease height") 
+                       (u.nlkm :<char-62> "vertical resize +3"            "increase width") 
+                       (u.nlkm :<lt>      "vertical resize -3"            "decrease width")]) 
 
               (wk.add [(u.tx :<leader>b {:group :buffers})
                        (u.nlkm :ba :ball               "open all buffers")

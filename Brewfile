@@ -71,6 +71,7 @@ brew 'pgcli'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
 brew 'pwgen'
+brew 'rclone'                               # for syncing files to s3.
 brew 'readline'
 brew 'rust'                                 # for vim-clap
 brew 'sops'

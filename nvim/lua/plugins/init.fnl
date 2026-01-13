@@ -21,7 +21,7 @@
                                 :padding 1}
                                {:icon " "
                                 :title "Recent Files"
-                                :section "recent_files"
+                                 :section "recent_files"
                                 :indent 2
                                 :padding 1}
                                {:icon " "
@@ -36,6 +36,7 @@
         :notifier {:enabled true}
         :picker {:enabled true}
         :statuscolumn {}
+        :terminal {:enabled true}
         :gitbrowse {:enabled true}}
     :keys
       [(u.tx :<leader>bb (fn [] (Snacks.picker.buffers)) {:desc "buffers"})
@@ -56,6 +57,9 @@
    {:opts {}})
 
  (u.tx :akinsho/toggleterm.nvim
+   {:opts {}})
+
+ (u.tx :em-schmidt/longway.nvim
    {:opts {}})
 
  (u.tx :ahmedkhalf/project.nvim
