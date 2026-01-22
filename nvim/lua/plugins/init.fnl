@@ -59,8 +59,8 @@
  (u.tx :akinsho/toggleterm.nvim
    {:opts {}})
 
- (u.tx :em-schmidt/longway.nvim
-   {:opts {}})
+ {:dir "~/workspace/longway.nvim"
+ :opts {}}
 
  (u.tx :ahmedkhalf/project.nvim
    {:config (fn []
