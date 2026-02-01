@@ -60,7 +60,26 @@
    {:opts {}})
 
  {:dir "~/workspace/longway.nvim"
- :opts {}}
+  :dependencies [:nvim-lua/plenary.nvim]
+  :opts {:token_file (vim.fn.expand "~/.config/longway.nvim/token") 
+         :workspace_dir (vim.fn.expand "~/workspace/spaceba.by/notes/work/crossbeam/shortcut")
+         :auto_push_on_save  true
+         :pull_on_open true
+         :conflict_strategy :prompt
+         :presets 
+            {
+             :my_work 
+               {:query "owner:eschmidt"
+                :description "my stories"}}
+         :default_preset :my_work
+         :debug false}
+  :keys
+    [(u.tx :<leader>pc "<cmd>LongwayPicker comments<cr>" {:desc "shortcut comments"})
+     (u.tx :<leader>pe "<cmd>LongwayPicker epics<cr>" {:desc "shortcut epics"})
+     (u.tx :<leader>pm "<cmd>LongwayPicker modified<cr>" {:desc "shortcut modified"})
+     (u.tx :<leader>pP "<cmd>LongwayPicker presets<cr>" {:desc "shortcut presets"})
+     (u.tx :<leader>pS "<cmd>LongwayStatus<cr>" {:desc "shortcut Status"})
+     (u.tx :<leader>ps "<cmd>LongwayPicker stories<cr>" {:desc "shortcut stories"})]}
 
  (u.tx :ahmedkhalf/project.nvim
    {:config (fn []

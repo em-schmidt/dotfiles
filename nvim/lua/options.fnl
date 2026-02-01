@@ -14,6 +14,9 @@
                  :completeopt "menu,menuone,noselect"
                  :encoding "utf-8"
                  :expandtab true
+                 :foldexpr "nvim_treesitter#foldexpr()"
+                 :foldmethod "expr"
+                 :foldlevel 9
                  :fillchars "vert:┃,diff:╱"
                  :guifont "JetBrainsMono Nerd Font:h18"
                  :hlsearch true
