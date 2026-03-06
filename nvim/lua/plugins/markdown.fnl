@@ -1,5 +1,15 @@
 (local u (require :util))
 
+(fn note_id_func [title]
+  (var suffix "")
+  (if (not= title nil) (set suffix
+                             (: (: (title:gsub " " "-") :gsub
+                                   "[^A-Za-z0-9-]" "")
+                                :lower))
+      (for [_ 1 4]
+        (set suffix (.. suffix (string.char (math.random 65 90))))))
+  (.. (tostring (os.date "%Y.%m.%d")) "-" suffix))
+
 [;; https://github.com/OXY2DEV/markview.nvim/
  (u.tx
   :OXY2DEV/markview.nvim
@@ -23,7 +33,9 @@
  ;; https://github.com/Kicamon/markdown-table-mode.nvim
  (u.tx
    :Kicamon/markdown-table-mode.nvim
-   {:config (fn [] ((. (require :markdown-table-mode) :setup)))})
+   {:config (fn [] ((. (require :markdown-table-mode) :setup)))
+    :keys
+      [(u.nlkm :mT "Mtm" "toggle markdown table mode")]})
 
  ;; https://github.com/obsidian-nvim/obsidian.nvim
  (u.tx
@@ -39,14 +51,24 @@
           :attachments {:folder "assets/images"}
           :daily_notes {:folder "daily"
                         :date_format "%Y/%m/%Y.%m.%d"
-                        :template nil}
+                        :template "daily.md"}
           :search {:sort_by :modified
                    :sort_reversed true}
-          :open_notes_in :vsplit
+          :templates {:folder ".obsidian/templates"
+                      :date_format "%YYYY-%MM-%DD"
+                      :time_format "%H:%mm"
+                      :substitutions {:human_today (fn [] (os.date "%B %d, %Y"))}}
           :legacy_commands false
-          :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}}
+          :hl_groups {:ObsidianTodo {:bold true :fg "#f78c6c"}}
+          :note_id_func note_id_func}
    :keys 
-     [(u.nlkm :nt "Obsidian today" "today's note")
-      (u.nlkm :nn "Obsidian dailies -10" "note picker")]})]
+     [(u.nlkm :nb "Obsidian backlinks" "incoming links")
+      (u.nlkm :nt "Obsidian today" "today's note")
+      (u.nlkm :nl "Obsidian links" "incoming links")
+      (u.nlkm :nN "Obsidian template" "new note from template")
+      (u.nlkm :nn "Obsidian dailies -10" "note picker")
+      (u.nlkm :np "Obsidian paste_img" "paste image")
+      (u.nlkm :nr "Obsidian rename" "rename current note")
+      (u.vlkm :ne "Obsidian extract_note" "extract note")]})]
 
 

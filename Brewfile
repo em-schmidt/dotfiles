@@ -83,7 +83,6 @@ brew 'stern'
 brew 'structurizr-cli'
 brew 'superbrothers/opener/opener'
 brew 'svn'
-brew 'syncthing'
 brew 'tectonic'                             # rendering latex
 brew 'temporalio/brew/tcld'                 # temporal CLI
 brew 'terraform-ls'

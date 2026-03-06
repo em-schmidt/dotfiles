@@ -4,4 +4,4 @@
 .lsp
 .clj-kondo
 .nrepl-port
-.claude
+**/.claude/settings.local.json

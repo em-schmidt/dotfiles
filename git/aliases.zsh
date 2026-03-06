@@ -8,3 +8,6 @@ alias gs='git status -sb'
 alias gsb='git switch'
 alias gsm='git switch main'
 alias gfp='git fetch && git pull'
+alias gw='git worktree'
+alias gwl='git worktree list'
+

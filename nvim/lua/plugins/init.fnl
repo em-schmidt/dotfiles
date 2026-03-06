@@ -70,13 +70,18 @@
             {
              :my_work 
                {:query "owner:eschmidt"
-                :description "my stories"}}
+                :description "my stories"}
+             :data_layer_tiger_team
+               {:query "team: dlm-tiger-team"
+                :descrition "Data Layer Tiger Team"}}
          :default_preset :my_work
          :debug false}
   :keys
     [(u.tx :<leader>pc "<cmd>LongwayPicker comments<cr>" {:desc "shortcut comments"})
      (u.tx :<leader>pe "<cmd>LongwayPicker epics<cr>" {:desc "shortcut epics"})
      (u.tx :<leader>pm "<cmd>LongwayPicker modified<cr>" {:desc "shortcut modified"})
+     (u.tx :<leader>po "<cmd>LongwayOpen<cr>" {:desc "open story/epic browser"})
+     (u.tx :<leader>pr "<cmd>LongwayRefresh<cr>" {:desc "refresh from shortcut"})
      (u.tx :<leader>pP "<cmd>LongwayPicker presets<cr>" {:desc "shortcut presets"})
      (u.tx :<leader>pS "<cmd>LongwayStatus<cr>" {:desc "shortcut Status"})
      (u.tx :<leader>ps "<cmd>LongwayPicker stories<cr>" {:desc "shortcut stories"})]}

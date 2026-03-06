@@ -47,10 +47,7 @@
 
               (wk.add [(u.tx :<leader>l {:group :lsp})]) 
 
-              (wk.add [(u.tx :<leader>m {:group :markdown}) 
-                       (u.nlkm :mt 
-                               "Markview toggle"
-                               "toggle markdown rendering")]) 
+              (wk.add [(u.tx :<leader>m {:group :markdown})]) 
 
               (wk.add [(u.tx :<leader>n {:group :notes})
                        (u.nlkm :nT 
