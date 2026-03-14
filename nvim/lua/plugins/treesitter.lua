@@ -1,10 +1,17 @@
 -- [nfnl] lua/plugins/treesitter.fnl
 local u = require("util")
-local function _1_()
-  return require("nvim-treesitter.install").update({with_sync = true})()
+local function enable_ts_for_lang(lang)
+  local function _1_()
+    return vim.treesitter.start()
+  end
+  return vim.api.nvim_create_autocmd("FileType", {pattern = {lang}, callback = _1_})
 end
 local function _2_()
-  local configs = require("nvim-treesitter.configs")
-  return configs.setup({ensure_installed = {"clojure", "css", "fennel", "hcl", "html", "json", "latex", "markdown", "markdown_inline", "norg", "python", "regex", "scss", "svelte", "tsx", "typst", "vue"}, sync_install = true, auto_install = true, indent = {enable = true}, highlight = {enable = true, additional_vim_regex_highlighting = false}, textobjects = {enable = true}})
+  local languages = {"clojure", "css", "fennel", "hcl", "html", "json", "latex", "markdown", "markdown_inline", "python", "regex", "scss", "svelte", "tsx", "typst", "vue"}
+  require("nvim-treesitter").install(languages)
+  for _, lang in ipairs(languages) do
+    enable_ts_for_lang(lang)
+  end
+  return nil
 end
-return {u.tx("nvim-treesitter/nvim-treesitter", {dependencies = {"OXY2DEV/markview.nvim"}, build = _1_, config = _2_})}
+return {u.tx("nvim-treesitter/nvim-treesitter", {dependencies = {"OXY2DEV/markview.nvim"}, build = ":TSUpdate", init = _2_, lazy = false})}
