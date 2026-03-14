@@ -59,7 +59,7 @@
  (u.tx :akinsho/toggleterm.nvim
    {:opts {}})
 
- {:dir "~/workspace/longway.nvim"
+ {:dir "~/workspace/em-schmidt/longway.nvim"
   :dependencies [:nvim-lua/plenary.nvim]
   :opts {:token_file (vim.fn.expand "~/.config/longway.nvim/token") 
          :workspace_dir (vim.fn.expand "~/workspace/spaceba.by/notes/work/crossbeam/shortcut")
