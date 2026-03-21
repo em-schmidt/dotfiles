@@ -18,6 +18,7 @@ brew 'checkov'                              # IaC scanner/static analysis
 brew 'borkdude/brew/clj-kondo'                            # clojure linting
 brew 'clojure-lsp'
 brew 'cmake'
+brew 'container'
 brew 'coreutils'
 brew 'difftastic'
 brew 'direnv'
