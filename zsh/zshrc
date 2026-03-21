@@ -76,5 +76,3 @@ if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
-
-# RAZOR SHELL-UTILITIES

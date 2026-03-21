@@ -7,7 +7,7 @@ local function enable_ts_for_lang(lang)
   return vim.api.nvim_create_autocmd("FileType", {pattern = {lang}, callback = _1_})
 end
 local function _2_()
-  local languages = {"clojure", "css", "fennel", "hcl", "html", "json", "latex", "markdown", "markdown_inline", "python", "regex", "scss", "svelte", "tsx", "typst", "vue"}
+  local languages = {"clojure", "css", "fennel", "hcl", "html", "javascript", "json", "latex", "markdown", "markdown_inline", "python", "regex", "scss", "svelte", "tsx", "typst", "vue"}
   require("nvim-treesitter").install(languages)
   for _, lang in ipairs(languages) do
     enable_ts_for_lang(lang)

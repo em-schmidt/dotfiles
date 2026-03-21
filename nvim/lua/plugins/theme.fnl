@@ -23,6 +23,12 @@
               (. (require "nvim-navic") :setup)
               (set vim.o.winbar "%{%v:lua.require'nvim-navic'.get_location()%}"))})
 
+ (u.tx
+   :oribarilan/lensline.nvim
+   {:event :LspAttach
+    :config (fn []
+              (. (require :lensline) :setup))})
+
  (u.tx :nvim-lualine/lualine.nvim
    {:dependencies [:nvim-tree/nvim-web-devicons
                    :AndreM222/copilot-lualine
@@ -34,7 +40,6 @@
                         "lazy"
                         "overseer"
                         "snacks"]
-                        
            :options {:theme :auto
                      :component_separators "|"
                      :section_separators {:left "" :right ""}

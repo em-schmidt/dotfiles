@@ -31,6 +31,7 @@ brew 'go'
 brew 'goenv'
 brew 'graphviz'
 brew 'grc'
+brew 'gs'
 brew 'gum'
 brew 'helm'
 brew 'hg'
@@ -140,6 +141,7 @@ cask 'podman-desktop'
 cask 'prince'                  # installed for dendron to support PDF export
 cask 'rectangle'               # tile and snap windows
 cask 'session-manager-plugin'  # aws sesssion manager plugin
+cask 'temurin'
 cask 'transmit'
 cask 'visual-studio-code'
 cask 'zprint'                  # clojure formatter

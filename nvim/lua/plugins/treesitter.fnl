@@ -15,6 +15,7 @@
                             "fennel"
                             "hcl"
                             "html"
+                            "javascript"
                             "json"
                             "latex"
                             "markdown"
