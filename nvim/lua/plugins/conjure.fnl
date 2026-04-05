@@ -22,7 +22,7 @@
                                          {
                                           :group (vim.api.nvim_create_augroup :conjure_log_disable_lsp {:clear true})
                                           :pattern ["conjure-log-*"]
-                                          :callback (fn [] (vim.diagnostic.disable 0))
+                                          :callback (fn [] (vim.diagnostic.enable false))
                                           :desc "Conjure Log disable LSP diagnostics"})
             (tset vim.g "conjure#eval#result_register" "*")
             (tset vim.g "conjure#log#botright" true)

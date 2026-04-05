@@ -3,6 +3,12 @@
 [(u.tx :Olical/nfnl
   {:ft :fennel})
 
+ (u.tx :allaman/tf.nvim
+  {:ft [:terraform :tf :hcl]
+   :opts {}
+   :keys
+     [(u.tx :<localleader>td "<cmd>TerraformDocOpen<cr>" {:desc "terraform docs"})]})
+
  (u.tx :taybart/b64.nvim)
 
  (u.tx :folke/todo-comments.nvim
@@ -13,7 +19,6 @@
    {:priority 1000
     :lazy false
     :opts
-        ;; TODO: add note management section, today's note, yesterday's note, recent notes
        {:dashboard {:sections [{:icon " "
                                 :title "Keymaps"
                                 :section "keys"
@@ -86,9 +91,19 @@
      (u.tx :<leader>pS "<cmd>LongwayStatus<cr>" {:desc "shortcut Status"})
      (u.tx :<leader>ps "<cmd>LongwayPicker stories<cr>" {:desc "shortcut stories"})]}
 
- (u.tx :ahmedkhalf/project.nvim
-   {:config (fn []
-              ((. (require :project_nvim) :setup) {}))})
+ (u.tx :coffebar/neovim-project
+   {:dependencies [:nvim-lua/plenary.nvim
+                   :folke/snacks.nvim
+                   :Shatur/neovim-session-manager]
+    :opts {:projects ["~/workspace/*/*"
+                      "~/.dotfiles"]
+           :picker {:type :snacks}}
+    :init (fn []
+            (vim.opt.sessionoptions:append :globals))
+    :lazy false
+    :priority 100
+    :keys
+      [(u.tx :<leader>pp "<cmd>:NeovimProjectHistory<cr>" {:desc "shortcut comments"})]})
 
  (u.tx :windwp/nvim-autopairs
    {:event "InsertEnter"

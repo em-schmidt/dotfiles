@@ -12,6 +12,7 @@
                  :signcolumn "auto:2"
                  :conceallevel 2
                  :completeopt "menu,menuone,noselect"
+                 :diffopt "internal,filler,closeoff,algorithm:patience,inline:char"
                  :encoding "utf-8"
                  :expandtab true
                  :foldexpr "nvim_treesitter#foldexpr()"

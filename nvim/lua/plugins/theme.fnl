@@ -25,9 +25,10 @@
 
  (u.tx
    :oribarilan/lensline.nvim
-   {:event :LspAttach
+   {:branch "release/2.x"
+    :event :LspAttach
     :config (fn []
-              (. (require :lensline) :setup))})
+              ((. (require :lensline) :setup)))})
 
  (u.tx :nvim-lualine/lualine.nvim
    {:dependencies [:nvim-tree/nvim-web-devicons

@@ -17,7 +17,7 @@ local function _1_()
     vim.api.nvim_create_autocmd("FileType", {group = augroup, pattern = {"clojure"}, callback = on_filetype})
   end
   local function _4_()
-    return vim.diagnostic.disable(0)
+    return vim.diagnostic.enable(false)
   end
   vim.api.nvim_create_autocmd("BufNewFile", {group = vim.api.nvim_create_augroup("conjure_log_disable_lsp", {clear = true}), pattern = {"conjure-log-*"}, callback = _4_, desc = "Conjure Log disable LSP diagnostics"})
   vim.g["conjure#eval#result_register"] = "*"
