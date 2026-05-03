@@ -97,7 +97,8 @@
                    :Shatur/neovim-session-manager]
     :opts {:projects ["~/workspace/*/*"
                       "~/.dotfiles"]
-           :picker {:type :snacks}}
+           :picker {:type :snacks}
+           :dashboard_mode true}
     :init (fn []
             (vim.opt.sessionoptions:append :globals))
     :lazy false

@@ -1,6 +1,5 @@
 cask_args appdir: '/Applications'
 
-tap '1password/tap'
 tap 'sst/tap'
 tap 'nikitabobko/tap'
 tap 'teamookla/speedtest'
@@ -104,7 +103,6 @@ brew 'zsh-git-prompt'
 cask 'amazon-chime'
 # cask 'confluent-cli' # broken checksum 2026-03-12
 cask '1password'
-cask '1password-cli'
 cask 'arq'
 cask 'claude'
 cask 'claude-code@latest'

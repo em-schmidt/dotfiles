@@ -68,3 +68,6 @@
 [include]
   path = ~/.gitconfig.local
 
+[user]
+	name = Eric
+	email = eschmidt@crossbeam.com

@@ -30,14 +30,14 @@
   - ~/.ssh
 
 - link:
-    ~/.zshrc: zsh/zshrc
-    ~/.zshenv: zsh/zshenv
-    ~/.gitignore:             git/gitignore
-    ~/.gitconfig:             git/gitconfig
-    ~/.config/ghostty:        ghostty
-    ~/.config/nvim:           nvim
-    ~/.ssh/rc:                ssh/rc
-    ~/.ssh/config:            ssh/config
+    ~/.zshrc:           zsh/zshrc
+    ~/.zshenv:          zsh/zshenv
+    ~/.gitignore:       git/gitignore
+    ~/.gitconfig:       git/gitconfig
+    ~/.config/ghostty:  ghostty
+    ~/.config/nvim:     nvim
+    ~/.ssh/rc:          ssh/rc
+    ~/.ssh/config:      ssh/config
 
 - shell:
   -
