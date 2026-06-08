@@ -79,9 +79,12 @@
                                                          :settings {:fennel {:diagnostics {:globals [:vim :Snacks]}
                                                                              :workspace {:library (vim.api.nvim_list_runtime_paths)}}}})
                 (vim.lsp.config :terraformls {:capabilities capabilities
+                                              :cmd ["terraform-ls" "serve"
+                                                    "-log-file" "/tmp/terraform-ls-{{pid}}.log"]
                                               :init_options {:experimentalFeatures {:prefillRequiredFields true
                                                                                     :validateOnSave true}}
                                               :on_attach (fn [client bufnr] 
+                                                           (set client.server_capabilities.semanticTokensProvider nil)
                                                            (on_attach client bufnr)
                                                            (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ta "<cmd>TermExec cmd='terraform apply'<cr>" {:noremap true :desc "terraform apply"}) 
                                                            (vim.api.nvim_buf_set_keymap bufnr :n :<localleader>ti "<cmd>TermExec cmd='terraform init'<cr>" {:noremap true :desc "terraform init"}) 

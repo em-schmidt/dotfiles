@@ -46,12 +46,13 @@ local function _1_()
   vim.lsp.config("*", {capabilities = capabilities, on_attach = on_attach})
   vim.lsp.config("fennel_language_server", {capabilities = capabilities, on_attach = on_attach, single_file_support = true, settings = {fennel = {diagnostics = {globals = {"vim", "Snacks"}}, workspace = {library = vim.api.nvim_list_runtime_paths()}}}})
   local function _6_(client, bufnr)
+    client.server_capabilities.semanticTokensProvider = nil
     on_attach(client, bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ta", "<cmd>TermExec cmd='terraform apply'<cr>", {noremap = true, desc = "terraform apply"})
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>ti", "<cmd>TermExec cmd='terraform init'<cr>", {noremap = true, desc = "terraform init"})
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tp", "<cmd>TermExec cmd='terraform plan'<cr>", {noremap = true, desc = "terraform plan"})
     return vim.api.nvim_buf_set_keymap(bufnr, "n", "<localleader>tv", "<cmd>TermExec cmd='terraform validate'<cr>", {noremap = true, desc = "terraform validate"})
   end
-  return vim.lsp.config("terraformls", {capabilities = capabilities, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _6_})
+  return vim.lsp.config("terraformls", {capabilities = capabilities, cmd = {"terraform-ls", "serve", "-log-file", "/tmp/terraform-ls-{{pid}}.log"}, init_options = {experimentalFeatures = {prefillRequiredFields = true, validateOnSave = true}}, on_attach = _6_})
 end
 return {u.tx("neovim/nvim-lspconfig", {dependencies = {"mason-org/mason.nvim", "mason-org/mason-lspconfig.nvim", "hrsh7th/cmp-nvim-lsp", "SmiteshP/nvim-navic", "Afourcat/treesitter-terraform-doc.nvim"}, config = _1_})}
