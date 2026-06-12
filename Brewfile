@@ -1,20 +1,14 @@
 cask_args appdir: '/Applications'
 
-tap 'sst/tap'
-tap 'nikitabobko/tap'
-tap 'teamookla/speedtest'
-tap 'temporalio/brew'
-tap 'superbrothers/opener'
-
 brew 'age'                                  # used by sops
 brew 'awscli'
 brew 'azure-cli'
-brew 'borkdude/brew/babashka'
-brew 'babashka/brew/bbin'
+brew 'borkdude/brew/babashka', trusted: true
+brew 'babashka/brew/bbin', trusted: true
 brew 'bzip2'
 brew 'cfssl'
-brew 'checkov'                              # IaC scanner/static analysis
-brew 'borkdude/brew/clj-kondo'                            # clojure linting
+brew 'checkov'                                # IaC scanner/static analysis
+brew 'borkdude/brew/clj-kondo', trusted: true # clojure linting
 brew 'clojure-lsp'
 brew 'cmake'
 brew 'container'
@@ -23,7 +17,7 @@ brew 'difftastic'
 brew 'direnv'
 brew 'fd'                                   #fast find (for nvim telescope)
 brew 'fennel'
-brew 'fluxcd/tap/flux@2.2', link: true
+brew 'fluxcd/tap/flux@2.2', link: true, trusted: true
 brew 'fzf'
 brew 'gh'
 brew 'glab'
@@ -74,14 +68,14 @@ brew 'rclone'                               # for syncing files to s3.
 brew 'readline'
 brew 'rust'                                 # for vim-clap
 brew 'sops'
-brew 'teamookla/speedtest/speedtest'
-brew 'sst/tap/opencode'
+brew 'teamookla/speedtest/speedtest', trusted: true
+brew 'sst/tap/opencode', trusted: true
 brew 'stern'
 brew 'structurizr-cli'
-brew 'superbrothers/opener/opener'
+brew 'superbrothers/opener/opener', trusted: true
 brew 'svn'
 brew 'tectonic'                             # rendering latex
-brew 'temporalio/brew/tcld'                 # temporal CLI
+brew 'temporalio/brew/tcld', trusted: true  # temporal CLI
 brew 'terraform-ls'
 brew 'terraform'
 #brew 'tfenv'

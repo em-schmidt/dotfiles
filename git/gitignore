@@ -6,3 +6,4 @@
 .nrepl-port
 **/.claude/settings.local.json
 **/.claude/worktrees
+paseo.json
