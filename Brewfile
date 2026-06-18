@@ -128,7 +128,6 @@ cask 'gcloud-cli'
 cask 'ghostty'
 cask 'github'
 cask 'google-chrome'
-cask 'humanlayer/humanlayer/humanlayer', trusted: true
 cask 'insomnia'
 cask 'kaleidoscope'
 cask 'karabiner-elements'
