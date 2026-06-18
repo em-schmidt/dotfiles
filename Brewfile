@@ -69,7 +69,7 @@ brew 'readline'
 brew 'rust'                                 # for vim-clap
 brew 'sops'
 brew 'teamookla/speedtest/speedtest', trusted: true
-brew 'sst/tap/opencode', trusted: true
+brew 'anomalyco/tap/opencode', trusted: true
 brew 'stern'
 brew 'structurizr-cli'
 brew 'superbrothers/opener/opener', trusted: true
@@ -135,6 +135,7 @@ cask 'karabiner-elements'
 cask 'multipass'
 cask 'notion'
 #cask 'obsidian'
+cask 'opencode-desktop'
 cask 'podman-desktop'
 cask 'prince'                  # installed for dendron to support PDF export
 cask 'rectangle'               # tile and snap windows
