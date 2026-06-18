@@ -30,7 +30,9 @@
   - ~/.ssh
 
 - link:
-    ~/.zshrc:           zsh/zshrc
+    ~/.zshrc:           
+      force: true
+      path: zsh/zshrc
     ~/.zshenv:          zsh/zshenv
     ~/.gitignore:       git/gitignore
     ~/.gitconfig:       git/gitconfig

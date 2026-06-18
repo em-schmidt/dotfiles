@@ -101,6 +101,7 @@ cask '1password'
 cask 'arq'
 cask 'claude'
 cask 'claude-code@latest'
+cask 'confluentinc/confluent-hub-client/confluent-hub-client', trusted: true
 #cask 'docker' # install not idempotent as of 2025-06-30
 cask 'font-inconsolata-go-nerd-font'
 cask 'font-inconsolata-lgc-nerd-font'
@@ -127,6 +128,7 @@ cask 'gcloud-cli'
 cask 'ghostty'
 cask 'github'
 cask 'google-chrome'
+cask 'humanlayer/humanlayer/humanlayer', trusted: true
 cask 'insomnia'
 cask 'kaleidoscope'
 cask 'karabiner-elements'
