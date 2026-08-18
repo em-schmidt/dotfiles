@@ -23,6 +23,3 @@ echo " - docker" \
   && test -x $(which docker) \
   && curl -s https://raw.githubusercontent.com/docker/cli/master/contrib/completion/zsh/_docker > ${COMPDIR}/_docker
 
-echo " - glab" \
-  && test -x $(which glab) \
-  && glab completion -s zsh > ${COMPDIR}/_glab
