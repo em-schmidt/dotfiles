@@ -20,7 +20,6 @@ brew 'fennel'
 brew 'fluxcd/tap/flux@2.2', link: true, trusted: true
 brew 'fzf'
 brew 'gh'
-brew 'glab'
 brew 'go'
 brew 'goenv'
 brew 'graphviz'
