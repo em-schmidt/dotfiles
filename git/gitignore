@@ -7,3 +7,5 @@
 **/.claude/settings.local.json
 **/.claude/worktrees
 paseo.json
+
+**/.claude/.cc-writes/

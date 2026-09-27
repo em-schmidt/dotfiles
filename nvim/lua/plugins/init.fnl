@@ -113,7 +113,6 @@
  (u.tx :nacro90/numb.nvim
    {:opts {:show_numbers true
            :show_cursorline true
-           :numbers_only true
            :centered_peeking true}})
 
  (u.tx :gpanders/nvim-parinfer)
