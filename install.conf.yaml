@@ -1,6 +1,6 @@
 - shell:
   - [git submodule update --init --recursive, Installing Submodules]
-  - [macos/set-defaults.sh, Setting macOS preferneces]
+  - [macos/set-defaults.sh, Setting macOS preferences]
   -
     command: homebrew/install.sh
     stdin: true
