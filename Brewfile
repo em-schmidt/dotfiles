@@ -141,7 +141,6 @@ cask 'session-manager-plugin'  # aws sesssion manager plugin
 cask 'temurin'
 cask 'transmit'
 cask 'visual-studio-code'
-cask 'zprint'                  # clojure formatter
 
 #mas "Navicat Premium Essentials", id: 1256997614
 #mas "OmniGraffle", id: 1142578753
